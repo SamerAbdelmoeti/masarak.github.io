@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masarak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="favicon.png"  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+	#program {
+	  scroll-margin-top: 40px; /* adjust as needed for your header height */
+	}
+	#events {
+	  scroll-margin-top: 50px; /* adjust as needed for your header height */
+	}
+        .hero-section {
+            background-image: linear-gradient(rgba(30, 44, 86, 0.7), rgba(30, 44, 86, 0.7)), url('cam.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+        }
+        
+        .nav-link:hover::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #59A88E;
+            margin-top: 2px;
+        }
+        
+        .content-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-item {
+            color: #1E2C56;
+            padding: 12px 16px;
+            display: block;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f1f1f1;
+            color: #59A88E;
+        }
+        
+        .mobile-menu {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero-section {
+                height: 70vh;
+            }
+        }
+        
+        .btn-primary {
+            background-color: #59A88E;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #4a8f77;
+        }
+        
+        .btn-secondary {
+            border-color: #59A88E;
+            color: #59A88E;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #59A88E;
+            color: white;
+        }
+        
+        .date-badge {
+            background-color: rgba(89, 168, 142, 0.2);
+            color: #1E2C56;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white text-gray-800 py-4 px-6 fixed w-full z-50 shadow-sm">
+
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <a href="#" class="flex items-center">
+                    <!-- Logo Image - Replace with your actual logo -->
+                    <img src="logo.png" alt="Masarak Logo" class="logo-img" width="150">
+
+                </a>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="desktop-menu hidden md:flex space-x-8">
+                <a href="#program" class="nav-link hover:text-59A88E">Program</a>
+                <a href="#tracks" class="nav-link hover:text-59A88E">Tracks</a>
+                <a href="#events" class="nav-link hover:text-59A88E">Events</a>
+                <a href="#mentors" class="nav-link hover:text-59A88E">Mentors</a>
+                <a href="#contact" class="nav-link hover:text-59A88E">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu md:hidden">
+                <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-dropdown" class="hidden bg-white py-4 px-6 shadow-md">
+            <a href="#program" class="block py-2 hover:text-59A88E">Program</a>
+            <a href="#tracks" class="block py-2 hover:text-59A88E">Tracks</a>
+            <a href="#events" class="block py-2 hover:text-59A88E">Events</a>
+            <a href="#mentors" class="block py-2 hover:text-59A88E">Mentors</a>
+            <a href="#contact" class="block py-2 hover:text-59A88E">Contact</a>	
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center text-white pt-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">One Brilliant Mind at a Time</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">  Shaping the Future of the Middle East's Brightest <br>Through Global Excellence</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#program" class="btn-primary px-8 py-3 rounded font-semibold transition">Masarak Program</a>
+                <a href="#mentors" class="btn-secondary border-2 px-8 py-3 rounded font-semibold transition">Meet Our Mentors</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Content -->
+    <section id="program" class="py-16 bg-gray-50;scroll-margin-top=500;">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8"><font color="#1E2C56">50-hour comprehensive program to reach your dream university 
+</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="content-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="h-48 bg-gray-200 mb-4 rounded" style="background-color: #f0f4f8;background-image: url('orient.svg');background-size:200px;background-repeat:no-repeat;background-position:center"></div>
+                    <h3 class="text-xl font-semibold mb-2 text-1E2C56">Orient</h3>
+                    <p class="text-gray-600 mb-4">A comprehensive approach to addressing climate change through policy innovation.</p>
+
+                </div>
+                <div class="content-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="h-48 bg-gray-200 mb-4 rounded" style="background-color: #f0f4f8;background-image: url('prep.svg');background-size:200px;background-repeat:no-repeat;background-position:center"></div>
+                    <h3 class="text-xl font-semibold mb-2 text-1E2C56">Prepare</h3>
+                    <p class="text-gray-600 mb-4">How technology is reshaping economies and societies worldwide.</p>
+
+                </div>
+                <div class="content-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="h-48 bg-gray-200 mb-4 rounded" style="background-color: #f0f4f8;background-image: url('apply.svg');background-size:200px;background-repeat:no-repeat;background-position:center"></div>
+                    <h3 class="text-xl font-semibold mb-2 text-1E2C56">Apply</h3>
+                    <p class="text-gray-600 mb-4">Strategies for building resilient health systems in a connected world.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="mentors" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl font-bold mb-6 text-1E2C56">Our Mentors</h2>
+                    <p class="text-lg mb-6 text-gray-700">Masarak mentors are PhD holders and candidates from top universities ready to inspire students in their field of interest. </p>
+                    <p class="text-lg mb-8 text-gray-700">Through a tailored step-by-step journey, we bridge dreams to destinations.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="h-96 rounded-lg" style="background-color: #f0f4f8; background-image: url('mentors_unis.png'); background-size: cover; background-position: center;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Events Section -->
+    <section id="events" class="py-16" style="background-color: #f8fafc;">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-1E2C56">Upcoming Events</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="content-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="date-badge px-4 py-2 rounded mr-4">
+                            <span class="font-bold text-xl">15</span>
+                            <span class="block text-sm">JUN</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-1E2C56">Pathways to Cambridge, Oxford, and Beyond</h3>
+                            <p class="text-gray-600 text-sm">Virtual Event</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Join our mentors and experts for a webinar on how to prepare and apply at top universities.</p>
+                    <a href="#" class="text-59A88E font-semibold hover:underline">Register Now</a>
+                </div>
+                <div class="content-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="date-badge px-4 py-2 rounded mr-4">
+                            <span class="font-bold text-xl">28</span>
+                            <span class="block text-sm">SEP</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-1E2C56">Masarak Summer Program (In-Person)</h3>
+                            <p class="text-gray-600 text-sm">Riyadh, Saudi Arabia</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Your journey to the top starts here. Join our 2-week summer program to orient, prepare, and apply to your dream university.</p>
+                    <a href="#" class="text-59A88E font-semibold hover:underline">Register Now</a>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="#" class="btn-secondary border-2 px-6 py-3 rounded font-semibold transition">View All Events</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="py-16" style="background-color: #1E2C56;">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-white">Stay Informed</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-300">Subscribe to our newsletter for the latest news, events, and insights from our experts.</p>
+            <form class="max-w-md mx-auto">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded text-gray-800">
+                    <button type="submit" class="btn-primary px-6 py-3 rounded font-semibold transition">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-12" style="background-color: #0f172a;">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Masarak Education</h3>
+                    <p class="text-gray-400">Shaping the Future of the Middle East's Brightest
+Through Global Excellence.</p>
+                </div>
+
+                <div>
+                </div>
+                <div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Contact Us</h4>
+                    <p class="text-gray-400">contact@masarak.education</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2025 Masarak Education. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-dropdown');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Simple form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            if (email) {
+                alert('Thank you for subscribing!');
+                this.querySelector('input[type="email"]').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
