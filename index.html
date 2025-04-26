@@ -18,22 +18,36 @@
 	#events {
 	  scroll-margin-top: 50px; /* adjust as needed for your header height */
 	}
+	#contact {
+	  scroll-margin-top: 60px; /* adjust as needed for your header height */
+	}
         .hero-section {
             background-image: linear-gradient(rgba(30, 44, 86, 0.7), rgba(30, 44, 86, 0.7)), url('img/cam.jpg');
             background-size: cover;
             background-position: center;
             height: 90vh;
         }
-        
-        .nav-link:hover::after {
+        .nav-link {
+        position: relative;
+        padding-bottom: 2px; /* reserve space for underline */
+            }
+        .nav-link::after {
             content: '';
-            display: block;
-            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
             height: 2px;
             background-color: #59A88E;
-            margin-top: 2px;
+            transition: width 0.3s ease;
         }
-        
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
         .content-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -123,13 +137,18 @@
             </div>
             
             <!-- Desktop Menu -->
-            <div class="desktop-menu hidden md:flex space-x-8">
-                <a href="#program" class="nav-link hover:text-59A88E">Program</a>
-                <a href="#mentors" class="nav-link hover:text-59A88E">Mentors</a>
-                <a href="#tracks" class="nav-link hover:text-59A88E">Tracks</a>
-                <a href="#about" class="nav-link hover:text-59A88E">About</a>
-                <a href="#events" class="nav-link hover:text-59A88E">Events</a>
-                <a href="#contact" class="nav-link hover:text-59A88E">Contact</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <div class="desktop-menu flex space-x-8">
+                    <a href="#program" class="nav-link hover:text-[#59A88E]">Program</a>
+                    <a href="#mentors" class="nav-link hover:text-[#59A88E]">Mentors</a>
+                    <a href="#tracks" class="nav-link hover:text-[#59A88E]">Tracks</a>
+                    <a href="#about" class="nav-link hover:text-[#59A88E]">About</a>
+                    <a href="#events" class="nav-link hover:text-[#59A88E]">Events</a>
+                    <a href="#contact" class="nav-link hover:text-[#59A88E]">Contact</a>
+                </div>
+                <a href="registration.html" class="px-4 py-2 bg-[#59A88E] text-white rounded-lg hover:bg-[#4d927c] transition">
+                    Register Now
+                </a>
             </div>
             
             <!-- Mobile Menu Button -->
@@ -183,7 +202,7 @@
                 <div class="content-card bg-white p-4 rounded-lg shadow-md">
                     <div class="h-36 bg-gray-200 mb-4 rounded" style="background-color: white;background-image: url('img/apply.svg');background-size:160px;background-repeat:no-repeat;background-position:center"></div>
                     <h3 class="text-xl font-semibold mb-2 text-1E2C56">Apply</h3>
-                    <p class="text-gray-600 mb-4">Turns hard‑earned expertise into a winning university application</p>
+                    <p class="text-gray-600 mb-4">Turn hard‑earned expertise into a winning university application.</p>
                 </div>
             </div>
         </div>
@@ -195,7 +214,7 @@
     </section>
     
     <!-- Mentors Section -->
-    <section id="mentors" class="pb-16 pt-0 bg-white;scroll-margin-top=500;">
+    <section id="mentors" class="pb-16 pt-0 bg-white;scroll-margin-top=0;">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
@@ -227,7 +246,7 @@
                         </div>
                     </div>
                     <p class="text-gray-600 mb-4">Join our mentors and experts for a webinar on how to prepare and apply at top universities.</p>
-                    <a href="#" class="text-59A88E font-semibold hover:underline">Register Now</a>
+                    <a href="registration.html" class="text-59A88E font-semibold hover:underline">Register</a>
                 </div>
                 <div class="content-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
@@ -248,10 +267,10 @@
     </section>
     
     <!-- Stay Informed Section -->
-    <section class="py-16" style="background-color: #1E2C56;">
+    <section id="contact" class="py-16" style="background-color: #1E2C56;">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6 text-white">Stay Informed</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-300">Subscribe to our newsletter for the latest news, events, and insights from our experts.</p>
+            <h2 class="text-3xl font-bold mb-6 text-white">Interested in Masarak?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-300">Download our brochure and subscribe to a newsletter for the latest events and insights from our mentors.</p>
             <form class="max-w-md mx-auto">
                 <div class="flex flex-col md:flex-row gap-4">
                     <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded text-gray-800">
@@ -278,7 +297,8 @@ Through Global Excellence.</p>
 
                 <div>
                     <h4 class="font-semibold mb-4 text-white">Contact Us</h4>
-                    <p class="text-gray-400">contact@masarak.education</p>
+                    <a href="mailto:contact@masarak.education" class="text-gray-400 hover:underline">contact@masarak.education
+                    </a>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
@@ -321,5 +341,28 @@ Through Global Excellence.</p>
             }
         });
     </script>
+<script>
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let currentSection = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100; // adjust offset as needed
+            const sectionHeight = section.offsetHeight;
+            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + currentSection) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
 </body>
 </html>
