@@ -6,660 +6,758 @@
     <title>Masarak</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="img/favicon.png"  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-	#program {
-	  scroll-margin-top: 60px; /* adjust as needed for your header height */
-	}
-	#subjects {
-	  scroll-margin-top: 80px; /* adjust as needed for your header height */
-	}
-	#mentors {
-	  scroll-margin-top: 110px; /* adjust as needed for your header height */
-	}
-	#events {
-	  scroll-margin-top: 50px; /* adjust as needed for your header height */
-	}
-	#contact {
-	  scroll-margin-top: 60px; /* adjust as needed for your header height */
-	}
-        .hero-section {
-            background-image: linear-gradient(rgba(30, 44, 86, 0.3), rgba(30, 44, 86, 0.75)), url('img/cam.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-}
-        .nav-link {
-        position: relative;
-        padding-bottom: 2px; /* reserve space for underline */
-            }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 2px;
-            background-color: #59A88E;
-            transition: width 0.3s ease;
+        #program {
+          scroll-margin-top: 60px; /* adjust as needed for your header height */
         }
+        #subjects {
+          scroll-margin-top: 100px; /* adjust as needed for your header height */
+        }
+        #founders {
+              scroll-margin-top: 50px;
+            }
+        #mentors {
+          scroll-margin-top: 110px; /* adjust as needed for your header height */
+        }
+        #events {
+          scroll-margin-top: 50px; /* adjust as needed for your header height */
+        }
+        #contact {
+          scroll-margin-top: 60px; /* adjust as needed for your header height */
+        }
+            .hero-section {
+                background-image: linear-gradient(rgba(30, 44, 86, 0.3), rgba(30, 44, 86, 0.75)), url('img/cam.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh;
+    }
+            .nav-link {
+            position: relative;
+            padding-bottom: 2px; /* reserve space for underline */
+                }
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background-color: #59A88E;
+                transition: width 0.3s ease;
+            }
 
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .nav-link.active::after {
-            width: 100%;
-        }
-        .content-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .content-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            z-index: 1;
-        }
-        
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-        
-        .dropdown-item {
-            color: #1E2C56;
-            padding: 12px 16px;
-            display: block;
-        }
-        
-        .dropdown-item:hover {
-            background-color: #f1f1f1;
-            color: #59A88E;
-        }
-        
-        .mobile-menu {
-            display: none;
-        }
-        
-        @media (max-width: 768px) {
-            .desktop-menu {
-                display: none;
+            .nav-link:hover::after {
+                width: 100%;
             }
-            
-            .mobile-menu {
+            .nav-link.active::after {
+                width: 100%;
+            }
+            .content-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                cursor: pointer;
+            }
+
+            .content-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 200px;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+                z-index: 1;
+            }
+
+            .dropdown:hover .dropdown-menu {
                 display: block;
             }
-            
-            .hero-section {
-                height: 70vh;
-            }
-        }
-        
-        .btn-primary {
-            background-color: #59A88E;
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background-color: #4a8f77;
-        }
-        
-        .btn-secondary {
-            border-color: #59A88E;
-            background-color: rgba(0, 0, 0, 0.15); /* 0.5 = 50% opacity */
-            color: #59A88E;
-        }
-        
-        .btn-secondary:hover {
-            background-color: #59A88E;
-            color: white;
-        }
-        
-        .date-badge {
-            background-color: rgba(89, 168, 142, 0.2);
-            color: #1E2C56;
-        }
-        /* Program details sidebar styles */
-        .program-details-sidebar {
-            position: fixed;
-            top: 0;
-            right: -400px;
-            width: 400px;
-            height: 100%;
-            background-color: white;
-            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-            transition: right 0.3s ease;
-            z-index: 1000;
-            overflow-y: auto;
-            padding: 30px;
-        }
-        .program-details-sidebar.active {
-            right: 0;
-        }
-        .sidebar-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            z-index: 999;
-            display: none;
-        }
-        .sidebar-overlay.active {
-            display: block;
-        }
-        .close-sidebar {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #1E2C56;
-        }
-        .program-card.active {
-            border: 2px solid #59A88E;
-            box-shadow: 0 5px 15px rgba(89, 168, 142, 0.3);
-        }
-        @media (max-width: 768px) {
-            .program-details-sidebar {
-                width: 100%;
-                right: -100%;
-            }
-        }
-        /* Subject cards */
-        .subject-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            height: 280px;
-            transition: all 0.3s ease;
-        }
-        .subject-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-        .subject-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            padding: 20px;
-            color: white;
-        }
-        .subject-icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-            color: #59A88E;
-        }
-        .subject-bg {
-            background-size: cover;
-            background-position: center;
-            height: 100%;
-            transition: transform 0.5s ease;
-        }
-        .subject-card:hover .subject-bg {
-            transform: scale(1.05);
-        }
 
+            .dropdown-item {
+                color: #1E2C56;
+                padding: 12px 16px;
+                display: block;
+            }
+
+            .dropdown-item:hover {
+                background-color: #f1f1f1;
+                color: #59A88E;
+            }
+
+            .mobile-menu {
+                display: none;
+            }
+
+            @media (max-width: 768px) {
+                .desktop-menu {
+                    display: none;
+                }
+
+                .mobile-menu {
+                    display: block;
+                }
+
+                .hero-section {
+                    height: 70vh;
+                }
+            }
+
+            .btn-primary {
+                background-color: #59A88E;
+                color: white;
+            }
+
+            .btn-primary:hover {
+                background-color: #4a8f77;
+            }
+
+            .btn-secondary {
+                border-color: #59A88E;
+                background-color: rgba(0, 0, 0, 0.15); /* 0.5 = 50% opacity */
+                color: #59A88E;
+            }
+
+            .btn-secondary:hover {
+                background-color: #59A88E;
+                color: white;
+            }
+
+            .date-badge {
+                background-color: rgba(89, 168, 142, 0.2);
+                color: #1E2C56;
+            }
+            /* Program details sidebar styles */
+            .program-details-sidebar {
+                position: fixed;
+                top: 0;
+                right: -400px;
+                width: 400px;
+                height: 100%;
+                background-color: white;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: right 0.3s ease;
+                z-index: 1000;
+                overflow-y: auto;
+                padding: 30px;
+            }
+            .program-details-sidebar.active {
+                right: 0;
+            }
+            .sidebar-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+                z-index: 999;
+                display: none;
+            }
+            .sidebar-overlay.active {
+                display: block;
+            }
+            .close-sidebar {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 24px;
+                cursor: pointer;
+                color: #1E2C56;
+            }
+            .program-card.active {
+                border: 2px solid #59A88E;
+                box-shadow: 0 5px 15px rgba(89, 168, 142, 0.3);
+            }
+            @media (max-width: 768px) {
+                .program-details-sidebar {
+                    width: 100%;
+                    right: -100%;
+                }
+            }
+            /* Subject cards */
+            .subject-card {
+                position: relative;
+                overflow: hidden;
+                border-radius: 12px;
+                height: 280px;
+                transition: all 0.3s ease;
+            }
+            .subject-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            }
+            .subject-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+                padding: 20px;
+                color: white;
+            }
+            .subject-icon {
+                font-size: 48px;
+                margin-bottom: 15px;
+                color: #59A88E;
+            }
+            .subject-bg {
+                background-size: cover;
+                background-position: center;
+                height: 100%;
+                transition: transform 0.5s ease;
+            }
+            .subject-card:hover .subject-bg {
+                transform: scale(1.05);
+            }
     </style>
 </head>
 <body class="font-sans; text-[#1E2C56]">
-    <!-- Navigation -->
-    <nav class="bg-white text-gray-800 py-4 px-6 fixed w-full z-50 shadow-sm">
+<!-- Navigation -->
+<nav class="bg-white text-gray-800 py-4 px-6 fixed w-full z-50 shadow-sm">
 
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold">
-                <a href="index.html" class="flex items-center">
-                    <!-- Logo Image - Replace with your actual logo -->
-                    <img src="img/logo.png" alt="Masarak Logo" class="logo-img" width="150">
-                </a>
-            </div>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8">
-                <div class="desktop-menu flex space-x-8">
-                    <a href="#program" class="nav-link hover:text-[#59A88E]">Program</a>
-                    <a href="#mentors" class="nav-link hover:text-[#59A88E]">Mentors</a>
-                    <a href="#subjects" class="nav-link hover:text-[#59A88E]">Subjects</a>
-                    <a href="#about" class="nav-link hover:text-[#59A88E]">About Masarak</a>
-                    <a href="#events" class="nav-link hover:text-[#59A88E]">Events</a>
-                    <a href="#contact" class="nav-link hover:text-[#59A88E]">Contact</a>
-                </div>
-                <a href="registration.html" class="px-4 py-2 bg-[#59A88E] text-white rounded-lg hover:bg-[#4d927c] transition">
-                    Apply Now
-                </a>
-            </div>
-            
-            <!-- Mobile Menu Button -->
-            <div class="mobile-menu md:hidden">
-                <button id="menu-toggle" class="text-gray-800 focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-dropdown" class="hidden bg-white py-4 px-6 shadow-md">
-            <a href="#program" class="block py-2 hover:text-59A88E">Program</a>
-            <a href="#mentors" class="block py-2 hover:text-59A88E">Mentors</a>
-            <a href="#subjects" class="block py-2 hover:text-59A88E">Subjects</a>
-            <a href="#about" class="block py-2 hover:text-59A88E">About Masarak</a>
-            <a href="#events" class="block py-2 hover:text-59A88E">Events</a>
-            <a href="#contact" class="block py-2 hover:text-59A88E">Contact</a>
-        </div>
-    </nav>
-    
-    <!-- Intro Section -->
-    <section class="hero-section flex items-center justify-center text-white pt-32">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">One Brilliant Mind at a Time</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-xl mx-auto">  Shaping the future of the Middle East's brightest through global excellence</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#program" class="btn-primary px-8 py-3 rounded font-semibold transition">Masarak Program</a>
-                <a href="#mentors" class="btn-secondary border-2 px-8 py-3 rounded font-semibold transition">Our Mentors</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Program Section -->
-    <section id="program" class="py-12 bg-gray-50;scroll-margin-top=500;">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-6">50-hour comprehensive program to reach your dream university</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Orient Card -->
-                <div class="content-card program-card bg-white p-4 rounded-lg shadow-md" data-program="orient">
-                    <div class="h-36 bg-gray-200 mb-4 rounded" style="background-color: white;background-image: url('img/orient.svg');background-size:160px;background-repeat:no-repeat;background-position:center"></div>
-                    <h3 class="text-xl font-semibold mb-2 text-1E2C56">Orient</h3>
-                    <p class="text-gray-600 mb-4">Try out different subjects until you find the one you like most.</p>
-                    <div class="text-59A88E font-semibold flex items-center">
-                        Learn more <i class="fas fa-chevron-right ml-2 text-sm"></i>
-                    </div>
-                </div>
-
-                <!-- Prepare Card -->
-                <div class="content-card program-card bg-white p-4 rounded-lg shadow-md" data-program="prepare">
-                    <div class="h-36 bg-gray-200 mb-4 rounded" style="background-color: white;background-image: url('img/prep.svg');background-size:160px;background-repeat:no-repeat;background-position:center"></div>
-                    <h3 class="text-xl font-semibold mb-2 text-1E2C56">Prepare</h3>
-                    <p class="text-gray-600 mb-4">Become an expert in a topic you love with mentor-guided research.</p>
-                    <div class="text-59A88E font-semibold flex items-center">
-                        Learn more <i class="fas fa-chevron-right ml-2 text-sm"></i>
-                    </div>
-                </div>
-
-                <!-- Apply Card -->
-                <div class="content-card program-card bg-white p-4 rounded-lg shadow-md" data-program="apply">
-                    <div class="h-36 bg-gray-200 mb-4 rounded" style="background-color: white;background-image: url('img/apply.svg');background-size:160px;background-repeat:no-repeat;background-position:center"></div>
-                    <h3 class="text-xl font-semibold mb-2 text-1E2C56">Apply</h3>
-                    <p class="text-gray-600 mb-4">Learn how to apply to top universities — and get an offer.</p>
-                    <div class="text-59A88E font-semibold flex items-center">
-                        Learn more <i class="fas fa-chevron-right ml-2 text-sm"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container mx-auto px-6 pt-4 pb-0">
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="registration.html" class="btn-primary flex items-center justify-center px-8 py-3 rounded font-semibold transition">Apply Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Program Details Sidebar -->
-    <div class="sidebar-overlay"></div>
-    <div class="program-details-sidebar">
-        <div class="close-sidebar"><i class="fas fa-times"></i></div>
-
-        <!-- Orient Content -->
-        <div class="program-content" id="orient-content">
-            <h3 class="text-2xl font-bold mb-4 text-1E2C56">Orient Phase</h3>
-            <div class="mb-6">
-                <h4 class="font-semibold text-lg mb-2">What you'll do:</h4>
-                <ul class="list-disc pl-5 space-y-2">
-                    <li>Explore 3-5 different academic disciplines</li>
-                    <li>Attend introductory sessions with subject experts</li>
-                    <li>Complete short exploratory projects in each field</li>
-                    <li>Identify your strongest interests and aptitudes</li>
-                </ul>
-            </div>
-            <div class="mb-6">
-                <h4 class="font-semibold text-lg mb-2">Key Benefits:</h4>
-                <ul class="list-disc pl-5 space-y-2">
-                    <li>Discover your true academic passions</li>
-                    <li>Make informed decisions about your future studies</li>
-                    <li>Gain exposure to university-level subjects</li>
-                    <li>Build foundational knowledge across disciplines</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-semibold text-lg mb-2">Duration:</h4>
-                <p>15 hours</p>
-            </div>
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="text-2xl font-bold">
+            <a href="index.html" class="flex items-center">
+                <!-- Logo Image - Replace with your actual logo -->
+                <img src="img/logo.png" alt="Masarak Logo" class="logo-img" width="150">
+            </a>
         </div>
 
-        <!-- Prepare Content -->
-        <div class="program-content hidden" id="prepare-content">
-            <h3 class="text-2xl font-bold mb-4 text-1E2C56">Prepare Phase</h3>
-            <div class="mb-6">
-                <h4 class="font-semibold text-lg mb-2">What you'll do:</h4>
-                <ul class="list-disc pl-5 space-y-2">
-                    <li>Work 1-on-1 with a PhD mentor in your chosen field</li>
-                    <li>Develop a specialized research project</li>
-                    <li>Attend advanced subject workshops</li>
-                    <li>Build a portfolio of academic work</li>
-                </ul>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+            <div class="desktop-menu flex space-x-8">
+                <a href="#program" class="nav-link hover:text-[#59A88E]">Program</a>
+                <a href="#mentors" class="nav-link hover:text-[#59A88E]">Mentors</a>
+                <a href="#subjects" class="nav-link hover:text-[#59A88E]">Subjects</a>
+                <a href="#founders" class="nav-link hover:text-[#59A88E]">About Masarak</a>
+                <a href="#events" class="nav-link hover:text-[#59A88E]">Events</a>
+                <a href="#contact" class="nav-link hover:text-[#59A88E]">Contact</a>
             </div>
-            <div class="mb-6">
-                <h4 class="font-semibold text-lg mb-2">Key Benefits:</h4>
-                <ul class="list-disc pl-5 space-y-2">
-                    <li>Deep dive into your chosen subject area</li>
-                    <li>Gain university-level research experience</li>
-                    <li>Develop critical thinking and analytical skills</li>
-                    <li>Create work that strengthens your applications</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-semibold text-lg mb-2">Duration:</h4>
-                <p>25 hours</p>
-            </div>
+            <a href="registration.html"
+               class="px-4 py-2 bg-[#59A88E] text-white rounded-lg hover:bg-[#4d927c] transition">
+                Apply Now
+            </a>
         </div>
 
-        <!-- Apply Content -->
-        <div class="program-content hidden" id="apply-content">
-            <h3 class="text-2xl font-bold mb-4 text-1E2C56">Apply Phase</h3>
-            <div class="mb-6">
-                <h4 class="font-semibold text-lg mb-2">What you'll do:</h4>
-                <ul class="list-disc pl-5 space-y-2">
-                    <li>Receive personalized application strategy</li>
-                    <li>Perfect your personal statement and essays</li>
-                    <li>Prepare for admissions tests and interviews</li>
-                    <li>Learn scholarship application techniques</li>
-                </ul>
-            </div>
-            <div class="mb-6">
-                <h4 class="font-semibold text-lg mb-2">Key Benefits:</h4>
-                <ul class="list-disc pl-5 space-y-2">
-                    <li>Maximize your chances of admission</li>
-                    <li>Present your best self to admissions committees</li>
-                    <li>Reduce stress through expert guidance</li>
-                    <li>Access insider knowledge about top universities</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-semibold text-lg mb-2">Duration:</h4>
-                <p>10 hours</p>
-            </div>
-        </div>
-
-        <div class="mt-8">
-            <a href="registration.html" class="btn-primary w-full text-center block px-6 py-3 rounded font-semibold transition">Apply to Program</a>
+        <!-- Mobile Menu Button -->
+        <div class="mobile-menu md:hidden">
+            <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
     </div>
 
-    <!-- Mentors Section -->
-    <section id="mentors" class="pb-16 pt-0 bg-white;scroll-margin-top=0;">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
-                    <h2 class="text-3xl font-bold mb-6 text-1E2C56">Our Mentors</h2>
-                    <p class="text-lg mb-6 text-gray-700">Masarak mentors are PhD holders and candidates from top universities ready to inspire students in their field of interest. </p>
-                    <p class="text-lg mb-8 text-gray-700">Through a tailored step-by-step journey, we bridge dreams to destinations.</p>
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-dropdown" class="hidden bg-white py-4 px-6 shadow-md">
+        <a href="#program" class="block py-2 hover:text-59A88E">Program</a>
+        <a href="#mentors" class="block py-2 hover:text-59A88E">Mentors</a>
+        <a href="#subjects" class="block py-2 hover:text-59A88E">Subjects</a>
+        <a href="#founders" class="block py-2 hover:text-59A88E">About Masarak</a>
+        <a href="#events" class="block py-2 hover:text-59A88E">Events</a>
+        <a href="#contact" class="block py-2 hover:text-59A88E">Contact</a>
+    </div>
+</nav>
+
+<!-- Intro Section -->
+<section class="hero-section flex items-center justify-center text-white pt-32">
+    <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">One Brilliant Mind at a Time</h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-xl mx-auto"> Shaping the future of the Middle East's brightest through
+            global excellence</p>
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a href="#program" class="btn-primary px-8 py-3 rounded font-semibold transition">Masarak Program</a>
+            <a href="#mentors" class="btn-secondary border-2 px-8 py-3 rounded font-semibold transition">Our Mentors</a>
+        </div>
+    </div>
+</section>
+
+<!-- Program Section -->
+<section id="program" class="py-12 bg-gray-50;scroll-margin-top=500;">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-6">50-hour comprehensive program to reach your dream
+            university</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Orient Card -->
+            <div class="content-card program-card bg-white p-4 rounded-lg shadow-md" data-program="orient">
+                <div class="h-36 bg-gray-200 mb-4 rounded"
+                     style="background-color: white;background-image: url('img/orient.svg');background-size:160px;background-repeat:no-repeat;background-position:center"></div>
+                <h3 class="text-xl font-semibold mb-2 text-1E2C56">Orient</h3>
+                <p class="text-gray-600 mb-4">Try out different subjects until you find the one you like most.</p>
+                <div class="text-59A88E font-semibold flex items-center">
+                    Learn more <i class="fas fa-chevron-right ml-2 text-sm"></i>
                 </div>
-                <div class="md:w-1/2">
-                    <div class="h-64 rounded-lg" style="background-color: #f0f4f8; background-size: cover; background-position: center;">
+            </div>
+
+            <!-- Prepare Card -->
+            <div class="content-card program-card bg-white p-4 rounded-lg shadow-md" data-program="prepare">
+                <div class="h-36 bg-gray-200 mb-4 rounded"
+                     style="background-color: white;background-image: url('img/prep.svg');background-size:160px;background-repeat:no-repeat;background-position:center"></div>
+                <h3 class="text-xl font-semibold mb-2 text-1E2C56">Prepare</h3>
+                <p class="text-gray-600 mb-4">Become an expert in a topic you love with mentor-guided research.</p>
+                <div class="text-59A88E font-semibold flex items-center">
+                    Learn more <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                </div>
+            </div>
+
+            <!-- Apply Card -->
+            <div class="content-card program-card bg-white p-4 rounded-lg shadow-md" data-program="apply">
+                <div class="h-36 bg-gray-200 mb-4 rounded"
+                     style="background-color: white;background-image: url('img/apply.svg');background-size:160px;background-repeat:no-repeat;background-position:center"></div>
+                <h3 class="text-xl font-semibold mb-2 text-1E2C56">Apply</h3>
+                <p class="text-gray-600 mb-4">Learn how to apply to top universities — and get an offer.</p>
+                <div class="text-59A88E font-semibold flex items-center">
+                    Learn more <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto px-6 pt-4 pb-0">
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a href="registration.html"
+               class="btn-primary flex items-center justify-center px-8 py-3 rounded font-semibold transition">Apply
+                Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- Program Details Sidebar -->
+<div class="sidebar-overlay"></div>
+<div class="program-details-sidebar">
+    <div class="close-sidebar"><i class="fas fa-times"></i></div>
+
+    <!-- Orient Content -->
+    <div class="program-content" id="orient-content">
+        <h3 class="text-2xl font-bold mb-4 text-1E2C56">Orient Phase</h3>
+        <div class="mb-6">
+            <h4 class="font-semibold text-lg mb-2">What you'll do:</h4>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>Explore 3-5 different academic disciplines</li>
+                <li>Attend introductory sessions with subject experts</li>
+                <li>Complete short exploratory projects in each field</li>
+                <li>Identify your strongest interests and aptitudes</li>
+            </ul>
+        </div>
+        <div class="mb-6">
+            <h4 class="font-semibold text-lg mb-2">Key Benefits:</h4>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>Discover your true academic passions</li>
+                <li>Make informed decisions about your future studies</li>
+                <li>Gain exposure to university-level subjects</li>
+                <li>Build foundational knowledge across disciplines</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-semibold text-lg mb-2">Duration:</h4>
+            <p>15 hours</p>
+        </div>
+    </div>
+
+    <!-- Prepare Content -->
+    <div class="program-content hidden" id="prepare-content">
+        <h3 class="text-2xl font-bold mb-4 text-1E2C56">Prepare Phase</h3>
+        <div class="mb-6">
+            <h4 class="font-semibold text-lg mb-2">What you'll do:</h4>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>Work 1-on-1 with a PhD mentor in your chosen field</li>
+                <li>Develop a specialized research project</li>
+                <li>Attend advanced subject workshops</li>
+                <li>Build a portfolio of academic work</li>
+            </ul>
+        </div>
+        <div class="mb-6">
+            <h4 class="font-semibold text-lg mb-2">Key Benefits:</h4>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>Deep dive into your chosen subject area</li>
+                <li>Gain university-level research experience</li>
+                <li>Develop critical thinking and analytical skills</li>
+                <li>Create work that strengthens your applications</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-semibold text-lg mb-2">Duration:</h4>
+            <p>25 hours</p>
+        </div>
+    </div>
+
+    <!-- Apply Content -->
+    <div class="program-content hidden" id="apply-content">
+        <h3 class="text-2xl font-bold mb-4 text-1E2C56">Apply Phase</h3>
+        <div class="mb-6">
+            <h4 class="font-semibold text-lg mb-2">What you'll do:</h4>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>Receive personalized application strategy</li>
+                <li>Perfect your personal statement and essays</li>
+                <li>Prepare for admissions tests and interviews</li>
+                <li>Learn scholarship application techniques</li>
+            </ul>
+        </div>
+        <div class="mb-6">
+            <h4 class="font-semibold text-lg mb-2">Key Benefits:</h4>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>Maximize your chances of admission</li>
+                <li>Present your best self to admissions committees</li>
+                <li>Reduce stress through expert guidance</li>
+                <li>Access insider knowledge about top universities</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-semibold text-lg mb-2">Duration:</h4>
+            <p>10 hours</p>
+        </div>
+    </div>
+
+    <div class="mt-8">
+        <a href="registration.html"
+           class="btn-primary w-full text-center block px-6 py-3 rounded font-semibold transition">Apply to Program</a>
+    </div>
+</div>
+
+<!-- Mentors Section -->
+<section id="mentors" class="pb-16 pt-0 bg-white;scroll-margin-top=0;">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                <h2 class="text-3xl font-bold mb-6 text-1E2C56">Our Mentors</h2>
+                <p class="text-lg mb-6 text-gray-700">Masarak mentors are PhD holders and candidates from top
+                    universities ready to inspire students in their field of interest. </p>
+            </div>
+            <div class="md:w-1/2">
+                <div class="h-64 rounded-lg"
+                     style="background-color: #f0f4f8; background-size: cover; background-position: center;">
                     <div class="flex flex-wrap justify-center items-center gap-16 py-8">
-                    <img src="img/cambridge_logo.png" alt="University of Cambridge" class="h-10">
-                    <img src="img/oxford_logo.png" alt="University of Oxford" class="h-12">
-                    <img src="img/MIT_logo.png" alt="MIT" class="h-20">
-                    <img src="img/stanford_logo.png" alt="Stanford University" class="h-20">
+                        <img src="img/cambridge_logo.png" alt="University of Cambridge" class="h-10">
+                        <img src="img/oxford_logo.png" alt="University of Oxford" class="h-12">
+                        <img src="img/MIT_logo.png" alt="MIT" class="h-20">
+                        <img src="img/stanford_logo.png" alt="Stanford University" class="h-20">
                     </div>
-                        </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-        <!-- Subjects Section -->
-    <section id="subjects" class="py-4 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold mb-4">Explore our academic disciplines</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Discover your passion across our four specialized subject areas, each designed to prepare you for excellence
-                </p>
-            </div>
+<!-- Subjects Section -->
+<section id="subjects" class="py-4 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold mb-4">Explore our academic disciplines</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Discover your passion across our four specialized subject areas, each designed to prepare you for
+                excellence
+            </p>
+        </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Medical Sciences Card -->
-                <div class="subject-card bg-white shadow-lg">
-                    <div class="subject-bg" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('img/medical-sciences.jpg');"></div>
-                    <div class="subject-overlay">
-                        <div class="subject-icon">
-                            <i class="fas fa-heartbeat"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Medical Sciences</h3>
-                        <p class="text-gray-300">Prepare for careers in medicine, biomedical research, and healthcare innovation</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Medical Sciences Card -->
+            <div class="subject-card bg-white shadow-lg">
+                <div class="subject-bg"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('img/medical-sciences.jpg');"></div>
+                <div class="subject-overlay">
+                    <div class="subject-icon">
+                        <i class="fas fa-heartbeat"></i>
                     </div>
-                </div>
-
-                <!-- Engineering & AI Card -->
-                <div class="subject-card bg-white shadow-lg">
-                    <div class="subject-bg" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('img/engineering-ai.jpg');"></div>
-                    <div class="subject-overlay">
-                        <div class="subject-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Engineering & AI</h3>
-                        <p class="text-gray-300">Master cutting-edge technologies shaping our future world</p>
-                    </div>
-                </div>
-
-                <!-- Social Sciences Card -->
-                <div class="subject-card bg-white shadow-lg">
-                    <div class="subject-bg" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('img/social-sciences.jpg');"></div>
-                    <div class="subject-overlay">
-                        <div class="subject-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">People & Society</h3>
-                        <p class="text-gray-300">Understand human behavior, societies, and political science</p>
-                    </div>
-                </div>
-
-                <!-- Humanities Card -->
-                <div class="subject-card bg-white shadow-lg">
-                    <div class="subject-bg" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('img/humanities.jpg');"></div>
-                    <div class="subject-overlay">
-                        <div class="subject-icon">
-                            <i class="fas fa-chart-line	"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Business </h3>
-                        <p class="text-gray-300">Explore finance, economics, and business administration</p>
-                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Medical Sciences</h3>
+                    <p class="text-gray-300">Prepare for careers in medicine, biomedical science, and healthcare</p>
                 </div>
             </div>
 
-    <!-- Events Section -->
-    <section id="events" class="py-16" style="background-color: #f8fafc;">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-1E2C56">Upcoming Events</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="content-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="date-badge px-4 py-2 rounded mr-4">
-                            <span class="font-bold text-xl">15</span>
-                            <span class="block text-sm">JUN</span>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-1E2C56">Pathways to Cambridge, Oxford, and Beyond</h3>
-                            <p class="text-gray-600 text-sm">Virtual Event</p>
-                        </div>
+            <!-- Engineering & AI Card -->
+            <div class="subject-card bg-white shadow-lg">
+                <div class="subject-bg"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('img/engineering-ai.jpg');"></div>
+                <div class="subject-overlay">
+                    <div class="subject-icon">
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <p class="text-gray-600 mb-4">Join our mentors and experts for an info session on how to prepare and apply at top universities.</p>
-                    <a href="registration.html" class="text-59A88E font-semibold hover:underline">Register Now</a>
+                    <h3 class="text-2xl font-bold mb-2">Engineering & AI</h3>
+                    <p class="text-gray-300">Master cutting-edge technologies shaping our future world</p>
                 </div>
-                <div class="content-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="date-badge px-4 py-2 rounded mr-4">
-                            <span class="font-bold text-xl">28</span>
-                            <span class="block text-sm">SEP</span>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-1E2C56">Masarak Summer Program (In-Person)</h3>
-                            <p class="text-gray-600 text-sm">Riyadh, Saudi Arabia</p>
-                        </div>
+            </div>
+
+            <!-- Social Sciences Card -->
+            <div class="subject-card bg-white shadow-lg">
+                <div class="subject-bg"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('img/social-sciences.jpg');"></div>
+                <div class="subject-overlay">
+                    <div class="subject-icon">
+                        <i class="fas fa-users"></i>
                     </div>
-                    <p class="text-gray-600 mb-4">Your journey to the top starts here. Join our 2-week summer program to orient, prepare, and apply to your dream university.</p>
-                    <a href="registration.html" class="text-59A88E font-semibold hover:underline">Apply Now</a>
+                    <h3 class="text-2xl font-bold mb-2">People & Society</h3>
+                    <p class="text-gray-300">Understand human behavior, societies, and political science</p>
+                </div>
+            </div>
+
+            <!-- Humanities Card -->
+            <div class="subject-card bg-white shadow-lg">
+                <div class="subject-bg"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('img/humanities.jpg');"></div>
+                <div class="subject-overlay">
+                    <div class="subject-icon">
+                        <i class="fas fa-chart-line	"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Business </h3>
+                    <p class="text-gray-300">Explore finance, economics, and business administration</p>
                 </div>
             </div>
         </div>
-    </section>
-    
-    <!-- Stay Informed Section -->
-    <section id="contact" class="py-16" style="background-color: #1E2C56;">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6 text-white">Interested in Masarak?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-300">Download our brochure and subscribe to a newsletter for the latest events and insights from our mentors.</p>
-            <form class="max-w-md mx-auto">
-                <div class="flex flex-col md:flex-row gap-4">
-                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded text-gray-800">
-                    <button type="submit" class="btn-primary px-6 py-3 rounded font-semibold transition">Subscribe</button>
-                </div>
-            </form>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="py-4" style="background-color: #0f172a;">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Masarak Education</h3>
-                    <p class="text-gray-400">Shaping the Future of the Middle East's Brightest
-Through Global Excellence.</p>
+
+        <!-- Founders Section -->
+        <section id="founders" class="py-16 bg-gray-0">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-5">
+                    <h2 class="text-3xl font-bold mb-4">Meet the Founders of Masarak</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Our mission is to unlock the full potential of the Middle East's brightest minds by connecting
+                        them to global standards of excellence
+                    </p>
                 </div>
 
-                <div>
-                </div>
-                <div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <!-- Founder 1 -->
+                    <div class="founder-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-40 bg-gray-100 mb-0 rounded" style="background-image: url('img/samuel.png');background-size:160px;background-repeat:no-repeat;background-position:center;"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-1">Dr. Samuel Gabra</h3>
+                            <p class="text-gray-500 mb-3">Co-Founder</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>MPhil and PhD in Energy Engineering from the University of Cambridge</li>
+                                <li>Technical Director at the University of Cambridge aiming to decarbonise aviation</li>
+                                <li>Over 10 years of teaching and supervision experience</li>
+                            </ul>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-59A88E hover:text-4a8f77"><i class="fab fa-linkedin fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Founder 2 -->
+                    <div class="founder-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="founder-img"
+                             style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80');"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-1">Dr. Abdelhamid Youssef</h3>
+                            <p class="text-gray-500 mb-3">Co-Founder</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>PhD in Pharmacology from the University of Cambridge</li>
+                                <li>Strategy consultant at ZS Associates consulting firm; supporting pharmaceutical & life science companies</li>
+                                <li>6 years’ experience in teaching and academic supervision</li>
+                            </ul>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-59A88E hover:text-4a8f77"><i class="fab fa-linkedin fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Founder 3 -->
+                    <div class="founder-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="founder-img"
+                             style="background-image: url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-1">Dr. Samer Abdelmoeti</h3>
+                            <p class="text-gray-500 mb-3">Co-Founder</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>PhD in Engineering from the University of Cambridge</li>
+                                <li>Technical expert at MathWorks; supporting industry and academic partners accelerate innovation & science</li>
+                                <li>10 years’ experience in teaching and research</li>
+                            </ul>
+
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-59A88E hover:text-4a8f77"><i class="fab fa-linkedin fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div>
-                    <h4 class="font-semibold mb-4 text-white">Contact Us</h4>
-                    <a href="mailto:contact@masarak.education" class="text-gray-400 hover:underline">contact@masarak.education
-                    </a>
+                <div class="mt-12 text-center">
+                    <a href="#contact" class="btn-primary inline-block px-8 py-3 rounded font-semibold transition">Connect
+                        With Us</a>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>© 2025 Masarak Education. All rights reserved.</p>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="py-16" style="background-color: #f8fafc;">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-1E2C56">Upcoming Events</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="content-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="date-badge px-4 py-2 rounded mr-4">
+                                <span class="font-bold text-xl">15</span>
+                                <span class="block text-sm">JUN</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-1E2C56">Pathways to Cambridge, Oxford, and Beyond</h3>
+                                <p class="text-gray-600 text-sm">Virtual Event</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Join our mentors and experts for an info session on how to prepare
+                            and apply at top universities.</p>
+                        <a href="registration.html" class="text-59A88E font-semibold hover:underline">Register Now</a>
+                    </div>
+                    <div class="content-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="date-badge px-4 py-2 rounded mr-4">
+                                <span class="font-bold text-xl">28</span>
+                                <span class="block text-sm">SEP</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-1E2C56">Masarak Summer Program (In-Person)</h3>
+                                <p class="text-gray-600 text-sm">Riyadh, Saudi Arabia</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Your journey to the top starts here. Join our 2-week summer
+                            program to orient, prepare, and apply to your dream university.</p>
+                        <a href="registration.html" class="text-59A88E font-semibold hover:underline">Apply Now</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
-    
-    <script>
-        // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-dropdown');
-            menu.classList.toggle('hidden');
-        });
+        </section>
 
-        // Program details sidebar functionality
-        const programCards = document.querySelectorAll('.program-card');
-        const sidebar = document.querySelector('.program-details-sidebar');
-        const overlay = document.querySelector('.sidebar-overlay');
-        const closeBtn = document.querySelector('.close-sidebar');
+        <!-- Stay Informed Section -->
+        <section id="contact" class="py-16" style="background-color: #1E2C56;">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-6 text-white">Interested in Masarak?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-300">Download our brochure and subscribe to a
+                    newsletter for the latest events and insights from our mentors.</p>
+                <form class="max-w-md mx-auto">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <input type="email" placeholder="Your email address"
+                               class="flex-grow px-4 py-3 rounded text-gray-800">
+                        <button type="submit" class="btn-primary px-6 py-3 rounded font-semibold transition">Subscribe
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
-        programCards.forEach(card => {
-            card.addEventListener('click', function() {
-                const program = this.getAttribute('data-program');
+        <!-- Footer -->
+        <footer class="py-4" style="background-color: #0f172a;">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-white">Masarak Education</h3>
+                        <p class="text-gray-400">Shaping the Future of the Middle East's Brightest
+                            Through Global Excellence.</p>
+                    </div>
 
-                // Hide all program contents
-                document.querySelectorAll('.program-content').forEach(content => {
-                    content.classList.add('hidden');
-                });
+                    <div>
+                    </div>
+                    <div>
+                    </div>
 
-                // Show selected program content
-                document.getElementById(`${program}-content`).classList.remove('hidden');
+                    <div>
+                        <h4 class="font-semibold mb-4 text-white">Contact Us</h4>
+                        <a href="mailto:contact@masarak.education" class="text-gray-400 hover:underline">contact@masarak.education
+                        </a>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                    <p>© 2025 Masarak Education. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
 
-                // Activate sidebar
-                sidebar.classList.add('active');
-                overlay.classList.add('active');
-
-                // Highlight active card
-                programCards.forEach(c => c.classList.remove('active'));
-                this.classList.add('active');
+        <script>
+            // Mobile menu toggle
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                const menu = document.getElementById('mobile-dropdown');
+                menu.classList.toggle('hidden');
             });
-        });
 
-        // Close sidebar
-        closeBtn.addEventListener('click', closeSidebar);
-        overlay.addEventListener('click', closeSidebar);
+            // Program details sidebar functionality
+            const programCards = document.querySelectorAll('.program-card');
+            const sidebar = document.querySelector('.program-details-sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            const closeBtn = document.querySelector('.close-sidebar');
 
-        function closeSidebar() {
-            sidebar.classList.remove('active');
-            overlay.classList.remove('active');
-            programCards.forEach(c => c.classList.remove('active'));
-        }
+            programCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const program = this.getAttribute('data-program');
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
+                    // Hide all program contents
+                    document.querySelectorAll('.program-content').forEach(content => {
+                        content.classList.add('hidden');
                     });
+
+                    // Show selected program content
+                    document.getElementById(`${program}-content`).classList.remove('hidden');
+
+                    // Activate sidebar
+                    sidebar.classList.add('active');
+                    overlay.classList.add('active');
+
+                    // Highlight active card
+                    programCards.forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Close sidebar
+            closeBtn.addEventListener('click', closeSidebar);
+            overlay.addEventListener('click', closeSidebar);
+
+            function closeSidebar() {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                programCards.forEach(c => c.classList.remove('active'));
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Simple form submission handler
+            document.querySelector('form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                if (email) {
+                    alert('Thank you for subscribing!');
+                    this.querySelector('input[type="email"]').value = '';
                 }
             });
-        });
-        
-        // Simple form submission handler
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
-            if (email) {
-                alert('Thank you for subscribing!');
-                this.querySelector('input[type="email"]').value = '';
-            }
-        });
-    </script>
-<script>
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+        </script>
+        <script>
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
 
-    window.addEventListener('scroll', () => {
-        let currentSection = '';
+            window.addEventListener('scroll', () => {
+                let currentSection = '';
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100; // adjust offset as needed
-            const sectionHeight = section.offsetHeight;
-            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                currentSection = section.getAttribute('id');
-            }
-        });
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100; // adjust offset as needed
+                    const sectionHeight = section.offsetHeight;
+                    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + currentSection) {
-                link.classList.add('active');
-            }
-        });
-    });
-</script>
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + currentSection) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        </script>
 </body>
 </html>
