@@ -16,16 +16,16 @@
           scroll-margin-top: 100px; /* adjust as needed for your header height */
         }
         #founders {
-              scroll-margin-top: 50px;
+              scroll-margin-top: 70px;
             }
         #mentors {
           scroll-margin-top: 110px; /* adjust as needed for your header height */
         }
         #events {
-          scroll-margin-top: 50px; /* adjust as needed for your header height */
+          scroll-margin-top: 100px; /* adjust as needed for your header height */
         }
         #contact {
-          scroll-margin-top: 60px; /* adjust as needed for your header height */
+          scroll-margin-top: 100px; /* adjust as needed for your header height */
         }
             .hero-section {
                 background-image: linear-gradient(rgba(30, 44, 86, 0.3), rgba(30, 44, 86, 0.75)), url('img/cam.jpg');
@@ -429,11 +429,11 @@
             <div class="md:w-1/2">
                 <div class="h-64 rounded-lg"
                      style="background-color: #f0f4f8; background-size: cover; background-position: center;">
-                    <div class="flex flex-wrap justify-center items-center gap-16 py-8">
+                    <div class="flex flex-wrap justify-center items-center gap-12 py-14">
                         <img src="img/cambridge_logo.png" alt="University of Cambridge" class="h-10">
                         <img src="img/oxford_logo.png" alt="University of Oxford" class="h-12">
-                        <img src="img/MIT_logo.png" alt="MIT" class="h-20">
-                        <img src="img/stanford_logo.png" alt="Stanford University" class="h-20">
+                        <img src="img/MIT_logo.png" alt="MIT" class="h-12">
+                        <img src="img/stanford_logo.png" alt="Stanford University" class="h-12">
                     </div>
                 </div>
             </div>
@@ -442,7 +442,7 @@
 </section>
 
 <!-- Subjects Section -->
-<section id="subjects" class="py-4 bg-gray-50">
+<section id="subjects" class="py-8 bg-gray-50">
     <div class="container mx-auto px-6">
         <div class="text-center mb-10">
             <h2 class="text-3xl font-bold mb-4">Explore our academic disciplines</h2>
@@ -452,7 +452,7 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-4">
             <!-- Medical Sciences Card -->
             <div class="subject-card bg-white shadow-lg">
                 <div class="subject-bg"
@@ -505,9 +505,11 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
         <!-- Founders Section -->
-        <section id="founders" class="py-16 bg-gray-0">
+        <section id="founders" class="py-12 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-5">
                     <h2 class="text-3xl font-bold mb-4">Meet the Founders of Masarak</h2>
@@ -520,7 +522,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
                     <!-- Founder 1 -->
                     <div class="founder-card bg-white rounded-lg shadow-md overflow-hidden">
-                        <div class="h-40 bg-gray-100 mb-0 rounded" style="background-image: url('img/samuel.png');background-size:160px;background-repeat:no-repeat;background-position:center;"></div>
+                        <div class="h-40 bg-gray-100 mb-0 rounded" style="background-image: url('img/samuel.png');background-size:170px;background-repeat:no-repeat;background-position:center;"></div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-1">Dr. Samuel Gabra</h3>
                             <p class="text-gray-500 mb-3">Co-Founder</p>
@@ -537,14 +539,14 @@
 
                     <!-- Founder 2 -->
                     <div class="founder-card bg-white rounded-lg shadow-md overflow-hidden">
-                        <div class="founder-img"
-                             style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80');"></div>
+                        <div class="h-40 bg-gray-100 mb-0 rounded"
+                             style="background-image: url('img/yousef.png');background-size:155px;background-repeat:no-repeat;background-position:center;"></div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-1">Dr. Abdelhamid Youssef</h3>
                             <p class="text-gray-500 mb-3">Co-Founder</p>
                             <ul class="list-disc pl-5 space-y-2">
                                 <li>PhD in Pharmacology from the University of Cambridge</li>
-                                <li>Strategy consultant at ZS Associates consulting firm; supporting pharmaceutical & life science companies</li>
+                                <li>Strategy consultant at ZS Associates consulting firm, supporting pharmaceutical & life science companies</li>
                                 <li>6 years’ experience in teaching and academic supervision</li>
                             </ul>
                             <div class="flex space-x-4">
@@ -555,14 +557,13 @@
 
                     <!-- Founder 3 -->
                     <div class="founder-card bg-white rounded-lg shadow-md overflow-hidden">
-                        <div class="founder-img"
-                             style="background-image: url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                        <div class="h-40 bg-gray-100 mb-0 rounded" style="background-image: url('img/samer.png');background-size:160px;background-repeat:no-repeat;background-position:center;"></div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-1">Dr. Samer Abdelmoeti</h3>
                             <p class="text-gray-500 mb-3">Co-Founder</p>
                             <ul class="list-disc pl-5 space-y-2">
                                 <li>PhD in Engineering from the University of Cambridge</li>
-                                <li>Technical expert at MathWorks; supporting industry and academic partners accelerate innovation & science</li>
+                                <li>Technical expert at MathWorks, supporting industry and academic partners accelerate innovation and science</li>
                                 <li>10 years’ experience in teaching and research</li>
                             </ul>
 
@@ -574,7 +575,7 @@
 
                 </div>
 
-                <div class="mt-12 text-center">
+                <div class="mt-8 text-center">
                     <a href="#contact" class="btn-primary inline-block px-8 py-3 rounded font-semibold transition">Connect
                         With Us</a>
                 </div>
@@ -582,7 +583,7 @@
         </section>
 
         <!-- Events Section -->
-        <section id="events" class="py-16" style="background-color: #f8fafc;">
+        <section id="events" class="py-8" style="background-color: #f8fafc;">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12 text-1E2C56">Upcoming Events</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -593,15 +594,16 @@
                                 <span class="block text-sm">JUN</span>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-1E2C56">Pathways to Cambridge, Oxford, and Beyond</h3>
+                                <h3 class="font-semibold text-1E2C56">Info Session: Pathways to Cambridge, Oxford, and Beyond</h3>
                                 <p class="text-gray-600 text-sm">Virtual Event</p>
                             </div>
                         </div>
                         <p class="text-gray-600 mb-4">Join our mentors and experts for an info session on how to prepare
                             and apply at top universities.</p>
-                        <a href="registration.html" class="text-59A88E font-semibold hover:underline">Register Now</a>
+                        <a class="text-59A88E font-semibold hover:underline">Register Now</a>
                     </div>
                     <div class="content-card bg-white p-6 rounded-lg shadow-md">
+                                            <a href="registration.html">
                         <div class="flex items-center mb-4">
                             <div class="date-badge px-4 py-2 rounded mr-4">
                                 <span class="font-bold text-xl">28</span>
@@ -615,14 +617,15 @@
                         <p class="text-gray-600 mb-4">Your journey to the top starts here. Join our 2-week summer
                             program to orient, prepare, and apply to your dream university.</p>
                         <a href="registration.html" class="text-59A88E font-semibold hover:underline">Apply Now</a>
+                    </a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Stay Informed Section -->
-        <section id="contact" class="py-16" style="background-color: #1E2C56;">
-            <div class="container mx-auto px-6 text-center">
+        <section id="contact" class="py-14" style="background-color: #1E2C56;">
+            <div class="container mx-auto px-6 text-center max-w-xl">
                 <h2 class="text-3xl font-bold mb-6 text-white">Interested in Masarak?</h2>
                 <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-300">Download our brochure and subscribe to a
                     newsletter for the latest events and insights from our mentors.</p>
@@ -630,7 +633,7 @@
                     <div class="flex flex-col md:flex-row gap-4">
                         <input type="email" placeholder="Your email address"
                                class="flex-grow px-4 py-3 rounded text-gray-800">
-                        <button type="submit" class="btn-primary px-6 py-3 rounded font-semibold transition">Subscribe
+                        <button type="submit" class="btn-primary px-6 py-3 rounded font-semibold transition">Submit
                         </button>
                     </div>
                 </form>
@@ -658,7 +661,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
                     <p>© 2025 Masarak Education. All rights reserved.</p>
                 </div>
             </div>
