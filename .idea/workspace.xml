@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="formsubmit thank you page - modified.">
+    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="formsubmit subcribe form update.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -241,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748203453402</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="formsubmit subcribe form update.">
+      <option name="closed" value="true" />
+      <created>1748203847335</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1748203847335</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,6 +275,7 @@
     <MESSAGE value="disable captcha in form submissions." />
     <MESSAGE value="formsubmit thank you page." />
     <MESSAGE value="formsubmit thank you page - modified." />
-    <option name="LAST_COMMIT_MESSAGE" value="formsubmit thank you page - modified." />
+    <MESSAGE value="formsubmit subcribe form update." />
+    <option name="LAST_COMMIT_MESSAGE" value="formsubmit subcribe form update." />
   </component>
 </project>
