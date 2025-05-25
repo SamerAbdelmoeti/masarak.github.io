@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="fix stay informed submission">
+    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="disable captcha in form submissions.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -217,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748202594363</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="disable captcha in form submissions.">
+      <option name="closed" value="true" />
+      <created>1748202815655</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1748202815655</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,6 +248,7 @@
     <MESSAGE value="Main page before final compatability customizations and forms." />
     <MESSAGE value="contact forms are functional." />
     <MESSAGE value="fix stay informed submission" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix stay informed submission" />
+    <MESSAGE value="disable captcha in form submissions." />
+    <option name="LAST_COMMIT_MESSAGE" value="disable captcha in form submissions." />
   </component>
 </project>

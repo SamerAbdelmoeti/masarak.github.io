@@ -722,6 +722,9 @@
                     Send
                 </button>
             </form>
+            <div id="thank-you-message" style="display: none;">
+            Thank you! Your message has been sent.
+            </div>
         </div>
     </div>
 </section>
@@ -812,6 +815,26 @@
         });
     });
 </script>
+<script>
+  function showThankYou(event) {
+    event.preventDefault();
+    const form = event.target;
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = "none";
+        document.getElementById("thank-you-message").style.display = "block";
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    });
+  }
+</script>
+
 <script>
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
