@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="Added new sections and features.">
+    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/MIT_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/stanford_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/cambridge_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/cambridge_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/engineering.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/imperial_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/imperial_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/kcl_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/kcl_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/oxford_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/oxford_logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +174,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746615758405</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="updates">
+      <option name="closed" value="true" />
+      <created>1748034068709</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1748034068709</updated>
+    </task>
+    <task id="LOCAL-00014" summary="updates">
+      <option name="closed" value="true" />
+      <created>1748034081272</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1748034081272</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +209,7 @@
     <MESSAGE value="Change hero wallpaper." />
     <MESSAGE value="Minor updates" />
     <MESSAGE value="Added new sections and features." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new sections and features." />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
   </component>
 </project>
