@@ -236,7 +236,7 @@
                 <a href="#subjects" class="nav-link hover:text-[#59A88E]">Subjects</a>
                 <a href="#founders" class="nav-link hover:text-[#59A88E]">About Masarak</a>
                 <a href="#events" class="nav-link hover:text-[#59A88E]">Events</a>
-                <a href="#contact" class="nav-link text-[#59A88E] hover:text-[#59A88E]">Free Consultation</a>
+                <a href="#contact" class="nav-link text-[#59A88E] hover:text-[#59A88E]">Get in Touch</a>
             </div>
             <a href="registration.html"
                class="px-4 py-2 bg-[#59A88E] text-white rounded-lg hover:bg-[#4d927c] transition">
@@ -260,9 +260,18 @@
         <a href="#subjects" class="block py-2 hover:text-59A88E">Subjects</a>
         <a href="#founders" class="block py-2 hover:text-59A88E">About Masarak</a>
         <a href="#events" class="block py-2 hover:text-59A88E">Events</a>
-        <a href="#contact" class="block py-2 hover:text-59A88E">Contact</a>
+        <a href="#contact" class="block py-2 text-[#59A88E] hover:text-59A88E">Get in Touch</a>
     </div>
 </nav>
+
+<!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">
+    window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/masarakeducation/30min?text_color=1e2c56&primary_color=59a88e', text: 'Book a Free Consultation', color: '#59a88e', textColor: '#ffffff' }); }
+</script>
+<!-- Calendly badge widget end -->
+
 
 <!-- Intro Section -->
 <section class="hero-section flex items-center justify-center text-white pt-32">
@@ -608,21 +617,30 @@
     <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12 text-1E2C56">Upcoming Events</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"
+                    async></script>
             <div class="content-card bg-white p-6 rounded-lg shadow-md">
-                <div class="flex items-center mb-4">
-                    <div class="date-badge px-4 py-2 rounded mr-4">
-                        <span class="font-bold text-xl">22</span>
-                        <span class="block text-sm">JUN</span>
+                <a href=""
+                   onclick="Calendly.initPopupWidget({url: 'https://calendly.com/masarakeducation/info-session-pathways-to-cambridge-oxford-and-beyond?text_color=1e2c56&primary_color=59a88e'});return false;">
+                    <div class="flex items-center mb-4">
+                        <div class="date-badge px-4 py-2 rounded mr-4">
+                            <span class="font-bold text-xl">22</span>
+                            <span class="block text-sm">JUN</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-1E2C56">Info Session: Pathways to Cambridge, Oxford, and
+                                Beyond</h3>
+                            <p class="text-gray-600 text-sm">Virtual Event</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="font-semibold text-1E2C56">Info Session: Pathways to Cambridge, Oxford, and
-                            Beyond</h3>
-                        <p class="text-gray-600 text-sm">Virtual Event</p>
-                    </div>
-                </div>
-                <p class="text-gray-600 mb-4">Join our mentors and experts for an info session on how to prepare
-                    and apply at top universities.</p>
-                <a class="text-59A88E font-semibold hover:underline">Register Now</a>
+                    <p class="text-gray-600 mb-4">Join our mentors and experts for an info session on how to prepare
+                        and apply at top universities.</p>
+                    <a href=""
+                       onclick="Calendly.initPopupWidget({url: 'https://calendly.com/masarakeducation/info-session-pathways-to-cambridge-oxford-and-beyond?text_color=1e2c56&primary_color=59a88e'});return false;"
+                       class="text-59A88E font-semibold hover:underline">Register Now</a>
+                </a>
+
             </div>
             <div class="content-card bg-white p-6 rounded-lg shadow-md">
                 <a href="registration.html">
@@ -658,7 +676,8 @@
             <div class="text-center">
                 <i class="fas fa-envelope-open-text fa-4x text-[white]"></i>
             </div>
-            <form class="space-y-4 mt-auto">
+            <form target="_blank" action="https://formsubmit.co/masarakeducation@gmail.com" method="POST"
+                  class="space-y-4 mt-auto">
                 <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded text-gray-800"/>
                 <button type="submit" class="btn-secondary border-2 w-full px-6 py-3 rounded font-semibold transition">
                     Subscribe
@@ -677,8 +696,11 @@
                 <i class="fas fa-comments fa-4x"></i>
                 <i class="fas fa-user-graduate fa-4x"></i>
             </div>
-            <a href="https://calendly.com/your-link" target="_blank"
-               class="btn-primary w-full block text-center border-2 px-6 py-3 rounded font-semibold transition mt-auto">
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+            <a href=""
+               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/masarakeducation/30min?text_color=1e2c56&primary_color=59a88e'});return false;"
+               class="btn-primary w-full block text-center px-6 py-3 rounded font-semibold transition mt-auto">
                 Book Now
             </a>
         </div>
@@ -705,13 +727,14 @@
 
 <!-- Footer -->
 <footer class="py-4" style="background-color: #0f172a;">
-  <div class="w-full px-6 lg:px-12">
-    <div class="flex flex-col md:flex-row justify-between items-start gap-8 w-full">
+    <div class="w-full px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-8 w-full">
             <!-- Left Column -->
             <div>
                 <h3 class="text-xl font-bold mb-4 text-white">Masarak Education</h3>
-                <p class="text-gray-400">Shaping the Future of the Middle East's Brightest<br>
+                <p class="text-gray-400 mb-4">Shaping the Future of the Middle East's Brightest<br>
                     Through Global Excellence.</p>
+                <a href="mailto:contact@masarak.education" class="text-gray-400 hover:underline">contact@masarak.education</a>
             </div>
 
             <!-- Spacer columns (optional if content not needed) -->
@@ -720,8 +743,7 @@
 
             <!-- Right Column -->
             <div class="md:text-right">
-                <h4 class="font-semibold mb-4 text-white">Contact Us</h4>
-                <a href="mailto:contact@masarak.education" class="text-gray-400 hover:underline">contact@masarak.education</a>
+                <h4 class="font-semibold mb-4 text-white"></h4>
             </div>
         </div>
     </div>
