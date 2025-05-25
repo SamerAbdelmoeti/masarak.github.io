@@ -709,7 +709,7 @@
         <!-- Contact Us -->
         <div class="px-6 flex flex-col h-full">
             <h2 class="text-2xl font-bold mb-4 text-white">Contact Us</h2>
-            <form target="_blank" action="https://formsubmit.co/masarakeducation@gmail.com" method="POST"
+            <form id="contact-form" target="_blank" action="https://formsubmit.co/masarakeducation@gmail.com" method="POST"
                   class="space-y-4">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="text" name="name" placeholder="Full Name" required
@@ -722,7 +722,7 @@
                     Send
                 </button>
             </form>
-            <div id="thank-you-message" style="display: none;">
+            <div id="form-message" style="display: none;">
             Thank you! Your message has been sent.
             </div>
         </div>
@@ -816,23 +816,25 @@
     });
 </script>
 <script>
-  function showThankYou(event) {
-    event.preventDefault();
-    const form = event.target;
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent redirect
+  const form = e.target;
 
-    fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        form.style.display = "none";
-        document.getElementById("thank-you-message").style.display = "block";
-      } else {
-        alert("Something went wrong. Please try again.");
-      }
-    });
-  }
+  fetch(form.action, {
+    method: "POST",
+    headers: {
+      'Accept': 'application/json'
+    },
+    body: new FormData(form)
+  }).then(response => {
+    if (response.ok) {
+      form.style.display = "none";
+      document.getElementById("form-message").style.display = "block";
+    } else {
+      alert("Oops! Something went wrong.");
+    }
+  });
+});
 </script>
 
 <script>
