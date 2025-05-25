@@ -676,8 +676,7 @@
             <div class="text-center">
                 <i class="fas fa-envelope-open-text fa-4x text-[white]"></i>
             </div>
-            <form target="_blank" action="https://formsubmit.co/masarakeducation@gmail.com" method="POST"
-                  class="space-y-4 mt-auto">
+            <form target="_blank" action="https://formsubmit.co/masarakeducation@gmail.com" method="POST" class="space-y-4 mt-auto">
                 <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded text-gray-800"/>
                 <button type="submit" class="btn-secondary border-2 w-full px-6 py-3 rounded font-semibold transition">
                     Subscribe
@@ -809,16 +808,6 @@
                 });
             }
         });
-    });
-
-    // Simple form submission handler
-    document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = this.querySelector('input[type="email"]').value;
-        if (email) {
-            alert('Thank you for subscribing!');
-            this.querySelector('input[type="email"]').value = '';
-        }
     });
 </script>
 <script>
