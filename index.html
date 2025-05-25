@@ -676,13 +676,16 @@
             <div class="text-center">
                 <i class="fas fa-envelope-open-text fa-4x text-[white]"></i>
             </div>
-            <form target="_blank" action="https://formsubmit.co/masarakeducation@gmail.com" method="POST" class="space-y-4 mt-auto">
+            <form id="subscribe-form" target="_blank" action="https://formsubmit.co/masarakeducation@gmail.com" method="POST" class="space-y-4 mt-auto">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded text-gray-800"/>
                 <button type="submit" class="btn-secondary border-2 w-full px-6 py-3 rounded font-semibold transition">
                     Subscribe
                 </button>
             </form>
+            <div id="subscribe-message" style="display: none;" class="text-white">
+            Thank you! Your message has been sent.
+            </div>
         </div>
 
         <!-- Book Free Consultation -->
@@ -691,7 +694,7 @@
             <p class="mb-8 text-gray-300">
                 Schedule a free call with our team to discuss your goals and how we can support your journey.
             </p>
-            <div class="flex justify-center gap-6 mt-4 text-[white]">
+            <div class="flex justify-center gap-6 mt-4 mb-4 text-[white]">
                 <i class="fas fa-calendar-check fa-4x"></i>
                 <i class="fas fa-comments fa-4x"></i>
                 <i class="fas fa-user-graduate fa-4x"></i>
@@ -722,7 +725,7 @@
                     Send
                 </button>
             </form>
-            <div id="form-message" style="display: none;">
+            <div id="form-message" style="display: none;" class="text-white">
             Thank you! Your message has been sent.
             </div>
         </div>
@@ -830,6 +833,27 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     if (response.ok) {
       form.style.display = "none";
       document.getElementById("form-message").style.display = "block";
+    } else {
+      alert("Oops! Something went wrong.");
+    }
+  });
+});
+</script>
+<script>
+document.getElementById("subscribe-form").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent redirect
+  const form = e.target;
+
+  fetch(form.action, {
+    method: "POST",
+    headers: {
+      'Accept': 'application/json'
+    },
+    body: new FormData(form)
+  }).then(response => {
+    if (response.ok) {
+      form.style.display = "none";
+      document.getElementById("subscribe-message").style.display = "block";
     } else {
       alert("Oops! Something went wrong.");
     }
