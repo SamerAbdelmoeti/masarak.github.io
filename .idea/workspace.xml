@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="adding a sitemap + meta description.">
+    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="fixed expanding mentors section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -281,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748251664257</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fixed expanding mentors section">
+      <option name="closed" value="true" />
+      <created>1748254259000</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1748254259000</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -310,6 +318,7 @@
     <MESSAGE value="formsubmit subcribe form update." />
     <MESSAGE value="fix email in formsubmit." />
     <MESSAGE value="adding a sitemap + meta description." />
-    <option name="LAST_COMMIT_MESSAGE" value="adding a sitemap + meta description." />
+    <MESSAGE value="fixed expanding mentors section" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed expanding mentors section" />
   </component>
 </project>
