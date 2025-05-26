@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="improving scrolling in mobile.">
+    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="fixing favicon on mobile.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -305,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748255030204</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fixing favicon on mobile.">
+      <option name="closed" value="true" />
+      <created>1748255140667</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1748255140667</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,6 +345,7 @@
     <MESSAGE value="fixed expanding mentors section" />
     <MESSAGE value="some margins in mobile version in mentors section." />
     <MESSAGE value="improving scrolling in mobile." />
-    <option name="LAST_COMMIT_MESSAGE" value="improving scrolling in mobile." />
+    <MESSAGE value="fixing favicon on mobile." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing favicon on mobile." />
   </component>
 </project>
