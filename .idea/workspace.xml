@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="adding copyrights.">
+    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="favicon fix attempt on mobile.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -321,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748255486625</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="favicon fix attempt on mobile.">
+      <option name="closed" value="true" />
+      <created>1748256530119</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1748256530119</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -355,6 +363,7 @@
     <MESSAGE value="improving scrolling in mobile." />
     <MESSAGE value="fixing favicon on mobile." />
     <MESSAGE value="adding copyrights." />
-    <option name="LAST_COMMIT_MESSAGE" value="adding copyrights." />
+    <MESSAGE value="favicon fix attempt on mobile." />
+    <option name="LAST_COMMIT_MESSAGE" value="favicon fix attempt on mobile." />
   </component>
 </project>
