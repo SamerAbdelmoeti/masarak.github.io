@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="test registration page on mobile.">
+    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="Publish tally registration page.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/VR_engineering.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/VR_engineering.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/business.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/business.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/machine_learning.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/machine_learning.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/oxford.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/stethoscope.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/stethoscope.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -362,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748259997223</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Publish tally registration page.">
+      <option name="closed" value="true" />
+      <created>1748540316243</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1748540316243</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -400,6 +411,7 @@
     <MESSAGE value="new favicon." />
     <MESSAGE value="sidebar of content card fix scrolling in mobile." />
     <MESSAGE value="test registration page on mobile." />
-    <option name="LAST_COMMIT_MESSAGE" value="test registration page on mobile." />
+    <MESSAGE value="Publish tally registration page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Publish tally registration page." />
   </component>
 </project>
