@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="Publish tally registration page.">
+    <list default="true" id="4a405157-ddc3-4727-b550-61f116c8febc" name="Changes" comment="Updating image quality.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/VR_engineering.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/VR_engineering.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/business.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/business.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/machine_learning.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/machine_learning.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/oxford.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/stethoscope.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/stethoscope.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -373,7 +369,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748540316243</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Updating image quality.">
+      <option name="closed" value="true" />
+      <created>1748540747341</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1748540747341</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,6 +416,7 @@
     <MESSAGE value="sidebar of content card fix scrolling in mobile." />
     <MESSAGE value="test registration page on mobile." />
     <MESSAGE value="Publish tally registration page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Publish tally registration page." />
+    <MESSAGE value="Updating image quality." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating image quality." />
   </component>
 </project>
