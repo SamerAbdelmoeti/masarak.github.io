@@ -272,12 +272,36 @@
     </div>
 </nav>
 
-<!-- Calendly badge widget begin -->
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<!--&lt;!&ndash; Calendly badge widget begin &ndash;&gt;-->
+<!--<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>-->
+<!--<script type="text/javascript">-->
+<!--    window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/masarakeducation/30min?text_color=1e2c56&primary_color=59a88e', text: 'Book a Free Consultation', color: '#59a88e', textColor: '#ffffff' }); }-->
+<!--</script>-->
+<!--&lt;!&ndash; Calendly badge widget end &ndash;&gt;-->
+
+<!-- WhatsApp floating badge -->
 <script type="text/javascript">
-    window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/masarakeducation/30min?text_color=1e2c56&primary_color=59a88e', text: 'Book a Free Consultation', color: '#59a88e', textColor: '#ffffff' }); }
+  window.addEventListener('load', function () {
+    const WA_NUMBER = '+447825949781'; // e.g. 971501234567
+    const defaultMsg = encodeURIComponent("Hi Masarak — I'd like to book a free consultation.");
+    const waHref = `https://wa.me/${WA_NUMBER}?text=${defaultMsg}`;
+
+    const badge = document.createElement('a');
+    badge.href = waHref;
+    badge.target = '_blank';
+    badge.rel = 'noopener';
+    badge.className =
+      'fixed bottom-4 right-4 z-50 flex items-center gap-3 bg-[#59A88E] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#4a8f77] focus:outline-none focus:ring-4 focus:ring-[#25D366]/40';
+    badge.setAttribute('aria-label', 'Book a Free Consultation');
+
+    badge.innerHTML = `
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+      <span class="font-semibold">Book a Free Consultation</span>
+    `;
+
+    document.body.appendChild(badge);
+  });
 </script>
-<!-- Calendly badge widget end -->
 
 
 <!-- Intro Section -->
