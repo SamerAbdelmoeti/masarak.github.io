@@ -1,971 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masarak</title>
-    <meta charset="UTF-8" name="description"
-          content="Masarak helps the Middle East's brightest students explore subjects, develop research projects, and apply to top universities through a 50-hour mentorship program.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Masarak Education | Coming Soon</title>
+    <meta name="description" content="Masarak Education — World-class mentors for Arab students. Stay tuned for our new website.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://masarak.github.io/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_2.png">
-    <link rel="apple-touch-icon" href="img/favicon_2.png">
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <style>
-        
-        nav {
-            transform: translateZ(0);
-            will-change: transform;
-            backface-visibility: hidden;
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        #program {
-          scroll-margin-top: 100px; /* adjust as needed for your header height */
-        }
-        #subjects {
-          scroll-margin-top: 100px; /* adjust as needed for your header height */
-        }
-        #founders {
-              scroll-margin-top: 70px;
-            }
-        #mentors {
-          scroll-margin-top: 100px; /* adjust as needed for your header height */
-        }
-        #events {
-          scroll-margin-top: 100px; /* adjust as needed for your header height */
-        }
-        #contact {
-          scroll-margin-top: 100px; /* adjust as needed for your header height */
-        }
-            .hero-section {
-                background-image: linear-gradient(rgba(30, 44, 86, 0.3), rgba(30, 44, 86, 0.75)), url('img/cam.jpg');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                height: 100vh;
-    }
-            .nav-link {
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a1628;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
             position: relative;
-            padding-bottom: 2px; /* reserve space for underline */
-                }
-            .nav-link::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 0;
-                height: 2px;
-                background-color: #59A88E;
-                transition: width 0.3s ease;
+        }
+
+        /* Subtle animated gradient background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 50%, rgba(16, 185, 129, 0.06) 0%, transparent 60%);
+            animation: drift 20s ease-in-out infinite alternate;
+            z-index: 0;
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-5%, 3%); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+            max-width: 600px;
+        }
+
+        .logo {
+            width: 220px;
+            margin-bottom: 2.5rem;
+            filter: brightness(0) invert(1) drop-shadow(0 0 30px rgba(37, 99, 235, 0.15));
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+
+        h1 span {
+            background: linear-gradient(135deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 3rem;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .contact a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.85rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 280px;
+            justify-content: center;
+        }
+
+        .contact a:hover {
+            transform: translateY(-2px);
+        }
+
+        .contact .whatsapp {
+            background: #25d366;
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .contact .whatsapp:hover {
+            box-shadow: 0 6px 28px rgba(37, 211, 102, 0.45);
+        }
+
+        .contact .email {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact .email:hover {
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 6px 28px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact a i {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                width: 160px;
+                margin-bottom: 2rem;
             }
 
-            .nav-link:hover::after {
-                width: 100%;
-            }
-            .nav-link.active::after {
-                width: 100%;
-            }
-            .content-card {
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                cursor: pointer;
+            h1 {
+                font-size: 1.5rem;
             }
 
-            .content-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            .tagline {
+                font-size: 1rem;
+                margin-bottom: 2rem;
             }
 
-            .dropdown-menu {
-                display: none;
-                position: absolute;
-                background-color: white;
-                min-width: 200px;
-                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-                z-index: 1;
+            .contact a {
+                width: 260px;
+                font-size: 0.95rem;
+                padding: 0.75rem 1.5rem;
             }
-
-            .dropdown:hover .dropdown-menu {
-                display: block;
-            }
-
-            .dropdown-item {
-                color: #1E2C56;
-                padding: 12px 16px;
-                display: block;
-            }
-
-            .dropdown-item:hover {
-                background-color: #f1f1f1;
-                color: #59A88E;
-            }
-
-            .mobile-menu {
-                display: none;
-            }
-
-            @media (max-width: 768px) {
-                .desktop-menu {
-                    display: none;
-                }
-
-                .mobile-menu {
-                    display: block;
-                }
-
-                .hero-section {
-                    height: 70svh;
-                }
-            }
-
-            .btn-primary {
-                background-color: #59A88E;
-                color: white;
-            }
-
-            .btn-primary:hover {
-                background-color: #4a8f77;
-            }
-
-            .btn-secondary {
-                border-color: #59A88E;
-                background-color: rgba(0, 0, 0, 0.15); /* 0.5 = 50% opacity */
-                color: #59A88E;
-            }
-
-            .btn-secondary:hover {
-                background-color: #59A88E;
-                color: white;
-            }
-
-            .date-badge {
-                background-color: rgba(89, 168, 142, 0.2);
-                color: #1E2C56;
-            }
-            /* Program details sidebar styles */
-            .program-details-sidebar {
-                position: fixed;
-                top: 0;
-                right: -400px;
-                width: 400px;
-                height: 100%;
-                background-color: white;
-                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-                transition: right 0.3s ease;
-                z-index: 1000;
-                overflow-y: auto;
-                padding: 30px;
-            }
-            .program-details-sidebar.active {
-                right: 0;
-            }
-            .sidebar-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0,0,0,0.5);
-                z-index: 999;
-                display: none;
-            }
-            .sidebar-overlay.active {
-                display: block;
-            }
-            .close-sidebar {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                font-size: 24px;
-                cursor: pointer;
-                color: #1E2C56;
-            }
-            .program-card.active {
-                border: 2px solid #59A88E;
-                box-shadow: 0 5px 15px rgba(89, 168, 142, 0.3);
-            }
-            @media (max-width: 768px) {
-                .program-details-sidebar {
-                    width: 100%;
-                    right: -100%;
-                }
-            }
-            /* Subject cards */
-            .subject-card {
-                position: relative;
-                overflow: hidden;
-                border-radius: 12px;
-                height: 280px;
-                transition: all 0.3s ease;
-            }
-            .subject-card:hover {
-                transform: translateY(-8px);
-                box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-            }
-            .subject-overlay {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-                padding: 20px;
-                color: white;
-            }
-            .subject-icon {
-                font-size: 48px;
-                margin-bottom: 15px;
-                color: #59A88E;
-            }
-            .subject-bg {
-                background-size: cover;
-                background-position: center;
-                height: 100%;
-                transition: transform 0.5s ease;
-            }
-            .subject-card:hover .subject-bg {
-                transform: scale(1.05);
-            }
+        }
     </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-08VHZPSCXW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-08VHZPSCXW');
-</script>
-<body class="font-sans; text-[#1E2C56]">
-<!-- Navigation -->
-<nav class="bg-white text-gray-800 py-4 px-6 fixed w-full z-50 shadow-sm">
-
-    <div class="container mx-auto flex justify-between items-center">
-        <div class="text-2xl font-bold">
-            <a href="index.html" class="flex items-center">
-                <!-- Logo Image - Replace with your actual logo -->
-                <img src="img/logo.png" alt="Masarak Logo" class="logo-img" width="150">
+<body>
+    <div class="container">
+        <img src="images/logo.png" alt="Masarak Education Logo" class="logo">
+        <h1>Something <span>exciting</span> is coming</h1>
+        <p class="tagline">We're building something new. Stay tuned!</p>
+        <div class="contact">
+            <a href="https://wa.me/447440117343?text=Hi%20Masarak!%20I'm%20interested%20in%20learning%20more%20about%20the%20program." class="whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
             </a>
-        </div>
-
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-8">
-            <div class="desktop-menu flex space-x-8">
-                <a href="#program" class="nav-link hover:text-[#59A88E]">Program</a>
-                <a href="#mentors" class="nav-link hover:text-[#59A88E]">Mentors</a>
-                <a href="#subjects" class="nav-link hover:text-[#59A88E]">Subjects</a>
-                <a href="#founders" class="nav-link hover:text-[#59A88E]">About Masarak</a>
-                <a href="#events" class="nav-link hover:text-[#59A88E]">Events</a>
-                <a href="#contact" class="nav-link text-[#59A88E] hover:text-[#59A88E]">Get in Touch</a>
-            </div>
-            <a href="registration.html"
-               class="px-4 py-2 bg-[#59A88E] text-white rounded-lg hover:bg-[#4d927c] transition">
-                Apply Now
-            </a>
-
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="mobile-menu md:hidden">
-            <button id="menu-toggle" class="text-gray-800 focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- Mobile Menu Dropdown -->
-    <div id="mobile-dropdown" class="hidden bg-white py-4 px-6 shadow-md">
-        <a href="#program" class="block py-2 hover:text-59A88E">Program</a>
-        <a href="#mentors" class="block py-2 hover:text-59A88E">Mentors</a>
-        <a href="#subjects" class="block py-2 hover:text-59A88E">Subjects</a>
-        <a href="#founders" class="block py-2 hover:text-59A88E">About Masarak</a>
-        <a href="#events" class="block py-2 hover:text-59A88E">Events</a>
-        <a href="#contact" class="block py-2 text-[#59A88E] hover:text-59A88E">Get in Touch</a>
-    </div>
-</nav>
-
-<!--&lt;!&ndash; Calendly badge widget begin &ndash;&gt;-->
-<!--<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>-->
-<!--<script type="text/javascript">-->
-<!--    window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/masarakeducation/30min?text_color=1e2c56&primary_color=59a88e', text: 'Book a Free Consultation', color: '#59a88e', textColor: '#ffffff' }); }-->
-<!--</script>-->
-<!--&lt;!&ndash; Calendly badge widget end &ndash;&gt;-->
-
-<!-- WhatsApp floating badge -->
-<script type="text/javascript">
-  window.addEventListener('load', function () {
-    const WA_NUMBER = '+447440117343'; // e.g. 971501234567
-    const defaultMsg = encodeURIComponent("Hi Masarak — I'd like to book a free consultation.");
-    const waHref = `https://wa.me/${WA_NUMBER}?text=${defaultMsg}`;
-
-    const badge = document.createElement('a');
-    badge.href = waHref;
-    badge.target = '_blank';
-    badge.rel = 'noopener';
-    badge.className =
-      'fixed bottom-4 right-4 z-50 flex items-center gap-3 bg-[#59A88E] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#4a8f77] focus:outline-none focus:ring-4 focus:ring-[#25D366]/40';
-    badge.setAttribute('aria-label', 'Book a Free Consultation');
-
-    badge.innerHTML = `
-      <i class="fa-brands fa-whatsapp text-2xl"></i>
-      <span class="font-semibold">Book a Free Consultation</span>
-    `;
-
-    document.body.appendChild(badge);
-  });
-</script>
-
-
-<!-- Intro Section -->
-<section class="hero-section flex items-center justify-center text-white pt-32">
-    <div class="container mx-auto px-6 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">One Bright Mind at a Time</h1>
-        <p class="text-xl md:text-2xl mb-8 max-w-xl mx-auto"> Shaping the future of the Middle East's brightest through
-            global excellence</p>
-        <div class="flex flex-col md:flex-row justify-center gap-4">
-            <a href="#program" class="btn-primary px-8 py-3 rounded font-semibold transition">Masarak Program</a>
-            <a href="#mentors" class="btn-secondary border-2 px-8 py-3 rounded font-semibold transition">Our Mentors</a>
-        </div>
-    </div>
-</section>
-
-<!-- Program Section -->
-<section id="program" class="py-0 mt-10 bg-gray-50;">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-6">50-hour comprehensive program to reach your dream
-            university</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Orient Card -->
-            <div class="content-card program-card bg-white p-4 rounded-lg shadow-md" data-program="orient">
-                <div class="h-36 bg-gray-200 mb-4 rounded"
-                     style="background-color: white;background-image: url('img/orient.svg');background-size:160px;background-repeat:no-repeat;background-position:center"></div>
-                <h3 class="text-xl font-semibold mb-2 text-1E2C56">Orient</h3>
-                <p class="text-gray-600 mb-4">Try out different subjects until you find the one you like most.</p>
-                <div class="text-59A88E font-semibold flex items-center">
-                    Learn more <i class="fas fa-chevron-right ml-2 text-sm"></i>
-                </div>
-            </div>
-
-            <!-- Prepare Card -->
-            <div class="content-card program-card bg-white p-4 rounded-lg shadow-md" data-program="prepare">
-                <div class="h-36 bg-gray-200 mb-4 rounded"
-                     style="background-color: white;background-image: url('img/prep.svg');background-size:160px;background-repeat:no-repeat;background-position:center"></div>
-                <h3 class="text-xl font-semibold mb-2 text-1E2C56">Prepare</h3>
-                <p class="text-gray-600 mb-4">Become an expert in a topic you love with mentor-guided research.</p>
-                <div class="text-59A88E font-semibold flex items-center">
-                    Learn more <i class="fas fa-chevron-right ml-2 text-sm"></i>
-                </div>
-            </div>
-
-            <!-- Apply Card -->
-            <div class="content-card program-card bg-white p-4 rounded-lg shadow-md" data-program="apply">
-                <div class="h-36 bg-gray-200 mb-4 rounded"
-                     style="background-color: white;background-image: url('img/apply.svg');background-size:160px;background-repeat:no-repeat;background-position:center"></div>
-                <h3 class="text-xl font-semibold mb-2 text-1E2C56">Apply</h3>
-                <p class="text-gray-600 mb-4">Learn how to apply to top universities — and get an offer.</p>
-                <div class="text-59A88E font-semibold flex items-center">
-                    Learn more <i class="fas fa-chevron-right ml-2 text-sm"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container mx-auto px-6 pt-6 pb-0">
-        <div class="flex flex-col md:flex-row justify-center gap-4">
-            <a href="registration.html"
-               class="btn-primary flex items-center justify-center px-8 py-2.5 rounded font-semibold transition">Apply
-                Now</a>
-        </div>
-    </div>
-</section>
-
-<!-- Program Details Sidebar -->
-<div class="sidebar-overlay"></div>
-<div class="program-details-sidebar">
-    <div class="close-sidebar"><i class="fas fa-times"></i></div>
-
-    <!-- Orient Content -->
-    <div class="program-content" id="orient-content">
-        <h3 class="text-2xl font-bold mb-4 text-1E2C56">Orient Phase</h3>
-        <div class="mb-6">
-            <h4 class="font-semibold text-lg mb-2">What you'll do:</h4>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>Explore 4 different academic disciplines</li>
-                <li>Attend introductory sessions with subject experts</li>
-                <li>Complete short exploratory exercises in each field</li>
-                <li>Identify your strongest interests and aptitudes</li>
-            </ul>
-        </div>
-        <div class="mb-6">
-            <h4 class="font-semibold text-lg mb-2">Key Benefits:</h4>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>Discover your true academic passions</li>
-                <li>Make informed decisions about your future studies</li>
-                <li>Gain exposure to university-level subjects and potential career paths</li>
-                <li>Build foundational knowledge across disciplines</li>
-            </ul>
-        </div>
-        <div>
-            <h4 class="font-semibold text-lg mb-2">Duration:</h4>
-            <p>20 hours</p>
-        </div>
-    </div>
-
-    <!-- Prepare Content -->
-    <div class="program-content hidden" id="prepare-content">
-        <h3 class="text-2xl font-bold mb-4 text-1E2C56">Prepare Phase</h3>
-        <div class="mb-6">
-            <h4 class="font-semibold text-lg mb-2">What you'll do:</h4>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>Work with PhD mentors in your chosen field</li>
-                <li>Develop a specialized research project</li>
-                <li>Attend advanced subject workshops</li>
-                <li>Build a portfolio of academic work</li>
-            </ul>
-        </div>
-        <div class="mb-6">
-            <h4 class="font-semibold text-lg mb-2">Key Benefits:</h4>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>Deep dive into your chosen subject area</li>
-                <li>Gain university-level research experience to strengthen your applications</li>
-                <li>Develop critical thinking and analytical skills</li>
-                <li>Navigate the research process: problem, literature review, hypothesis, methods, analysis, and
-                    writeup
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h4 class="font-semibold text-lg mb-2">Duration:</h4>
-            <p>20 hours</p>
-        </div>
-    </div>
-
-    <!-- Apply Content -->
-    <div class="program-content hidden" id="apply-content">
-        <h3 class="text-2xl font-bold mb-4 text-1E2C56">Apply Phase</h3>
-        <div class="mb-6">
-            <h4 class="font-semibold text-lg mb-2">What you'll do:</h4>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>Receive personalized application strategy</li>
-                <li>Perfect your personal statement and essays</li>
-                <li>Prepare for admissions tests and interviews</li>
-                <li>Learn scholarship application techniques</li>
-            </ul>
-        </div>
-        <div class="mb-6">
-            <h4 class="font-semibold text-lg mb-2">Key Benefits:</h4>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>Maximize your chances of admission</li>
-                <li>Present your best self to admissions committees</li>
-                <li>Reduce stress through expert guidance</li>
-                <li>Access insider knowledge about top universities</li>
-            </ul>
-        </div>
-        <div>
-            <h4 class="font-semibold text-lg mb-2">Duration:</h4>
-            <p>10 hours</p>
-        </div>
-    </div>
-
-    <div class="mt-8 mb-12">
-        <a href="registration.html"
-           class="btn-primary w-full text-center block px-6 py-3 rounded font-semibold transition">Apply to Program</a>
-    </div>
-</div>
-
-<!-- Mentors Section -->
-<section id="mentors" class="pb-16 pt-12 bg-white;">
-    <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
-                <h2 class="text-3xl font-bold mb-6 text-1E2C56">Our Mentors</h2>
-                <p class="text-lg mb-6 text-gray-700">Masarak mentors are PhD holders and candidates from top
-                    universities ready to inspire students in their field of interest. </p>
-                <p class="text-lg mb-6 text-gray-700">Our mentors empower students to find their direction and develop a
-                    portfolio of academic work that showcases their readiness for top-tier universities.</p>
-            </div>
-            <div class="md:w-1/2">
-                <div class="rounded-lg flex items-center justify-center md:min-h-[16rem]"
-                     style="background-color: #f0f4f8; background-size: cover; background-position: center;">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-0 px-0 place-items-center mb-4">
-                        <div class="w-2/3 flex justify-center"><img src="img/cambridge_logo.png"
-                                                                    alt="University of Cambridge"
-                                                                    class="object-contain"></div>
-                        <div class="w-2/3 flex justify-center"><img src="img/oxford_logo.png" alt="University of Oxford"
-                                                                    class="object-contain"></div>
-                        <div class="w-2/3 flex justify-center"><img src="img/imperial_logo.png"
-                                                                    alt="Imperial College London"
-                                                                    class="object-contain"></div>
-                        <div class="w-2/3 flex justify-center"><img src="img/kcl_logo.png" alt="King's College London"
-                                                                    class="object-contain"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Subjects Section -->
-<section id="subjects" class="py-8 bg-gray-50">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-10">
-            <h2 class="text-3xl font-bold mb-4">Explore our academic disciplines</h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                Discover your passion across our four major subject areas, each with different specializations
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-4">
-            <!-- Medical Sciences Card -->
-            <div class="subject-card bg-white shadow-lg">
-                <div class="subject-bg"
-                     style="background-image: linear-gradient(rgba(30, 44, 86 ,0.5), rgba(30, 44, 86,0.5)), url('img/stethoscope.jpg');"></div>
-                <div class="subject-overlay px-3">
-                    <div class="subject-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Medicine & Biosciences</h3>
-                    <p class="text-gray-300">Prepare for careers in medicine, biomedical science, and healthcare</p>
-                </div>
-            </div>
-
-            <!-- Engineering & AI Card -->
-            <div class="subject-card bg-white shadow-lg">
-                <div class="subject-bg"
-                     style="background-image: linear-gradient(rgba(30, 44, 86 ,0.5), rgba(30, 44, 86,0.5)), url('img/VR_engineering.jpg');"></div>
-                <div class="subject-overlay px-3">
-                    <div class="subject-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Engineering</h3>
-                    <p class="text-gray-300">Master cutting-edge technologies shaping our future world</p>
-                </div>
-            </div>
-
-            <!-- Machine Learning Card -->
-            <div class="subject-card bg-white shadow-lg">
-                <div class="subject-bg"
-                     style="background-image: linear-gradient(rgba(30, 44, 86 ,0.5), rgba(30, 44, 86,0.5)), url('img/machine_learning.png');"></div>
-                <div class="subject-overlay px-3">
-                    <div class="subject-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Machine Learning & AI</h3>
-                    <p class="text-gray-300">Pursue a future in AI, data science, and machine learning</p>
-                </div>
-            </div>
-
-            <!-- Humanities Card -->
-            <div class="subject-card bg-white shadow-lg">
-                <div class="subject-bg"
-                     style="background-image: linear-gradient(rgba(30, 44, 86 ,0.5), rgba(30, 44, 86,0.5)), url('img/business.jpg');"></div>
-                <div class="subject-overlay px-3">
-                    <div class="subject-icon">
-                        <i class="fas fa-chart-line	"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Business & Social Sciences</h3>
-                    <p class="text-gray-300">Explore people and society through politics, business, or law </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Founders Section -->
-<!-- Founders Section -->
-<section id="founders" class="py-12 bg-white">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-5">
-            <h2 class="text-3xl font-bold mb-4">Meet the founders of Masarak</h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                Our mission is to unlock the full potential of the Middle East's brightest minds by connecting
-                them to global standards of excellence
-            </p>
-        </div>
-
-        <!-- Changed grid: 1 col on mobile, 2 on md, 4 on large -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-            <!-- Founder 1 -->
-            <div class="founder-card bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="h-40 bg-gray-100 mb-0 rounded"
-                     style="background-image: url('img/yousef.png');background-size:150px;background-repeat:no-repeat;background-position:center;"></div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-1">Dr. Abdelhamid Youssef</h3>
-                    <p class="text-gray-500 mb-3">Co-Founder</p>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>PhD in Pharmacology from the University of Cambridge</li>
-                        <li>Strategy consultant at ZS Associates consulting firm, supporting pharmaceutical & life
-                            science companies
-                        </li>
-                        <li>6 years’ experience in teaching and academic supervision</li>
-                    </ul>
-                    <div class="flex space-x-4 px-6 py-1">
-                        <a href="https://www.linkedin.com/in/abdelhamid-adel-yousef/"
-                           class="text-59A88E hover:text-4a8f77"><i class="fab fa-linkedin fa-lg"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Founder 2  -->
-            <div class="founder-card bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="h-40 bg-gray-100 mb-0 rounded"
-                     style="background-image: url('img/omar_2.png');background-size:145px;background-repeat:no-repeat;background-position:center;"></div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-1">Dr. Omar Salem</h3>
-                    <p class="text-gray-500 mb-3">Co-Founder</p>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>PhD in Inflammation & Cancer Biology from the University of Edinburgh</li>
-                        <li>EMBA from Hult International Business School</li>
-                        <li>Senior Scientist with prior roles at Mestag Therapeutics, InvoX Pharma and Artios Pharma</li>
-                        <li>7+ years of combined teaching, academic and industrial research</li>
-                    </ul>
-                    <div class="flex space-x-4 px-6 py-1">
-                        <a href="https://www.linkedin.com/in/omarsalemm/" class="text-59A88E hover:text-4a8f77">
-                            <i class="fab fa-linkedin fa-lg"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Founder 3 -->
-            <div class="founder-card bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="h-40 bg-gray-100 mb-0 rounded"
-                     style="background-image: url('img/samer.png');background-size:155px;background-repeat:no-repeat;background-position:center;"></div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-1">Dr. Samer Abuzeid</h3>
-                    <p class="text-gray-500 mb-3">Co-Founder</p>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>PhD in Engineering from the University of Cambridge</li>
-                        <li>Technical expert at MathWorks, supporting industry and academic partners accelerate
-                            innovation and science
-                        </li>
-                        <li>10 years of research experience in industry and academia</li>
-                    </ul>
-
-                    <div class="flex space-x-4 px-6 py-1">
-                        <a href="https://www.linkedin.com/in/samerabdelmoeti/" class="text-59A88E hover:text-4a8f77">
-                            <i class="fab fa-linkedin fa-lg"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Founder 4 -->
-            <div class="founder-card bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="h-40 bg-gray-100 mb-0 rounded"
-                     style="background-image: url('img/samuel.png');background-size:170px;background-repeat:no-repeat;background-position:center;"></div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-1">Dr. Samuel Gabra</h3>
-                    <p class="text-gray-500 mb-3">Co-Founder</p>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>MPhil and PhD in Energy Engineering from the University of Cambridge</li>
-                        <li>Technical Director at the University of Cambridge's Aviation Impact Accelerator aiming to
-                            decarbonise aviation
-                        </li>
-                        <li>Over 10 years of teaching and supervision experience</li>
-                    </ul>
-                    <div class="flex space-x-4 py-1 px-6">
-                        <a href="https://www.linkedin.com/in/samuel-gabra/" class="text-59A88E hover:text-4a8f77">
-                            <i class="fab fa-linkedin fa-lg"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="mt-8 text-center">
-            <a href="#contact" class="btn-primary inline-block px-8 py-3 rounded font-semibold transition">
-                Connect With Us
+            <a href="mailto:contact@masarak.education" class="email">
+                <i class="fas fa-envelope"></i> contact@masarak.education
             </a>
         </div>
     </div>
-</section>
-
-<!-- Events Section -->
-<section id="events" class="py-8" style="background-color: #f8fafc;">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12 text-1E2C56">Upcoming Events</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"
-                    async></script>
-            <div class="content-card bg-white p-6 rounded-lg shadow-md">
-<!--                <a onclick="Calendly.initPopupWidget({url: 'https://calendly.com/masarakeducation/info-session-pathways-to-cambridge-oxford-and-beyond?text_color=1e2c56&primary_color=59a88e'});return false;">-->
-                    <div class="flex items-center mb-4">
-                        <div class="date-badge px-4 py-2 rounded mr-4">
-                            <span class="font-bold text-xl">TBC</span>
-                            <span class="block text-sm"></span>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-1E2C56">Info Session: Pathways to Cambridge, Oxford, and
-                                Beyond</h3>
-                            <p class="text-gray-600 text-sm">Virtual Event</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">Join our mentors and experts for an info session on how to prepare
-                        and apply at top universities.</p>
-<!--                    <a onclick="Calendly.initPopupWidget({url: 'https://calendly.com/masarakeducation/info-session-pathways-to-cambridge-oxford-and-beyond?text_color=1e2c56&primary_color=59a88e'});return false;"-->
-<!--                       class="text-59A88E font-semibold hover:underline">-->
-<!--                        Register Now-->
-<!--                    </a>-->
-<!--                </a>-->
-
-            </div>
-            <div class="content-card bg-white p-6 rounded-lg shadow-md">
-                <a href="registration.html">
-                    <div class="flex items-center mb-4">
-                        <div class="date-badge px-4 py-2 rounded mr-4">
-                            <span class="font-bold text-xl">TBC</span>
-                            <span class="block text-sm"></span>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-1E2C56">Masarak Summer Program (In-Person)</h3>
-                            <p class="text-gray-600 text-sm">Riyadh, Saudi Arabia</p>
-                            <p class="text-gray-600 text-sm">Cairo, Egypt</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">Your journey to the top starts here. Join our 2-week summer
-                        program to orient, prepare, and apply to your dream university.</p>
-                    <a href="registration.html" class="text-59A88E font-semibold hover:underline">Apply Now</a>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Sections -->
-
-<section id="contact" class="py-8" style="background-color: #1E2C56;">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-        <!-- Stay Informed Section -->
-        <div class="px-6 flex flex-col h-full">
-            <h2 class="text-2xl font-bold mb-4 text-white">Stay Informed</h2>
-            <p class="mb-6 text-gray-300">Subscribe to get updates on upcoming events and opportunities.</p>
-            <div class="text-center">
-                <i class="fas fa-envelope-open-text fa-4x text-[white]"></i>
-            </div>
-            <form id="subscribe-form" target="_blank" action="https://formsubmit.co/masarakeducation@gmail.com"
-                  method="POST" class="space-y-4 mt-auto">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="email" name="email" placeholder="Your email address"
-                       class="w-full px-4 py-3 rounded text-gray-800"/>
-                <button type="submit" class="btn-secondary border-2 w-full px-6 py-3 rounded font-semibold transition">
-                    Subscribe
-                </button>
-            </form>
-            <div id="subscribe-message" style="display: none;">
-                <p class="text-white mt-4">Thank you! You are now subscribed.</p>
-            </div>
-        </div>
-
-        <!-- Book Free Consultation -->
-        <div class="px-6 flex flex-col h-full">
-            <h2 class="text-2xl font-bold mb-4 text-white">Book a Free Consultation</h2>
-            <p class="mb-8 text-gray-300">
-                Schedule a free call with our team to discuss your goals and how we can support your journey.
-            </p>
-            <div class="flex justify-center gap-6 mt-4 mb-4 text-[white]">
-                <i class="fas fa-calendar-check fa-4x"></i>
-                <i class="fas fa-comments fa-4x"></i>
-                <i class="fas fa-user-graduate fa-4x"></i>
-            </div>
-<!--            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>-->
-<!--            <a onclick="Calendly.initPopupWidget({url: 'https://calendly.com/masarakeducation/30min?text_color=1e2c56&primary_color=59a88e'});return false;"-->
-<!--               class="btn-primary w-full block text-center px-6 py-3 rounded font-semibold transition mt-auto">-->
-<!--                Book Now-->
-<!--            </a>-->
-            <a href="https://wa.me/+447440117343?text=Hi%20Masarak%20%E2%80%94%20I%27d%20like%20to%20book%20a%20free%20consultation."
-   target="_blank" rel="noopener"
-   class="w-full flex items-center justify-center gap-2 px-6 py-3 rounded font-semibold transition mt-auto bg-[#59A88E] text-white hover:bg-[#4a8f77]">
-  <i class="fa-brands fa-whatsapp text-xl"></i>
-  Book Now
-</a>
-        </div>
-
-
-        <!-- Contact Us -->
-        <div class="px-6 flex flex-col h-full">
-            <h2 class="text-2xl font-bold mb-4 text-white">Contact Us</h2>
-            <form id="contact-form" target="_blank" action="https://formsubmit.co/masarakeducation@gmail.com"
-                  method="POST"
-                  class="space-y-4">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="name" placeholder="Full Name" required
-                       class="w-full px-4 py-2 rounded text-gray-800"/>
-                <input type="email" name="email" placeholder="Email Address" required
-                       class="w-full px-4 py-2 rounded text-gray-800"/>
-                <textarea name="message" rows="3" placeholder="Your Message" required
-                          class="w-full px-4 py-2 rounded text-gray-800"></textarea>
-                <button type="submit" class="btn-secondary border-2 w-full px-6 py-3 rounded font-semibold transition">
-                    Send
-                </button>
-            </form>
-            <div id="form-message" style="display: none;" class="text-white">
-                <p class="text-white mt-4">Thank you! Your message has been sent.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="py-4" style="background-color: #0f172a;">
-    <div class="w-full px-2 lg:px-12">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-start gap-4 w-full">
-            <!-- Left Column -->
-            <div class="md:w-1/3">
-                <h3 class="text-xl font-bold mb-4 text-white">Masarak Education</h3>
-                <p class="text-gray-400">Shaping the Future of the Middle East's Brightest<br>
-                    Through Global Excellence.</p>
-                <a href="mailto:contact@masarak.education" class="text-gray-400 hover:underline">contact@masarak.education</a>
-            </div>
-
-            <!-- Center: Site Map -->
-            <div class="md:w-1/3 text-center">
-                <h4 class="text-white font-semibold mb-4">Site Map</h4>
-                <div class="flex flex-wrap justify-center gap-3">
-                    <a href="#program" class="text-gray-400 hover:underline">Program</a>
-                    <a href="#mentors" class="text-gray-400 hover:underline">Mentors</a>
-                    <a href="#subjects" class="text-gray-400 hover:underline">Subjects</a>
-                    <a href="#founders" class="text-gray-400 hover:underline">About</a>
-                    <a href="#events" class="text-gray-400 hover:underline">Events</a>
-                    <a href="registration.html" class="text-gray-400 hover:underline">Apply</a>
-                </div>
-                <p class="text-gray-400 mt-4">© <script>document.write(new Date().getFullYear());</script> Masarak Education. All rights reserved.</p>
-            </div>
-
-            <!-- Right Column -->
-            <div class="md:w-1/3 md:text-right">
-<!--                <h4 class="font-semibold mb-2 text-white">Contact Address</h4>-->
-            </div>
-        </div>
-    </div>
-</footer>
-
-<script>
-    // Mobile menu toggle
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-        const menu = document.getElementById('mobile-dropdown');
-        menu.classList.toggle('hidden');
-    });
-
-    // Program details sidebar functionality
-    const programCards = document.querySelectorAll('.program-card');
-    const sidebar = document.querySelector('.program-details-sidebar');
-    const overlay = document.querySelector('.sidebar-overlay');
-    const closeBtn = document.querySelector('.close-sidebar');
-
-    programCards.forEach(card => {
-        card.addEventListener('click', function() {
-            const program = this.getAttribute('data-program');
-
-            // Hide all program contents
-            document.querySelectorAll('.program-content').forEach(content => {
-                content.classList.add('hidden');
-            });
-
-            // Show selected program content
-            document.getElementById(`${program}-content`).classList.remove('hidden');
-
-            // Activate sidebar
-            sidebar.classList.add('active');
-            overlay.classList.add('active');
-
-            // Highlight active card
-            programCards.forEach(c => c.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-
-    // Close sidebar
-    closeBtn.addEventListener('click', closeSidebar);
-    overlay.addEventListener('click', closeSidebar);
-
-    function closeSidebar() {
-        sidebar.classList.remove('active');
-        overlay.classList.remove('active');
-        programCards.forEach(c => c.classList.remove('active'));
-    }
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-</script>
-<script>
-    document.getElementById("contact-form").addEventListener("submit", function(e) {
-      e.preventDefault(); // Prevent redirect
-      const form = e.target;
-
-      fetch(form.action, {
-        method: "POST",
-        headers: {
-          'Accept': 'application/json'
-        },
-        body: new FormData(form)
-      }).then(response => {
-        if (response.ok) {
-          form.style.display = "none";
-          document.getElementById("form-message").style.display = "block";
-        } else {
-          alert("Oops! Something went wrong.");
-        }
-      });
-    });
-</script>
-<script>
-    document.getElementById("subscribe-form").addEventListener("submit", function(e) {
-      e.preventDefault(); // Prevent redirect
-      const form = e.target;
-
-      fetch(form.action, {
-        method: "POST",
-        headers: {
-          'Accept': 'application/json'
-        },
-        body: new FormData(form)
-      }).then(response => {
-        if (response.ok) {
-          form.style.display = "none";
-          document.getElementById("subscribe-message").style.display = "block";
-        } else {
-          alert("Oops! Something went wrong.");
-        }
-      });
-    });
-</script>
-
-<script>
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-        let currentSection = '';
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100; // adjust offset as needed
-            const sectionHeight = section.offsetHeight;
-            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + currentSection) {
-                link.classList.add('active');
-            }
-        });
-    });
-</script>
 </body>
 </html>
