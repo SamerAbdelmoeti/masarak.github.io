@@ -1714,14 +1714,14 @@ body {
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
     .hero h1 { font-size: 42px; }
-    .hero .container { grid-template-columns: 1fr; text-align: center; display: flex; flex-direction: column; }
+    .hero .container { grid-template-columns: 1fr; text-align: center; display: flex; flex-direction: column; gap: 0; }
     .hero-content { display: contents; }
-    .hero-content h1 { order: 1; }
-    .hero-visual { order: 2; max-width: 480px; margin: 16px auto 20px; width: 100%; }
-    .hero-content p { order: 3; margin-left: auto; margin-right: auto; }
-    .hero-content .hero-buttons { order: 4; justify-content: center; }
+    .hero-content h1 { order: 1; margin-bottom: 12px; }
+    .hero-visual { order: 2; max-width: 480px; margin: 8px auto 12px; width: 100%; }
+    .hero-content p { order: 3; margin-left: auto; margin-right: auto; margin-bottom: 12px; }
+    .hero-content .hero-buttons { order: 4; justify-content: center; margin-bottom: 12px; }
     .hero-content p[style] { order: 5; }
-    .hero-content .hero-metrics { order: 6; justify-content: center; }
+    .hero-content .hero-metrics { order: 6; justify-content: center; margin-top: 0; }
     .hero-video-wrapper img { border-radius: var(--radius-lg); }
     .hero-stats { justify-content: center; }
     .why-grid { grid-template-columns: repeat(2, 1fr); }
