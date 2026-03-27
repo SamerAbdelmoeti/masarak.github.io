@@ -1772,10 +1772,10 @@ body {
     .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
     .cta-section h2 { font-size: 32px; }
     .navbar .logo img {
-        height: 80px;
+        height: 90px;
     }
     .navbar.scrolled .logo img {
-        height: 56px;
+        height: 90px;
     }
     .uni-bar p {
         font-size: 11px;
