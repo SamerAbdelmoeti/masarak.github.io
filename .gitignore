@@ -1,2 +1,4 @@
 /todos
 /img/src
+index_*.html
+git config --global core.excludesfile ~/.gitignore_global

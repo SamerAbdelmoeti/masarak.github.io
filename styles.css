@@ -654,7 +654,7 @@ body {
     align-items: center;
     gap: 60px;
     width: max-content;
-    animation: scroll-logos 30s linear infinite;
+    animation: scroll-logos 18s linear infinite;
 }
 
 .uni-carousel-track img {
@@ -1714,13 +1714,16 @@ body {
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
     .hero h1 { font-size: 42px; }
-    .hero .container { grid-template-columns: 1fr; text-align: center; }
-    .hero p { margin-left: auto; margin-right: auto; }
-    .hero-buttons { justify-content: center; }
-    .hero-metrics { justify-content: center; }
-    .hero-stats { justify-content: center; }
-    .hero-visual { max-width: 480px; margin: 0 auto; }
+    .hero .container { grid-template-columns: 1fr; text-align: center; display: flex; flex-direction: column; }
+    .hero-content { display: contents; }
+    .hero-content h1 { order: 1; }
+    .hero-visual { order: 2; max-width: 480px; margin: 16px auto 20px; width: 100%; }
+    .hero-content p { order: 3; margin-left: auto; margin-right: auto; }
+    .hero-content .hero-buttons { order: 4; justify-content: center; }
+    .hero-content p[style] { order: 5; }
+    .hero-content .hero-metrics { order: 6; justify-content: center; }
     .hero-video-wrapper img { border-radius: var(--radius-lg); }
+    .hero-stats { justify-content: center; }
     .why-grid { grid-template-columns: repeat(2, 1fr); }
     .why-strip { grid-template-columns: repeat(3, 1fr); }
     .program-layout { grid-template-columns: 1fr 1fr; }
@@ -1769,10 +1772,15 @@ body {
     .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
     .cta-section h2 { font-size: 32px; }
     .navbar .logo img {
-        height: 60px;
+        height: 80px;
     }
     .navbar.scrolled .logo img {
-        height: 48px;
+        height: 56px;
+    }
+    .uni-bar p {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        text-align: center;
     }
     .uni-carousel-track {
         gap: 40px;
