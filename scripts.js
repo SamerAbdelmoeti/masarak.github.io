@@ -152,62 +152,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ── Prospectus form handling ──
 (function () {
-    const form = document.getElementById('prospectusForm');
-    if (!form) return;
-
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        // Clear previous invalid states
-        form.querySelectorAll('input').forEach(i => i.classList.remove('invalid'));
-
-        // Validate required fields
-        let valid = true;
-        form.querySelectorAll('input[required]').forEach(input => {
-            if (!input.value.trim()) {
-                input.classList.add('invalid');
-                valid = false;
-            }
-        });
-
-        // Basic email check
-        const emailInput = form.querySelector('input[type="email"]');
-        if (emailInput && emailInput.value.trim()) {
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(emailInput.value.trim())) {
-                emailInput.classList.add('invalid');
-                valid = false;
-            }
-        }
-
-        if (!valid) return;
-
-        // Disable button while processing
-        const btn = form.querySelector('.prospectus-submit');
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing…';
-
-        // Simulate a short delay (replace with real form submission endpoint)
-        setTimeout(function () {
-            // Hide form, show success + download
-            form.style.display = 'none';
-            var success = document.getElementById('prospectusSuccess');
-            if (success) success.style.display = 'block';
-            // Set the download link to the PDF in files folder
-            var downloadLink = document.getElementById('prospectusDownloadLink');
-            if (downloadLink) {
-                downloadLink.href = 'files/Masarak_prospectus_2026.pdf';
-            }
-        }, 800);
-    });
-
-    // Remove invalid styling on input
-    form.querySelectorAll('input').forEach(input => {
-        input.addEventListener('input', function () {
-            this.classList.remove('invalid');
-        });
-    });
-})();
+// (Prospectus form handling script removed to allow FormSubmit to handle submission and redirect)
 
 // ── Why-Masarak card image carousel ──
 (function () {
