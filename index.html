@@ -3,177 +3,668 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masarak Education | Coming Soon</title>
-    <meta name="description" content="Masarak Education — World-class mentors for Arab students. Stay tuned for our new website.">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Masarak Education | World Class Mentors for Arab Students</title>
+    <meta name="description" content="Masarak Education helps Riyadh high school students get accepted into top UK universities — Oxford, Cambridge, Imperial, LSE, UCL. Expert admissions consulting, UCAS guidance, personal statement support & interview prep in Riyadh.">
+    <meta name="keywords" content="UK university admissions Riyadh, study in UK from Saudi Arabia, Oxford admissions Saudi, Cambridge admissions Riyadh, UCAS help Riyadh, university consulting Riyadh, UK education consultant Saudi Arabia, personal statement help Riyadh, study abroad Riyadh, British university admissions, top UK universities Saudi students, education consultant Riyadh, مستشار تعليمي الرياض, الدراسة في بريطانيا, القبول الجامعي بريطانيا">
+    <meta name="author" content="Masarak Education">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://masarak.github.io/">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://masarak.github.io/">
+    <meta property="og:title" content="Masarak Education | UK University Admissions Consulting in Riyadh">
+    <meta property="og:description" content="Get into Oxford, Cambridge, Imperial & top UK universities. Riyadh's leading education consultancy for Saudi students.">
+    <meta property="og:image" content="https://masarak.github.io/images/og-image.jpg">
+    <meta property="og:locale" content="en_SA">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Masarak Education | UK University Admissions in Riyadh">
+    <meta name="twitter:description" content="Expert UK university admissions consulting for Riyadh students. Oxford, Cambridge, Imperial, LSE, UCL.">
+    
+    <!-- Geo SEO -->
+    <meta name="geo.region" content="SA-01">
+    <meta name="geo.placename" content="Riyadh">
+    <meta name="geo.position" content="24.7136;46.6753">
+    <meta name="ICBM" content="24.7136, 46.6753">
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://masarak.github.io/">
+    <link rel="alternate" hreflang="ar" href="https://masarak.github.io/ar/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #0a1628;
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-            position: relative;
-        }
+    <!-- Masarak Shared Styles -->
+    <link rel="stylesheet" href="styles.css">
 
-        /* Subtle animated gradient background */
-        body::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(ellipse at 30% 50%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
-                        radial-gradient(ellipse at 70% 50%, rgba(16, 185, 129, 0.06) 0%, transparent 60%);
-            animation: drift 20s ease-in-out infinite alternate;
-            z-index: 0;
-        }
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Masarak Education",
+        "url": "https://masarak.github.io",
+        "logo": "https://masarak.github.io/images/logo.png",
+        "description": "Leading UK university admissions consulting firm in Riyadh, Saudi Arabia. Helping Saudi students gain admission to Oxford, Cambridge, Imperial, LSE, UCL and other top UK universities.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Riyadh",
+            "addressRegion": "Riyadh Province",
+            "addressCountry": "SA"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "24.7136",
+            "longitude": "46.6753"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Riyadh"
+        },
+        "sameAs": [
+            "https://www.instagram.com/masarakeducation",
+            "https://www.linkedin.com/company/masarakeducation",
+            "https://twitter.com/masarakedu"
+        ],
+        "serviceType": ["University Admissions Consulting", "UCAS Application Support", "Personal Statement Writing", "Interview Preparation", "UK University Guidance"],
+        "priceRange": "$$$$"
+    }
+    </script>
 
-        @keyframes drift {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(-5%, 3%); }
-        }
-
-        .container {
-            position: relative;
-            z-index: 1;
-            padding: 2rem;
-            max-width: 600px;
-        }
-
-        .logo {
-            width: 220px;
-            margin-bottom: 2.5rem;
-            filter: brightness(0) invert(1) drop-shadow(0 0 30px rgba(37, 99, 235, 0.15));
-        }
-
-        h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.02em;
-            line-height: 1.3;
-        }
-
-        h1 span {
-            background: linear-gradient(135deg, #3b82f6, #10b981);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .tagline {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.6);
-            margin-bottom: 3rem;
-            font-weight: 300;
-            line-height: 1.6;
-        }
-
-        .contact {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .contact a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            padding: 0.85rem 1.8rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            width: 280px;
-            justify-content: center;
-        }
-
-        .contact a:hover {
-            transform: translateY(-2px);
-        }
-
-        .contact .whatsapp {
-            background: #25d366;
-            color: #fff;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-        }
-
-        .contact .whatsapp:hover {
-            box-shadow: 0 6px 28px rgba(37, 211, 102, 0.45);
-        }
-
-        .contact .email {
-            background: rgba(255, 255, 255, 0.08);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact .email:hover {
-            background: rgba(255, 255, 255, 0.12);
-            box-shadow: 0 6px 28px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact a i {
-            font-size: 1.2rem;
-        }
-
-        @media (max-width: 480px) {
-            .logo {
-                width: 160px;
-                margin-bottom: 2rem;
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How can Saudi students apply to UK universities?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Saudi students apply through UCAS (Universities and Colleges Admissions Service). Masarak Education guides Riyadh students through every step â€” from university selection to personal statements, references, and interview preparation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What UK universities accept Saudi students?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "All UK universities welcome Saudi students. Our Riyadh students have been accepted to Oxford, Cambridge, Imperial College London, LSE, UCL, Edinburgh, King's College London, and many more Russell Group universities."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need IELTS to study in the UK from Saudi Arabia?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most UK universities require IELTS or equivalent English proficiency tests. Some accept international school qualifications as proof of English. Masarak Education helps Riyadh students understand and meet all requirements."
+                }
             }
+        ]
+    }
+    </script>
 
-            h1 {
-                font-size: 1.5rem;
-            }
 
-            .tagline {
-                font-size: 1rem;
-                margin-bottom: 2rem;
-            }
 
-            .contact a {
-                width: 260px;
-                font-size: 0.95rem;
-                padding: 0.75rem 1.5rem;
-            }
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <img src="images/logo.png" alt="Masarak Education Logo" class="logo">
-        <h1>Something <span>exciting</span> is coming</h1>
-        <p class="tagline">We're building something new. Stay tuned!</p>
-        <div class="contact">
-            <a href="https://wa.me/447440117343?text=Hi%20Masarak!%20I'm%20interested%20in%20learning%20more%20about%20the%20program." class="whatsapp" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-            </a>
-            <a href="mailto:contact@masarak.education" class="email">
-                <i class="fas fa-envelope"></i> contact@masarak.education
-            </a>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner" style="display:none;">
+        <div class="cookie-consent-content">
+            <span>
+                This website uses cookies to ensure you get the best experience and to analyze site usage (Google Analytics). See our <a href="cookies-policy.html" target="_blank">Cookies Policy</a>.
+            </span>
+            <button id="acceptCookiesBtn" class="btn-primary">Accept</button>
+            <button id="rejectCookiesBtn" class="btn-secondary" style="margin-left: 8px;">Reject</button>
         </div>
     </div>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Masarak Education Logo">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <button class="nav-close" onclick="toggleNav()"><i class="fas fa-times"></i></button>
+                <li><a href="#why" onclick="toggleNav()">Why Masarak</a></li>
+                <li><a href="#services" onclick="toggleNav()">Program</a></li>
+                <li><a href="#process" onclick="toggleNav()">How It Works</a></li>
+                <li><a href="#founders" onclick="toggleNav()">Founders</a></li>
+                <li><a href="#faq" onclick="toggleNav()">FAQ</a></li>
+                <li><a href="https://wa.me/447440117343?text=Hi%20Masarak!%20I'm%20interested%20in%20learning%20more%20about%20the%20program." class="btn-nav-secondary" target="_blank" onclick="toggleNav()"><i class="fab fa-whatsapp"></i>Free consultation</a></li>
+                <li><a href="get-started.html" class="btn-primary" onclick="toggleNav()">Get Started</a></li>
+                 <!-- <li class="lang-toggle"><span class="lang-active">EN</span><span class="lang-divider">|</span><a href="#" class="lang-option">العربية</a></li> -->
+            </ul>
+            <button class="mobile-toggle" onclick="toggleNav()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Everyone has grades. Few have proof. <span>We help you build it.</span></h1>
+                <p>Top universities reject straight-A students 
+                    because grades alone aren't enough.
+                     Masarak helps ambitious Arab students stand out with a real project, a top uni PhD mentor,
+                      and proof they're ready.</p>
+                <div class="hero-buttons">
+                    <a href="get-started.html?tab=webinar" class="btn-primary"><i class="fas fa-video"></i> Attend Free Webinar</a>
+                    <a href="#services" class="btn-secondary"><i class="fas fa-file-arrow-down"></i> Explore the Program</a>
+                </div>
+                <p style="font-size: 11px; color: rgba(255,255,255,0.35); margin: 20px 0 4px; padding: 0; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 400;">Our founders' track record:</p>
+                <div class="hero-metrics" style="margin-top: 0; padding-top: 0; border-top: none;">
+                    <div class="hero-metric">
+                        <span class="hero-metric-value">>450</span>
+                        <span class="hero-metric-label">Students Supervised</span>
+                    </div>
+                    <div class="hero-metric-divider"></div>
+                    <div class="hero-metric">
+                        <span class="hero-metric-value">>40</span>
+                        <span class="hero-metric-label">Top Uni Admissions</span>
+                    </div>
+                    <div class="hero-metric-divider"></div>
+                    <div class="hero-metric">
+                        <span class="hero-metric-value">15</span>
+                        <span class="hero-metric-label">Courses Delivered</span>
+                    </div>
+                    <div class="hero-metric-divider"></div>
+                    <div class="hero-metric">
+                        <span class="hero-metric-value">18</span>
+                        <span class="hero-metric-label">Papers Published</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-video-wrapper">
+                    <!-- TODO: Uncomment video below and remove the image once video is recorded
+                    <div class="video-thumbnail" id="videoThumbnail" onclick="playHeroVideo()">
+                        <img src="images/video_thumbnail.jpg" alt="Masarak mentor at Cambridge University explaining the program">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <video id="heroVideo" 
+                        src="images/hero-video.mp4" 
+                        preload="metadata"
+                        controls 
+                        playsinline
+                        style="display:none;">
+                        Your browser does not support the video tag.
+                    </video>
+                    -->
+                    <img src="images/student.jpg" alt="Masarak Education — mentoring Arab students for top universities" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- University Carousel (outside hero) -->
+    <div class="uni-bar">
+        <p>Our mentors are PhD researchers & graduates from</p>
+        <div class="uni-carousel">
+            <div class="uni-carousel-track">
+                <img src="images/unis/oxford.png" alt="University of Oxford">
+                <img src="images/unis/cambridge.png" alt="University of Cambridge">
+                <img src="images/unis/imperial.png" alt="Imperial College London">
+                <img src="images/unis/kcl.png" alt="King's College London">
+                <!-- Duplicate set for seamless loop -->
+                <img src="images/unis/oxford.png" alt="University of Oxford">
+                <img src="images/unis/cambridge.png" alt="University of Cambridge">
+                <img src="images/unis/imperial.png" alt="Imperial College London">
+                <img src="images/unis/kcl.png" alt="King's College London">
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== WHY MASARAK ====== -->
+    <section class="section bg-light" id="why" style="padding-top: 60px;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-label">Why Masarak</div>
+                <h2>The gap between good students and admitted students is proof.</h2>
+                <p>Oxford receives 23,000+ applications for 3,300 places. Cambridge and MIT look for evidence of critical thinking, initiative, and exploration beyond school. Masarak gives students that evidence.</p>
+            </div>
+            <div class="why-strip">
+                <div class="why-strip-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-strip-img" data-carousel>
+                        <span class="img-label active">Dr. Omar, University of Edinburgh<br><em>Biology</em></span>
+                        <img src="images/omar_mentor_2.jpeg" alt="Dr. Omar, University of Edinburgh - Biology" class="active">
+                        <span class="img-label">Dr. Yousef, University of Cambridge<br><em>Biomedical Sciences</em></span>
+                        <img src="images/yousef_mentor_2.jpeg" alt="Dr. Yousef, University of Cambridge - Biomedical">
+                        <span class="img-label">Dr. Samuel, University of Cambridge<br><em>Energy &amp; Environment</em></span>
+                        <img src="images/samuel_mentor_3.jpeg" alt="Dr. Samuel, University of Cambridge - Energy">
+                        <span class="img-label">Dr. Samer, University of Cambridge<br><em>Engineering</em></span>
+                        <img src="images/samer_mentor.jfif" alt="Dr. Samer, University of Cambridge - Engineering">
+                    </div>
+                    <h3>PhD mentor from a top university</h3>
+                    <p>Work directly with PhDs from top universities like Cambridge and Oxford, in your field of interest.</p>
+                </div>
+                <div class="why-strip-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-strip-img">
+                        <img src="images/student_laptop.jpg" alt="VR engineering project" class="active">
+                    </div>
+                    <h3>Real project, real output</h3>
+                    <p>Something real they built themselves, in their own field, that no other applicant can claim.</p>
+                </div>
+                <div class="why-strip-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-strip-img">
+                        <img src="images/samuel_mentor.jfif" alt="Student showcasing soft skills in a presentation" class="active">
+                    </div>
+                    <h3>Soft skills &amp; showcasing</h3>
+                    <p>Develop the skills to effectively show the work and walk into any interview and own the room.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PROGRAM ====== -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-label">The Program</div>
+                <h2>A structured path from curiosity to proof</h2>
+                <p>Three phases. One mentor. A real project that becomes the strongest part of your university application.</p>
+            </div>
+            <div class="program-layout" data-aos="fade-up">
+                <div class="program-left">
+                    <div class="program-overview-card">
+                        <h3>What you build</h3>
+                        <p>Students choose a real problem in their field of interest and work with their PhD mentor to produce a tangible, evidence-based output:</p>
+                        <ul class="program-deliverables">
+                            <li><i class="fas fa-microscope"></i> A research paper or literature review</li>
+                            <li><i class="fas fa-code"></i> A working prototype or software tool</li>
+                            <li><i class="fas fa-lightbulb"></i> A designed solution with tested evidence</li>
+                        </ul>
+                    </div>
+                    <div class="program-overview-card">
+                        <h3>What you leave with</h3>
+                        <ul class="program-deliverables">
+                            <li><i class="fas fa-file-alt"></i> Polished academic report</li>
+                            <li><i class="fas fa-bullseye"></i> Evidence-based CV bullets</li>
+                            <li><i class="fas fa-pen-fancy"></i> Personal statement material</li>
+                            <li><i class="fas fa-comments"></i> Interview answers bank with mock prep</li>
+                            <li><i class="fas fa-presentation-screen"></i> 2-minute pitch + Q&amp;A readiness</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="program-right">
+                    <div class="phase-card phase-spark">
+                        <div class="phase-badge">Phase I</div>
+                        <h3>SPARK - Find a strong project</h3>
+                        <p>Learn core skills, find direction, and commit to a real problem.</p>
+                        <ul class="phase-steps">
+                            <li>Kickoff &amp; orientation with your PhD mentor</li>
+                            <li>Core theory sessions &amp; guided discussions</li>
+                            <li>Problem framing - define context, constraints, success indicators</li>
+                            <li>Research basics &amp; critical thinking foundations</li>
+                            <li>Writing lab - clear structure, logical flow</li>
+                            <li>Project plan - goals, methodology, tools, expected outcome</li>
+                        </ul>
+                    </div>
+                    <div class="phase-card phase-build">
+                        <div class="phase-badge">Phase II</div>
+                        <h3>BUILD - Create, test, and refine</h3>
+                        <p>Build the main output, validate it, and document clearly.</p>
+                        <ul class="phase-steps">
+                            <li>Build sprint - prototype, implement, or draft research output</li>
+                            <li>Evidence sprint - run validation, capture structured evidence</li>
+                            <li>Writing lab - interpret results, integrate sources</li>
+                            <li>Iteration &amp; documentation - refine based on evidence</li>
+                        </ul>
+                    </div>
+                    <div class="phase-card phase-showcase">
+                        <div class="phase-badge">Phase III</div>
+                        <h3>SHOWCASE - Present and defend</h3>
+                        <p>Turn the project into a strong application story.</p>
+                        <ul class="phase-steps">
+                            <li>Academic report polish - strengthen logic, clean citations</li>
+                            <li>Pitch + public speaking + live Q&amp;A prep</li>
+                            <li>Application pack build - CV, personal statement, interview bank</li>
+                            <li>Mock interviews modelled on top universities' formats</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prospectus download (part of Program) -->
+            <div class="prospectus-wrapper" data-aos="fade-up" id="prospectus" style="margin-top: 48px;">
+                <div class="prospectus-info">
+                    <div class="section-label">Download</div>
+                    <h2>Get the Full Program Details</h2>
+                    <p>Get the full details by downloading Masarak prospectus.</p>
+                    <ul class="prospectus-highlights">
+                        <li><i class="fas fa-check-circle"></i> Detailed program breakdown & timeline</li>
+                        <li><i class="fas fa-check-circle"></i> The gap Masarak is addressing</li>
+                        <li><i class="fas fa-check-circle"></i> Achievements in numbers</li>
+                        <li><i class="fas fa-check-circle"></i> Program details & enrollment information</li>
+                    </ul>
+                </div>
+                <div class="prospectus-form-card">
+                <form action="https://formsubmit.co/masarakeducation@gmail.com" method="POST"/>
+                        <h3>Get The Full Program Details</h3>
+                        <div class="form-group">
+                            <label for="pf-name">Full Name</label>
+                            <input type="text" id="pf-name" name="name" placeholder="e.g. Ahmed Al-Rashid" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pf-school">School</label>
+                            <input type="text" id="pf-school" name="school" placeholder="e.g. British International School Riyadh" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pf-city">City / Country</label>
+                            <input type="text" id="pf-city" name="city" placeholder="e.g. Riyadh, Saudi Arabia" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pf-whatsapp">WhatsApp Number</label>
+                            <input type="tel" id="pf-whatsapp" name="whatsapp" placeholder="e.g. +966 5X XXX XXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pf-email">Email Address</label>
+                            <input type="email" id="pf-email" name="email" placeholder="e.g. ahmed@email.com" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 16px;">
+                            <label style="display: flex; align-items: flex-start; gap: 8px; font-size: 15px;">
+                                <input type="checkbox" id="pf-privacy" name="privacy" required style="margin-top: 3px;">
+                                <span>I have read and agree to the <a href="privacy-policy.html" target="_blank">Privacy Policy</a> and consent to the processing of my personal data for the purpose of sending the prospectus.</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary prospectus-submit">
+                            <i class="fas fa-download"></i> Download Prospectus
+                        </button>
+                    </form>
+                    <!-- Success state -->
+                    <div class="prospectus-success" id="prospectusSuccess" style="display:none;">
+                        <div class="success-icon"><i class="fas fa-circle-check"></i></div>
+                        <h3>Your prospectus is ready!</h3>
+                        <p>Thank you for your interest. Click below to download.</p>
+                        <a href="#" id="prospectusDownloadLink" class="btn-primary" download>
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                        <p class="success-note">We've also sent a copy to your email.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- ====== PROCESS ====== -->
+    <section class="section" id="process">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-label">How It Works</div>
+                <h2>From the Middle East to a top university</h2>
+                <p>A clear, structured journey for students and parents, with your PhD mentor, and the Masarak team by your side.</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-up" data-aos-offset="120">
+                    <div class="step-marker">1</div>
+                    <div class="step-content">
+                        <h3>Free Strategy Consultation</h3>
+                        <p>Book a free call with our team. We learn about your academic profile, interests, and goals - then outline whether Masarak is the right fit and what your journey could look like.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-offset="120">
+                    <div class="step-marker">2</div>
+                    <div class="step-content">
+                        <h3>Mentor Matching</h3>
+                        <p>We pair you with a PhD mentor from a top university whose expertise aligns with your field of interest. Your mentor stays with you throughout the entire program.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-offset="120">
+                    <div class="step-marker">3</div>
+                    <div class="step-content">
+                        <h3>Spark, Build, Showcase</h3>
+                        <p>Three structured phases. First, find and frame a strong project. Then build, test, and refine a real output. Finally, turn it into a polished story for your application - with a pitch, report, and mock interviews.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-offset="120">
+                    <div class="step-marker">4</div>
+                    <div class="step-content">
+                        <h3>Parent &amp; Student Touch Points</h3>
+                        <p>Regular check-ins with both students and parents keep everyone aligned. Progress updates, feedback sessions, and open communication so families always know where things stand.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-offset="120">
+                    <div class="step-marker">5</div>
+                    <div class="step-content">
+                        <h3>Interview &amp; Application Preparation</h3>
+                        <p>We help you build a strong application pack - CV bullets, personal statement material, and an interview answers bank. Then intensive mock interviews modelled on top universities' formats so you walk in confident.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOUNDERS ====== -->
+    <section class="section" id="founders">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-label">Meet the Founders</div>
+                <h2>Built by Arab graduates who've been through it</h2>
+                <p>Masarak was founded by Arab PhD graduates from the world's top universities who understand exactly what it takes to stand out.</p>
+            </div>
+            <div class="founders-content" data-aos="fade-up">
+                <div class="founders-photo">
+                    <img src="images/founders_photo_2.jfif" alt="Masarak founders">
+                </div>
+                <div class="founders-quote">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <blockquote>&ldquo;I completed my PhD at the University of Cambridge. We started Masarak because we saw brilliant Arab students get rejected, not because they lacked talent, but because no one showed them how to prove it. We&rsquo;ve been through the process ourselves, and we built Masarak to give every ambitious student a real chance.&rdquo;</blockquote>
+                    <div class="founders-quote-author">
+                        <h4>Samuel Gabra</h4>
+                        <p>Co-Founder, Masarak Education</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- ====== FAQ ====== -->
+    <section class="section bg-light" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-label">FAQ</div>
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything students and parents need to know about the Masarak program.</p>
+            </div>
+            <div class="faq-list" data-aos="fade-up">
+                <div class="faq-item active">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What exactly does the Masarak program include?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The program pairs you with a PhD mentor from a top university for a structured, three-phase journey: Spark (find and frame a project), Build (create and test a real output), and Showcase (turn it into a polished application story). You leave with a completed project, an academic report, CV material, personal statement content, and an interview answers bank.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Who are the mentors?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All Masarak mentors are PhD researchers or graduates from world-leading universities including Cambridge, Oxford, Edinburgh, and Imperial. Each mentor is matched to a student based on their field of interest - from engineering and computer science to biomedical sciences and beyond.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>When should my child start?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ideally 12-18 months before your university application deadline. This allows time to complete a meaningful project, develop strong application material, and prepare for interviews. Most families join in Year 11 or the equivalent, but earlier starts give more flexibility.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How long is the program?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The core program runs over several months across three phases. The exact timeline depends on the student's goals and chosen project, but most students complete the full Spark-Build-Showcase cycle within one academic term. Sessions are typically weekly with your mentor.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Is the program online or in person?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Mentorship sessions run online, which means students can join from anywhere. We also plan in-person programs and events in Riyadh - register your interest to be the first to know about the next available cohort.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How are parents kept in the loop?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We schedule regular touch points with parents throughout the program. You will receive progress updates, have opportunities to ask questions, and always know where your child stands. Communication and transparency are central to how we work.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What kind of project will my child work on?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Projects are tailored to each student's interests and target field. Examples include building a software tool, conducting a research investigation, designing an engineering prototype, or writing a structured literature review. The output is real and tangible - not a simulation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What grades or qualifications does my child need to join?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>There are no strict grade requirements. We look for motivated students who are serious about applying to competitive universities. Whether your child is in the Saudi national curriculum, international school, or studying A-Levels or IB, we tailor the program to fit.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do you help with UK university applications specifically?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Our core focus is helping students build standout applications for top UK universities - including UCAS personal statements, Oxbridge and medicine interviews, and admissions tests. The project, CV, and interview prep are all designed with UK admissions in mind.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Is the program suitable for students in Saudi Arabia?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. Masarak was built with Saudi students in mind. Mentorship sessions run online so students across Riyadh, Jeddah, and the rest of the Kingdom can join without disrupting their school schedule. We also plan in-person events in Riyadh - register your interest to hear about the next one.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>My child doesn't know what they want to study yet - can they still join?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes - that is one of the best times to start. The Spark phase is specifically designed to help students explore their interests and discover a direction. Many of our students begin undecided and finish with a clear subject choice backed by a real project.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How much does the program cost?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pricing depends on the package and duration. Book a free consultation call and we will walk you through the options and help you choose the right fit for your child's goals and timeline.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Does my child need prior research or project experience?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Not at all. The program is designed to take students from zero experience to a completed, university-quality project. Your mentor guides every step - from choosing a topic to writing the final report.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CTA ====== -->
+    <section class="cta-section" id="contact">
+        <div class="container" data-aos="fade-up">
+            <h2>Ready to Get Started?</h2>
+            <p>Join our free webinar to learn how Masarak prepares students for top UK universities or register your interest for the next cohort.</p>
+            <div class="cta-buttons">
+                <a href="get-started.html?tab=webinar" class="btn-primary"><i class="fas fa-video"></i> Attend Free Webinar</a>
+                <a href="get-started.html?tab=cohort" class="btn-primary"><i class="fas fa-pen-to-square"></i> Register for Next Cohort</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">Masarak Education</div>
+                    <p>Mentorship-driven university preparation. We pair ambitious students with PhD mentors from world-leading universities to build real projects, strong applications, and lasting confidence.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/masarak.education/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <!-- <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a> -->
+                        <a href="https://wa.me/447440117343?text=Hi%20Masarak!%20I'm%20interested%20in%20learning%20more%20about%20the%20program." aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:contact@masarak.education"><i class="fas fa-envelope" style="margin-right:6px"></i> contact@masarak.education</a></li>
+                        <li><a href="tel:+447440117343"><i class="fas fa-phone" style="margin-right:6px"></i> +44 7440117343</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Masarak Education. All rights reserved.</p>
+                <div>
+                    <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms & Conditions</a> · <a href="cookies-policy.html">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== Book button FLOAT ====== -->
+    <a href="get-started.html?tab=webinar" class="whatsapp-float" aria-label="Register for Webinar">
+        <i class="fas fa-video"></i>
+        <span>Attend Free Webinar</span>
+    </a>
+
+    <!-- AOS Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init({ duration: 700, once: true, offset: 80 });</script>
+
+    <!-- Masarak Shared Scripts -->
+    <script src="scripts.js"></script>
 </body>
 </html>

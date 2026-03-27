@@ -7,6 +7,10 @@
           content="Register to Masarak Program which helps the Middle East's brightest students explore subjects, develop research projects, and apply to top universities through a 50-hour mentorship program.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_2.png">
     <link rel="apple-touch-icon" href="img/favicon_2.png">
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -225,50 +229,35 @@
 </head>
 
 <body class="font-sans; text-[#1E2C56]">
-<!-- Navigation -->
-<nav class="bg-white text-gray-800 py-4 px-6 fixed w-full z-50 shadow-sm">
-
-    <div class="container mx-auto flex justify-between items-center">
-        <div class="text-2xl font-bold">
-            <a href="index.html" class="flex items-center">
-                <!-- Logo Image - Replace with your actual logo -->
-                <img src="img/logo.png" alt="Masarak Logo" class="logo-img" width="150">
-            </a>
-        </div>
-
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-8">
-            <div class="desktop-menu flex space-x-8">
-                <a href="index.html#program" class="nav-link hover:text-[#59A88E]">Program</a>
-                <a href="index.html#mentors" class="nav-link hover:text-[#59A88E]">Mentors</a>
-                <a href="index.html#subjects" class="nav-link hover:text-[#59A88E]">Subjects</a>
-                <a href="index.html#founders" class="nav-link hover:text-[#59A88E]">About Masarak</a>
-                <a href="index.html#events" class="nav-link hover:text-[#59A88E]">Events</a>
-                <a href="index.html#contact" class="nav-link text-[#59A88E] hover:text-[#59A88E]">Get in Touch</a>
-            </div>
-            <a href="registration.html"
-               class="px-4 py-2 bg-[#59A88E] text-white rounded-lg hover:bg-[#4d927c] transition">
-                Apply Now
-            </a>
-
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="mobile-menu md:hidden">
-            <button id="menu-toggle" class="text-gray-800 focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner" style="display:none;">
+        <div class="cookie-consent-content">
+            <span>
+                This website uses cookies to ensure you get the best experience and to analyze site usage (Google Analytics). See our <a href="cookies-policy.html" target="_blank">Cookies Policy</a>.
+            </span>
+            <button id="acceptCookiesBtn" class="btn-primary">Accept</button>
         </div>
     </div>
-
-    <!-- Mobile Menu Dropdown -->
-    <div id="mobile-dropdown" class="hidden bg-white py-4 px-6 shadow-md">
-        <a href="index.html#program" class="block py-2 hover:text-59A88E">Program</a>
-        <a href="index.html#mentors" class="block py-2 hover:text-59A88E">Mentors</a>
-        <a href="index.html#subjects" class="block py-2 hover:text-59A88E">Subjects</a>
-        <a href="index.html#founders" class="block py-2 hover:text-59A88E">About Masarak</a>
-        <a href="index.html#events" class="block py-2 hover:text-59A88E">Events</a>
-        <a href="index.html#contact" class="block py-2 text-[#59A88E] hover:text-59A88E">Get in Touch</a>
+<!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Masarak Education Logo">
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <button class="nav-close" onclick="toggleNav()"><i class="fas fa-times"></i></button>
+            <li><a href="index.html#why" onclick="toggleNav()">Why Masarak</a></li>
+            <li><a href="index.html#services" onclick="toggleNav()">Program</a></li>
+            <li><a href="index.html#process" onclick="toggleNav()">How It Works</a></li>
+            <li><a href="index.html#founders" onclick="toggleNav()">Founders</a></li>
+            <li><a href="index.html#faq" onclick="toggleNav()">FAQ</a></li>
+            <li><a href="https://wa.me/447440117343?text=Hi%20Masarak!%20I'm%20interested%20in%20learning%20more%20about%20the%20program." class="btn-nav-secondary" target="_blank" onclick="toggleNav()"><i class="fab fa-whatsapp"></i>Free consultation</a></li>
+            <li><a href="get-started.html" class="btn-primary" onclick="toggleNav()">Get Started</a></li>
+            <li class="lang-toggle"><span class="lang-active">EN</span><span class="lang-divider">|</span><a href="#" class="lang-option">العربية</a></li>
+        </ul>
+        <button class="mobile-toggle" onclick="toggleNav()">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </nav>
 
@@ -313,11 +302,11 @@
 </section>
 
 <section id="registration" class="py-16" style="background-color: #f8fafc;">
-    <div class="container mx-auto px-6 flex justify-center">
-        <div class="w-full max-w-3xl">
+    <div class="w-full px-4 sm:px-8 md:px-16 lg:px-24">
+        <div class="w-full">
             <iframe data-tally-src="https://tally.so/embed/3l1lpv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                     loading="lazy" width="100%" height="539" frameborder="0" marginheight="0" marginwidth="0"
-                    title="Program Registration Form 🎓"></iframe>
+                    title="Program Registration Form 🎓" style="overflow-y: auto;"></iframe>
             <script>
                 var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
             </script>
@@ -334,37 +323,29 @@
 </section>
 
 <!-- Footer -->
-<footer class="py-4" style="background-color: #0f172a;">
-    <div class="w-full px-2 lg:px-12">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-start gap-4 w-full">
-            <!-- Left Column -->
-            <div class="md:w-1/3">
-                <h3 class="text-xl font-bold mb-4 text-white">Masarak Education</h3>
-                <p class="text-gray-400">Shaping the Future of the Middle East's Brightest<br>
-                    Through Global Excellence.</p>
-                <a href="mailto:contact@masarak.education" class="text-gray-400 hover:underline">contact@masarak.education</a>
-            </div>
-
-            <!-- Center: Site Map -->
-            <div class="md:w-1/3 text-center">
-                <h4 class="text-white font-semibold mb-4">Site Map</h4>
-                <div class="flex flex-wrap justify-center gap-3">
-                    <a href="index.htmlprogram" class="text-gray-400 hover:underline">Program</a>
-                    <a href="index.html#mentors" class="text-gray-400 hover:underline">Mentors</a>
-                    <a href="index.html#subjects" class="text-gray-400 hover:underline">Subjects</a>
-                    <a href="index.html#founders" class="text-gray-400 hover:underline">About</a>
-                    <a href="index.html#events" class="text-gray-400 hover:underline">Events</a>
-                    <a href="registration.html" class="text-gray-400 hover:underline">Apply</a>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo-text">Masarak Education</div>
+                <p>Mentorship-driven university preparation. We pair ambitious students with PhD mentors from world-leading universities to build real projects, strong applications, and lasting confidence.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/masarak.education/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/447440117343?text=Hi%20Masarak!%20I'm%20interested%20in%20learning%20more%20about%20the%20program." aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
-                <p class="text-gray-400 mt-4">©
-                    <script>document.write(new Date().getFullYear());</script>
-                    Masarak Education. All rights reserved.
-                </p>
             </div>
-
-            <!-- Right Column -->
-            <div class="md:w-1/3 md:text-right">
-                <!--                <h4 class="font-semibold mb-2 text-white">Contact Address</h4>-->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@masarak.education"><i class="fas fa-envelope" style="margin-right:6px"></i> contact@masarak.education</a></li>
+                    <li><a href="tel:+447440117343"><i class="fas fa-phone" style="margin-right:6px"></i> +44 7440117343</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Masarak Education. All rights reserved.</p>
+            <div>
+                <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms & Conditions</a> · <a href="cookies-policy.html">Cookies Policy</a>
             </div>
         </div>
     </div>
@@ -498,5 +479,6 @@
         });
     });
 </script>
+<script src="scripts.js"></script>
 </body>
 </html>
