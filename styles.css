@@ -1719,7 +1719,8 @@ body {
     .hero-buttons { justify-content: center; }
     .hero-metrics { justify-content: center; }
     .hero-stats { justify-content: center; }
-    .hero-visual { display: none; }
+    .hero-visual { max-width: 480px; margin: 0 auto; }
+    .hero-video-wrapper img { border-radius: var(--radius-lg); }
     .why-grid { grid-template-columns: repeat(2, 1fr); }
     .why-strip { grid-template-columns: repeat(3, 1fr); }
     .program-layout { grid-template-columns: 1fr 1fr; }
@@ -1768,10 +1769,10 @@ body {
     .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
     .cta-section h2 { font-size: 32px; }
     .navbar .logo img {
-        height: 38px;
+        height: 60px;
     }
     .navbar.scrolled .logo img {
-        height: 34px;
+        height: 48px;
     }
     .uni-carousel-track {
         gap: 40px;
@@ -1784,8 +1785,10 @@ body {
 }
 
 @media (max-width: 480px) {
-    .hero { padding: 130px 0 60px; }
-    .hero h1 { font-size: 28px; }
+    .hero { padding: 120px 0 40px; }
+    .hero h1 { font-size: 26px; }
+    .hero p { font-size: 15px; }
+    .hero-visual { max-width: 100%; }
     .section { padding: 60px 0; }
     .uni-grid { grid-template-columns: 1fr; }
     .results-grid { grid-template-columns: 1fr; }

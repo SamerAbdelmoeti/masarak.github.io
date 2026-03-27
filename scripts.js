@@ -150,10 +150,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     sections.forEach(function (section) { observer.observe(section); });
 })();
 
-// ── Prospectus form handling ──
-(function () {
-// (Prospectus form handling script removed to allow FormSubmit to handle submission and redirect)
-
 // ── Why-Masarak card image carousel ──
 (function () {
     document.querySelectorAll('[data-carousel]').forEach(function (wrapper) {
