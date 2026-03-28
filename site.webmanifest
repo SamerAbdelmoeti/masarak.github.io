@@ -1,0 +1,14 @@
+{
+  "name": "Masarak Education",
+  "short_name": "Masarak",
+  "icons": [
+    {
+      "src": "images/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#3655D6",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
