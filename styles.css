@@ -1974,12 +1974,12 @@ body {
 
 /* CTA used as page hero (e.g. Get Started page) */
 .cta-hero-page {
-    padding-top: 120px;
+    padding-top: 160px;
     padding-bottom: 24px;
 }
 
 @media (max-width: 768px) {
-    .cta-hero-page { padding-top: 100px; }
+    .cta-hero-page { padding-top: 130px; }
 }
 
 /* Form tab toggle buttons */
