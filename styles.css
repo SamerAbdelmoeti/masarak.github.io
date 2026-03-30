@@ -1764,7 +1764,7 @@ body {
     .results-grid { grid-template-columns: repeat(2, 1fr); }
     .hero-metrics { gap: 16px; justify-content: center; }
     .hero-metric-divider { height: 24px; }
-    .hero-stats { gap: 24px; flex-wrap: wrap; }
+    .hero-stats { gap: 16px; flex-direction: column; align-items: center; text-align: center; }
     .hero-stat h3 { font-size: 28px; }
     .process-timeline::before { left: 23px; }
     .step-marker { width: 48px; height: 48px; min-width: 48px; font-size: 18px; }
@@ -2181,5 +2181,174 @@ body {
     .prospectus-form-card {
         padding: 28px 20px;
     }
+}
+
+/* ==========================================
+   RTL / Arabic Overrides
+   ========================================== */
+
+/* Arabic font */
+[dir="rtl"] body {
+    font-family: 'IBM Plex Sans Arabic', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+[dir="rtl"] .hero h1,
+[dir="rtl"] .section-header h2,
+[dir="rtl"] .cta-section h2,
+[dir="rtl"] .legal-hero h1,
+[dir="rtl"] .legal-content h2,
+[dir="rtl"] .footer-brand .logo-text,
+[dir="rtl"] .navbar .logo-text,
+[dir="rtl"] .prospectus-info h2,
+[dir="rtl"] .founders-quote blockquote,
+[dir="rtl"] .hero-metric-value,
+[dir="rtl"] .step-marker,
+[dir="rtl"] .result-card .number,
+[dir="rtl"] .hero-stat h3,
+[dir="rtl"] .service-number {
+    font-family: 'IBM Plex Sans Arabic', 'Playfair Display', serif;
+}
+
+/* Text alignment */
+[dir="rtl"] .section-header,
+[dir="rtl"] .cta-section {
+    text-align: center;
+}
+
+[dir="rtl"] .uni-bar p {
+    text-align: right;
+}
+
+/* Phase card border: flip from left to right */
+[dir="rtl"] .phase-card {
+    border-left: none;
+    border-right: 4px solid var(--teal);
+}
+
+[dir="rtl"] .phase-build { border-right-color: var(--royal-azure); }
+[dir="rtl"] .phase-showcase { border-right-color: var(--deep-navy); }
+
+/* Phase step bullets */
+[dir="rtl"] .phase-steps li {
+    padding-left: 0;
+    padding-right: 18px;
+}
+
+[dir="rtl"] .phase-steps li::before {
+    left: auto;
+    right: 0;
+}
+
+/* Program deliverables */
+[dir="rtl"] .program-deliverables li {
+    flex-direction: row;
+}
+
+/* Process timeline */
+[dir="rtl"] .process-timeline::before {
+    left: auto;
+    right: 43px;
+}
+
+@media (max-width: 768px) {
+    [dir="rtl"] .process-timeline::before {
+        left: auto;
+        right: 23px;
+    }
+}
+
+/* Image label positioning */
+[dir="rtl"] .why-strip-img .img-label {
+    left: auto;
+    right: 12px;
+    text-align: right;
+}
+
+/* Nav links spacing */
+[dir="rtl"] .nav-links li:nth-last-child(2) {
+    margin-left: -8px;
+    margin-right: 8px;
+}
+
+/* Footer icon margins */
+[dir="rtl"] .footer-col ul li a i {
+    margin-right: 0;
+    margin-left: 6px;
+}
+
+/* Hero buttons */
+[dir="rtl"] .hero-buttons {
+    justify-content: flex-start;
+}
+
+@media (max-width: 1024px) {
+    [dir="rtl"] .hero-buttons {
+        justify-content: center;
+    }
+}
+
+/* FAQ chevron */
+[dir="rtl"] .faq-question {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .faq-question h3 {
+    text-align: right;
+    flex: 1;
+}
+
+/* Carousel animation direction for RTL */
+[dir="rtl"] .uni-carousel-track {
+    animation-name: scroll-logos-rtl;
+}
+
+@keyframes scroll-logos-rtl {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50%); }
+}
+
+/* WhatsApp / Webinar float button */
+[dir="rtl"] .whatsapp-float {
+    right: auto;
+    left: 24px;
+}
+
+/* Mobile nav close button */
+[dir="rtl"] .nav-close {
+    right: auto;
+    left: 24px;
+}
+
+/* Legal content list padding */
+[dir="rtl"] .legal-content ul,
+[dir="rtl"] .legal-content ol {
+    padding-left: 0;
+    padding-right: 24px;
+}
+
+/* Legal table text alignment */
+[dir="rtl"] .legal-content table th,
+[dir="rtl"] .legal-content table td {
+    text-align: right;
+}
+
+/* Prospectus wrapper on mobile: keep natural order */
+[dir="rtl"] .prospectus-form-card label {
+    text-align: right;
+}
+
+/* Cookie banner */
+[dir="rtl"] .cookie-consent-banner .btn-primary {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/* Language toggle for Arabic pages: show Arabic as active */
+[dir="rtl"] .lang-active {
+    font-family: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+}
+
+[dir="rtl"] .lang-option {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
 
