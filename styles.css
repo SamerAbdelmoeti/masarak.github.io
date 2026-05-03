@@ -1821,21 +1821,30 @@ body {
 @media (max-width: 768px) {
     [dir="rtl"] .hero-metrics {
         flex-wrap: nowrap;
-        gap: 6px;
-        justify-content: center;
+        gap: 8px;
+        justify-content: space-between;
+        width: 100%;
     }
     [dir="rtl"] .hero-metric {
         flex: 1;
         min-width: 0;
         text-align: center;
     }
+    [dir="rtl"] .hero-metric:nth-child(1),
+    [dir="rtl"] .hero-metric:nth-child(5) {
+        flex: 0.9;
+    }
+    [dir="rtl"] .hero-metric:nth-child(3) {
+        flex: 1.2;
+    }
     [dir="rtl"] .hero-metric-value {
         font-size: 15px;
     }
     [dir="rtl"] .hero-metric-label {
         font-size: 9px;
-        white-space: normal;
-        word-break: break-word;
+        white-space: nowrap;
+        word-break: normal;
+        line-height: 1.25;
     }
     [dir="rtl"] .hero-metric-divider {
         display: none;
