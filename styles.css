@@ -1788,6 +1788,18 @@ body {
     .navbar.scrolled .logo img {
         height: 90px;
     }
+    .navbar.scrolled .lang-active {
+        color: var(--white);
+    }
+    .navbar.scrolled .lang-divider {
+        color: rgba(255,255,255,0.3);
+    }
+    .navbar.scrolled .lang-option {
+        color: rgba(255,255,255,0.45) !important;
+    }
+    .navbar.scrolled .lang-option:hover {
+        color: var(--white) !important;
+    }
     .uni-bar p {
         font-size: 11px;
         letter-spacing: 0.5px;
