@@ -1849,6 +1849,10 @@ body {
     [dir="rtl"] .hero-metric-divider {
         display: none;
     }
+    [dir="rtl"] .hero h1 span {
+        display: block;
+        white-space: nowrap;
+    }
 }
 
 /* ========== LEGAL PAGES (Privacy, Terms, Cookies) ========== */
