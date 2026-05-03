@@ -1838,8 +1838,7 @@ body {
         word-break: break-word;
     }
     [dir="rtl"] .hero-metric-divider {
-        height: 20px;
-        flex-shrink: 0;
+        display: none;
     }
 }
 
