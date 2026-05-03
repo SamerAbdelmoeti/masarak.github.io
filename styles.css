@@ -1815,6 +1815,23 @@ body {
     font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
+@media (max-width: 768px) {
+    [dir="rtl"] .hero-metrics {
+        flex-wrap: nowrap;
+        gap: 8px;
+        justify-content: center;
+    }
+    [dir="rtl"] .hero-metric-value {
+        font-size: 15px;
+    }
+    [dir="rtl"] .hero-metric-label {
+        font-size: 10px;
+    }
+    [dir="rtl"] .hero-metric-divider {
+        height: 20px;
+    }
+}
+
 /* ========== LEGAL PAGES (Privacy, Terms, Cookies) ========== */
 .legal-hero {
     background: var(--gradient-hero);
