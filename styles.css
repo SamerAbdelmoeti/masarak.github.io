@@ -1804,6 +1804,17 @@ body {
     .results-grid { grid-template-columns: 1fr; }
 }
 
+/* ========== RTL / ARABIC OVERRIDES ========== */
+[dir="rtl"] .section-label,
+[dir="rtl"] .phase-badge {
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+[dir="rtl"] .section-header h2 {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
 /* ========== LEGAL PAGES (Privacy, Terms, Cookies) ========== */
 .legal-hero {
     background: var(--gradient-hero);
