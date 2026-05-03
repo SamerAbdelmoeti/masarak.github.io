@@ -1756,6 +1756,7 @@ body {
     .nav-links.active ~ .mobile-toggle { display: none; }
     .mobile-toggle { display: flex; z-index: 1002; }
     .hero h1 { font-size: 34px; }
+    .hero h1 span { display: block; white-space: nowrap; }
     .section-header h2 { font-size: 32px; }
     .why-grid { grid-template-columns: 1fr; }
     .why-strip { grid-template-columns: 1fr; gap: 20px; }
@@ -1815,6 +1816,12 @@ body {
 }
 
 [dir="rtl"] .section-header h2 {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+[dir="rtl"] .prospectus-form-card label {
+    letter-spacing: 0;
+    text-transform: none;
     font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
