@@ -419,6 +419,10 @@ body {
     color: var(--accent);
 }
 
+.hero-mobile-break {
+    display: none;
+}
+
 .hero p {
     font-size: 18px;
     color: rgba(255,255,255,0.75);
@@ -1756,6 +1760,7 @@ body {
     .nav-links.active ~ .mobile-toggle { display: none; }
     .mobile-toggle { display: flex; z-index: 1002; }
     .hero h1 { font-size: 34px; }
+    .hero-mobile-break { display: inline; }
     .hero h1 span { display: block; white-space: nowrap; }
     .section-header h2 { font-size: 32px; }
     .why-grid { grid-template-columns: 1fr; }
