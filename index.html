@@ -122,6 +122,11 @@
 
 </head>
 <body>
+    <script>
+      if (localStorage.getItem('masarak-lang') !== 'en') {
+        window.location.replace('/ar/');
+      }
+    </script>
     <!-- Cookie Consent Banner -->
     <div id="cookieConsentBanner" class="cookie-consent-banner" style="display:none;">
         <div class="cookie-consent-content">
@@ -148,7 +153,7 @@
                 <li><a href="#faq" onclick="toggleNav()">FAQ</a></li>
                 <li><a href="https://wa.me/447440117343?text=Hi%20Masarak!%20I'm%20interested%20in%20learning%20more%20about%20the%20program." class="btn-nav-secondary" target="_blank" onclick="toggleNav()"><i class="fab fa-whatsapp"></i>Free consultation</a></li>
                 <li><a href="get-started.html" class="btn-primary" onclick="toggleNav()">Get Started</a></li>
-                 <li class="lang-toggle"><span class="lang-active">EN</span><span class="lang-divider">|</span><a href="ar/index.html" class="lang-option">العربية</a></li>
+                 <li class="lang-toggle"><span class="lang-active">EN</span><span class="lang-divider">|</span><a href="ar/index.html" class="lang-option" onclick="localStorage.removeItem('masarak-lang')">العربية</a></li>
             </ul>
             <button class="mobile-toggle" onclick="toggleNav()">
                 <span></span><span></span><span></span>
