@@ -123,6 +123,9 @@
 </head>
 <body>
     <script>
+      if (new URLSearchParams(window.location.search).get('lang') === 'en') {
+        localStorage.setItem('masarak-lang', 'en');
+      }
       if (localStorage.getItem('masarak-lang') !== 'en') {
         window.location.replace('/ar/');
       }
