@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | Masarak Education</title>
+    <meta name="description" content="Explore Masarak's research programmes. Engineering and Biology courses guided by PhD researchers from Cambridge and Edinburgh — designed for ambitious arab students applying to top UK universities.">
+    <meta name="author" content="Masarak Education">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://masarak.github.io/courses/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://masarak.github.io/courses/">
+    <meta property="og:title" content="Courses | Masarak Education">
+    <meta property="og:description" content="Engineering and Biology research programmes guided by PhD researchers from Cambridge and Edinburgh — for ambitious arab students applying to top UK universities.">
+    <meta property="og:image" content="https://masarak.github.io/images/og-image.jpg">
+    <meta property="og:locale" content="en_SA">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Courses | Masarak Education">
+    <meta name="twitter:description" content="Engineering and Biology research programmes guided by PhD researchers from Cambridge and Edinburgh.">
+
+    <link rel="alternate" hreflang="en" href="https://masarak.github.io/courses/">
+    <link rel="alternate" hreflang="ar" href="https://masarak.github.io/ar/courses/">
+
+    <link rel="icon" type="image/png" href="../images/favicon.png?v=2">
+    <link rel="apple-touch-icon" href="../images/favicon.png?v=2">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner" style="display:none;">
+        <div class="cookie-consent-content">
+            <span>This website uses cookies to ensure you get the best experience. See our <a href="../cookies-policy.html" target="_blank">Cookies Policy</a>.</span>
+            <button id="acceptCookiesBtn" class="btn-primary">Accept</button>
+            <button id="rejectCookiesBtn" class="btn-secondary" style="margin-left:8px;">Reject</button>
+        </div>
+    </div>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo.png" alt="Masarak Education Logo">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <button class="nav-close" onclick="toggleNav()"><i class="fas fa-times"></i></button>
+                <li><a href="../index.html#why" onclick="toggleNav()">Why Masarak</a></li>
+                <li><a href="../index.html#services" onclick="toggleNav()">Program</a></li>
+                <li class="has-dropdown">
+                    <a href="index.html">Courses <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                    <ul class="nav-dropdown">
+                        <li><a href="engineering.html" onclick="toggleNav()"><i class="fas fa-cogs"></i> Engineering</a></li>
+                        <li><a href="biology.html" onclick="toggleNav()"><i class="fas fa-dna"></i> Biology</a></li>
+                        <li><a href="ai.html" onclick="toggleNav()"><i class="fas fa-brain"></i> Artificial Intelligence</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#process" onclick="toggleNav()">How It Works</a></li>
+                <li><a href="../index.html#founders" onclick="toggleNav()">Founders</a></li>
+                <li><a href="../index.html#faq" onclick="toggleNav()">FAQ</a></li>
+                <li><a href="#contact" class="btn-nav-secondary" onclick="toggleNav()"><i class="fas fa-comments"></i>Free consultation</a></li>
+                <li><a href="index.html" class="btn-primary" onclick="toggleNav()">Get Started</a></li>
+                <li class="lang-toggle"><span class="lang-active">EN</span><span class="lang-divider">|</span><a href="../ar/courses/index.html" class="lang-option" onclick="localStorage.removeItem('masarak-lang')">العربية</a></li>
+            </ul>
+            <button class="mobile-toggle" onclick="toggleNav()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section class="courses-hero">
+        <div class="container">
+            <div class="section-label" style="color:var(--accent);margin-bottom:16px;">Research Programmes</div>
+            <h1>Explore Our <span>Courses</span></h1>
+            <p>Each course is a structured research programme guided by a PhD mentor from a top university to help you build real proof for your university application.</p>
+        </div>
+    </section>
+
+    <!-- ====== COURSES GRID ====== -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="section-header" style="text-align:left;max-width:600px;" data-aos="fade-up">
+                <div class="section-label">Available Now</div>
+                <h2>Choose your subject</h2>
+                <p>All courses follow the same Spark–Build–Showcase framework and lead to a university-quality project.</p>
+            </div>
+            <div class="courses-grid" data-aos="fade-up">
+
+                <!-- Engineering Card -->
+                <a href="engineering.html" class="course-card">
+                    <div class="course-card-img">
+                        <img src="../images/engineering.png" alt="Dr. Samer, Engineering mentor, University of Cambridge">
+                        <span class="course-card-subject">Engineering</span>
+                    </div>
+                    <div class="course-card-body">
+                        <h3>Engineering &amp; Robotics</h3>
+                        <div class="course-card-tutor">
+                            <i class="fas fa-user-graduate"></i>
+                           TBC &middot; University of Cambridge
+                        </div>
+                        <p>Explore robotics, computer vision, sensing, and machine learning by solving real-world problems with autonomous systems.</p>
+                        <div class="course-card-pills">
+                            <span class="course-card-pill"><i class="fas fa-clock"></i> 16 Weeks</span>
+                            <span class="course-card-pill"><i class="fas fa-laptop"></i> Online</span>
+                            <span class="course-card-pill"><i class="fas fa-users"></i> Ages 15–18</span>
+                            <span class="course-card-pill"><i class="fas fa-calendar-check"></i> Dec 1, 2026</span>
+                        </div>
+                        <span class="btn-primary" style="width:100%;justify-content:center;display:inline-flex;">Explore Course <i class="fas fa-arrow-right" style="margin-left:6px;"></i></span>
+                    </div>
+                </a>
+
+                <!-- Biology Card -->
+                <a href="biology.html" class="course-card">
+                    <div class="course-card-img">
+                        <img src="../images/biology.png" alt="Dr. Omar, Medicine &amp; Biomedical mentor, University of Edinburgh">
+                        <span class="course-card-subject">Biology</span>
+                    </div>
+                    <div class="course-card-body">
+                        <h3>The Future of Biology</h3>
+                        <div class="course-card-tutor">
+                            <i class="fas fa-user-graduate"></i>
+                            Kavi Shah &middot; University of Cambridge
+                        </div>
+                        <p> Explore genetics and synthetic biology through real-world research, innovation, and discovery. Ideal for students aiming for Medicine or life sciences.</p>
+                        <div class="course-card-pills">
+                            <span class="course-card-pill"><i class="fas fa-clock"></i> 16 Weeks</span>
+                            <span class="course-card-pill"><i class="fas fa-laptop"></i> Online</span>
+                            <span class="course-card-pill"><i class="fas fa-users"></i> Ages 15–18</span>
+                            <span class="course-card-pill"><i class="fas fa-calendar-check"></i> Dec 1, 2026</span>
+                        </div>
+                        <span class="btn-primary" style="width:100%;justify-content:center;display:inline-flex;">Explore Course <i class="fas fa-arrow-right" style="margin-left:6px;"></i></span>
+                    </div>
+                </a>
+
+                <!-- AI Card -->
+                <a href="ai.html" class="course-card">
+                    <div class="course-card-img">
+                        <img src="../images/AI.png" alt="Artificial Intelligence">
+                        <span class="course-card-subject">Artificial Intelligence</span>
+                    </div>
+                    <div class="course-card-body">
+                        <h3>Applied AI</h3>
+                        <div class="course-card-tutor">
+                            <i class="fas fa-user-graduate"></i>
+                            TBC &middot; University of Cambridge
+                        </div>
+                        <p>Design, build, and deploy a Generative AI solution to a real-world problem. Master the skill of the future.</p>
+                        <div class="course-card-pills">
+                            <span class="course-card-pill"><i class="fas fa-clock"></i> 16 Weeks</span>
+                            <span class="course-card-pill"><i class="fas fa-laptop"></i> Online</span>
+                            <span class="course-card-pill"><i class="fas fa-users"></i> Ages 15&ndash;18</span>
+                            <span class="course-card-pill"><i class="fas fa-calendar-check"></i> Dec 1, 2026</span>
+                        </div>
+                        <span class="btn-primary" style="width:100%;justify-content:center;display:inline-flex;">Explore Course <i class="fas fa-arrow-right" style="margin-left:6px;"></i></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====== CTA ====== -->
+    <section class="cta-section contact-section" id="contact">
+        <div class="container" data-aos="fade-up">
+            <h2>Not sure which course is right?</h2>
+            <p>Reach out however is easiest for you and we'll recommend the best path for your goals.</p>
+            <div class="contact-options-grid">
+                <a href="https://wa.me/447440117343?text=Hi%20Masarak!%20I'd%20like%20a%20free%20consultation%20about%20your%20courses." class="contact-option-card contact-option-featured" target="_blank">
+                    <span class="contact-option-badge">Fastest reply</span>
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>Message our team directly — most questions get a reply within minutes. +44 7440117343</p>
+                </a>
+                <a href="https://calendly.com/masarakeducation/30min" class="contact-option-card" target="_blank">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Book a Free Call</h3>
+                    <p>Pick a time that suits you for a free 30-minute consultation.</p>
+                </a>
+                <a href="mailto:contact@masarak.education" class="contact-option-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>Prefer writing? Send your questions to contact@masarak.education.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">Masarak Education</div>
+                    <p>Mentorship-driven university preparation. We pair ambitious students with PhD mentors from world-leading universities to build real projects, strong applications, and lasting confidence.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/masarak.education/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/447440117343?text=Hi%20Masarak!%20I'm%20interested%20in%20learning%20more%20about%20the%20program." aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:contact@masarak.education"><i class="fas fa-envelope" style="margin-right:6px"></i> contact@masarak.education</a></li>
+                        <li><a href="tel:+447440117343"><i class="fas fa-phone" style="margin-right:6px"></i> +44 7440117343</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Masarak Education. All rights reserved.</p>
+                <div>
+                    <a href="../privacy-policy.html">Privacy Policy</a> &middot; <a href="../terms.html">Terms &amp; Conditions</a> &middot; <a href="../cookies-policy.html">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامج البحث في الأحياء | مسارك للتعليم</title>
+    <meta name="description" content="أجرِ بحثاً بيولوجياً حقيقياً، من الفرضية إلى كتابة التقرير، بإشراف كافي شاه، باحث دكتوراه من جامعة كامبريدج. برنامج أونلاين مدته ١٦ أسبوعاً للطلاب العرب الراغبين في دراسة الطب أو علوم الحياة.">
+    <meta name="author" content="Masarak Education">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://masarak.github.io/ar/courses/biology.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://masarak.github.io/ar/courses/biology.html">
+    <meta property="og:title" content="برنامج البحث في الأحياء | مسارك للتعليم">
+    <meta property="og:description" content="أجرِ بحثاً بيولوجياً حقيقياً بإشراف باحث دكتوراه من كامبريدج. مثالي للطلاب الراغبين في دراسة الطب.">
+    <meta property="og:image" content="https://masarak.github.io/images/og-image.jpg">
+    <meta property="og:locale" content="ar_SA">
+
+    <link rel="alternate" hreflang="ar" href="https://masarak.github.io/ar/courses/biology.html">
+    <link rel="alternate" hreflang="en" href="https://masarak.github.io/courses/biology.html">
+
+    <link rel="icon" type="image/png" href="../../images/favicon.png?v=2">
+    <link rel="apple-touch-icon" href="../../images/favicon.png?v=2">
+    <link rel="manifest" href="../../site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner" style="display:none;">
+        <div class="cookie-consent-content">
+            <span>يستخدم هذا الموقع ملفات تعريف الارتباط. اطلع على <a href="../../cookies-policy.html" target="_blank">سياسة ملفات تعريف الارتباط</a>.</span>
+            <button id="acceptCookiesBtn" class="btn-primary">قبول</button>
+            <button id="rejectCookiesBtn" class="btn-secondary" style="margin-right:8px;">رفض</button>
+        </div>
+    </div>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../../images/logo.png" alt="شعار مسارك للتعليم">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <button class="nav-close" onclick="toggleNav()"><i class="fas fa-times"></i></button>
+                <li><a href="../index.html#why" onclick="toggleNav()">لماذا مسارك</a></li>
+                <li><a href="../index.html#services" onclick="toggleNav()">البرنامج</a></li>
+                <li class="has-dropdown">
+                    <a href="index.html">الدورات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                    <ul class="nav-dropdown">
+                        <li><a href="engineering.html" onclick="toggleNav()"><i class="fas fa-cogs"></i> الهندسة</a></li>
+                        <li><a href="biology.html" onclick="toggleNav()"><i class="fas fa-dna"></i> الأحياء</a></li>
+                        <li><a href="ai.html" onclick="toggleNav()"><i class="fas fa-brain"></i> الذكاء الاصطناعي</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#process" onclick="toggleNav()">كيف نعمل</a></li>
+                <li><a href="../index.html#founders" onclick="toggleNav()">المؤسسون</a></li>
+                <li><a href="../index.html#faq" onclick="toggleNav()">الأسئلة الشائعة</a></li>
+                <li><a href="#contact" class="btn-nav-secondary" onclick="toggleNav()"><i class="fas fa-comments"></i>استشارة مجانية</a></li>
+                <li><a href="biology-enroll.html" class="btn-primary" onclick="toggleNav()">سجّل الآن</a></li>
+                <li class="lang-toggle"><span class="lang-active">العربية</span><span class="lang-divider">|</span><a href="../../courses/biology.html" class="lang-option" onclick="localStorage.setItem('masarak-lang','en')">EN</a></li>
+            </ul>
+            <button class="mobile-toggle" onclick="toggleNav()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section class="course-hero">
+        <div class="container">
+            <div class="course-subject-badge"><i class="fas fa-dna"></i> الأحياء</div>
+            <h1>أجرِ بحثاً في الأحياء<br><span>بإشراف باحث دكتوراه من كامبريدج</span></h1>
+            <p class="course-tagline">برنامج بحثي منظّم مدته ١٦ أسبوعاً للطلاب العرب الطموحين، بإشراف باحث دكتوراه من جامعة كامبريدج. مثالي للراغبين في دراسة الطب أو علوم الحياة.</p>
+            <div class="course-stat-pills">
+                <span class="course-stat-pill"><i class="fas fa-calendar-alt"></i> ١٦ أسبوعاً</span>
+                <span class="course-stat-pill"><i class="fas fa-laptop"></i> أونلاين</span>
+                <span class="course-stat-pill"><i class="fas fa-users"></i> ١٥–١٨ سنة</span>
+                <span class="course-stat-pill"><i class="fas fa-user-graduate"></i> جلسات فردية وجماعية</span>
+                <span class="course-stat-pill"><i class="fas fa-calendar-check"></i> ١ ديسمبر ٢٠٢٦</span>
+            </div>
+            <div class="course-hero-btns">
+                <a href="biology-enroll.html" class="btn-primary"><i class="fas fa-pen-to-square"></i> سجّل الآن</a>
+                <a href="#contact" class="btn-secondary"><i class="fas fa-comment-dots"></i> اسأل سؤالاً</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SUMMARY BAR ====== -->
+    <div class="course-summary-bar">
+        <div class="container">
+            <div class="course-summary-item">
+                <i class="fas fa-users"></i>
+                <strong>المستهدفون</strong>
+                <span>الصفوف العاشر–الثالث عشر · العلوم والطب</span>
+            </div>
+            <div class="course-summary-item">
+                <i class="fas fa-laptop"></i>
+                <strong>الطريقة</strong>
+                <span>أونلاين · جلسات أسبوعية</span>
+            </div>
+            <div class="course-summary-item">
+                <i class="fas fa-calendar-alt"></i>
+                <strong>المدة</strong>
+                <span>١٦ أسبوعاً · ٣ مراحل</span>
+            </div>
+            <div class="course-summary-item">
+                <i class="fas fa-microscope"></i>
+                <strong>ما ستبنيه</strong>
+                <span>بحث بيولوجي</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== VIDEO INTRO ====== -->
+    <section class="course-video-section">
+        <div class="container">
+            <div class="section-label">مقدمة الدورة</div>
+            <h2>اسمع القصة وراء برنامج الأحياء</h2>
+            <p class="video-byline">يقدمها <strong>د. عمر</strong> · دكتوراه في الأحياء · جامعة إدنبرة</p>
+            <div class="course-video-wrapper">
+                <iframe src="https://drive.google.com/file/d/1jzGFQWvKH8zj_lKoqVisS6N0itctfNNV/preview" allow="autoplay" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== COURSE DESCRIPTION + SIDEBAR ====== -->
+    <section class="course-description-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-label">البرنامج</div>
+                <h2>كيف يبدو برنامج الأحياء فعلياً</h2>
+            </div>
+            <div class="course-description-layout" data-aos="fade-up">
+                <div class="course-description-content">
+                    <p>اكتشف الأحياء بما يتجاوز الكتاب المدرسي، وتعرّف على كيفية استخدام العلماء المعاصرين للأنظمة البيولوجية لحل مشكلات العالم الحقيقي. بإشراف كافي شاه، باحث دكتوراه في الوراثة بجامعة كامبريدج، تقدّم هذه الدورة للطلاب الأفكار والأدوات والتفكير وراء البحث البيولوجي الحديث.</p>
+                    <p>من الوراثة إلى الأحياء التركيبية، سيتعلّم الطلاب كيفية طرح أسئلة ذات معنى، وتحليل الأدلة، وتطوير أفكارهم تكرارياً. من خلال رحلة منظّمة من الاستكشاف وتطوير المشروع والعرض، سيحوّل الطلاب فضولهم تجاه الأحياء إلى عمل ملموس — مع تطوير الأدلة ومهارات التواصل والثقة لتعزيز طلباتهم الجامعية والاستعداد لمقابلات القبول التنافسية.</p>
+                    <p>يمنحك هذا البرنامج بالضبط ما تبحث عنه أفضل لجان القبول: دليلاً على الفضول العلمي المستقل، ومنهجية منظّمة، وقدرة على التواصل الواضح بشأن عملك. كل مرحلة تبني نحو عمل أكاديمي حقيقي وقصة طلب جامعي مقنعة في آنٍ واحد.</p>
+
+                    <div class="phase-card phase-spark">
+                        <div class="phase-badge">المرحلة الأولى</div>
+                        <h3>الشرارة: اختر بحثك</h3>
+                        <p>استكشف اهتماماتك البيولوجية وصمّم بحثاً صارماً وقابلاً للتطبيق مع مشرفك.</p>
+                        <ul class="phase-steps">
+                            <li>جلسة التوجيه والتعارف</li>
+                            <li>مبادئ الأحياء الأساسية ومناقشات موجّهة</li>
+                            <li>صياغة الفرضية: المتغيرات والنطاق ومعايير النجاح</li>
+                            <li>أسس مراجعة الأدبيات ومهارات القراءة العلمية</li>
+                            <li>ورشة الكتابة: البنية العلمية الواضحة والتدفق المنطقي</li>
+                            <li>خطة البحث: المنهجية ومصادر البيانات والنتائج المتوقعة</li>
+                        </ul>
+                    </div>
+
+                    <div class="phase-card phase-build">
+                        <div class="phase-badge">المرحلة الثانية</div>
+                        <h3>البناء: ابحث وحلّل ووثّق</h3>
+                        <p>اجمع البيانات أو حللها، واستخلص استنتاجات قائمة على الأدلة، ووثّق عمليتك بصرامة علمية.</p>
+                        <ul class="phase-steps">
+                            <li>سباق جمع أو تحليل البيانات: بيانات بيولوجية أولية أو ثانوية</li>
+                            <li>مراجعة الأدلة: دمج الأدبيات مع النتائج</li>
+                            <li>ورشة الكتابة: تفسير النتائج ومناقشة القيود والاستشهاد بالمصادر</li>
+                            <li>التكرار: تحسين التحليل والحجة بتغذية راجعة من المشرف</li>
+                        </ul>
+                    </div>
+
+                    <div class="phase-card phase-showcase">
+                        <div class="phase-badge">المرحلة الثالثة</div>
+                        <h3>العرض: تواصل وطبّق</h3>
+                        <p>حوّل بحثك إلى قصة تقديم قوية للطب أو الأحياء أو العلوم الطبيعية.</p>
+                        <ul class="phase-steps">
+                            <li>صقل التقرير العلمي: المنطق والبنية والاستشهادات</li>
+                            <li>العرض والتقديم وتحضير جلسة الأسئلة والأجوبة</li>
+                            <li>حزمة التقديم: نقاط السيرة الذاتية والبيان الشخصي وبنك المقابلات</li>
+                            <li>محاكاة مقابلات على غرار قبول الطب والأحياء</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="course-enroll-sidebar">
+                    <h3>برنامج الأحياء</h3>
+                    <ul class="sidebar-details">
+                        <li><i class="fas fa-calendar-alt"></i> ١٦ أسبوعاً، ٣ مراحل</li>
+                        <li><i class="fas fa-laptop"></i> أونلاين بالكامل</li>
+                        <li><i class="fas fa-user-graduate"></i> جلسات فردية أو مجموعات صغيرة</li>
+                        <li><i class="fas fa-file-alt"></i> تقرير علمي وعرض تقديمي</li>
+                        <li><i class="fas fa-pen-fancy"></i> مواد البيان الشخصي</li>
+                        <li><i class="fas fa-stethoscope"></i> دعم تحضير المقابلات</li>
+                        <li><i class="fas fa-shield-alt"></i> شهادة مسارك</li>
+                    </ul>
+                    <a href="biology-enroll.html" class="btn-primary"><i class="fas fa-pen-to-square"></i> سجّل الآن</a>
+                    <a href="#contact" class="btn-nav-secondary" onclick="toggleNav()"><i class="fas fa-comments"></i> استشارة مجانية</a>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== ENROLL CTA (mid-page) ====== -->
+    <div style="background:var(--accent);padding:28px 0;">
+        <div class="container" style="text-align:center;">
+            <p style="font-size:17px;font-weight:600;color:var(--deep-navy);margin-bottom:12px;">هل أنت مستعد للبدء؟ الأماكن محدودة في كل دفعة.</p>
+            <a href="biology-enroll.html" class="btn-dark"><i class="fas fa-pen-to-square"></i> سجّل في برنامج الأحياء</a>
+        </div>
+    </div>
+
+    <!-- ====== MEET YOUR TUTOR ====== -->
+    <section class="tutor-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-label">تعرّف على مشرفك</div>
+                <h2>موجّه من شخص مرّ بتجربتك</h2>
+            </div>
+            <div class="tutor-card tutor-card-no-photo" data-aos="fade-up">
+                <div class="tutor-info">
+                    <p class="tutor-label">مشرفك في الأحياء</p>
+                    <h3>كافي شاه</h3>
+                    <p class="tutor-credentials">باحث دكتوراه في الأحياء · جامعة كامبريدج</p>
+                    <p>كافي طالب دكتوراه في مختبر ميكلم بقسم الوراثة. يبحث في استراتيجيات التطور المخبري لتحسين السلالات والبروتينات. شغل منصب رئيس جمعية الأحياء التركيبية بجامعة كامبريدج، وأشرف على تنسيق فريق كامبريدج iGEM بين عامي ٢٠٢٣ و٢٠٢٥.</p>
+                    <div class="tutor-tags">
+                        <span class="tutor-tag"><i class="fas fa-graduation-cap"></i> دكتوراه · جامعة كامبريدج</span>
+                        <span class="tutor-tag"><i class="fas fa-dna"></i> الوراثة والأحياء التركيبية</span>
+                        <span class="tutor-tag"><i class="fas fa-stethoscope"></i> خبير قبول علوم الحياة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== WHAT YOU'LL LEARN ====== -->
+    <section class="course-highlights-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-label">ماذا ستتعلم</div>
+                <h2>ست مهارات تُبرز طلبك في مجال العلوم</h2>
+                <p>كل مهارة ذات صلة مباشرة بعملية القبول في الأحياء والطب في أفضل الجامعات مثل أوكسفورد وكامبريدج.</p>
+            </div>
+            <div class="course-highlights-grid" data-aos="fade-up">
+                <div class="course-highlight-item">
+                    <i class="fas fa-flask"></i>
+                    <div>
+                        <h4>التفكير العلمي وتصميم الفرضيات</h4>
+                        <p>طوّر تفكيراً علمياً قائماً على الفرضيات وتصميم التجارب، أساس كل طلب قبول قوي في العلوم.</p>
+                    </div>
+                </div>
+                <div class="course-highlight-item">
+                    <i class="fas fa-book-open"></i>
+                    <div>
+                        <h4>مراجعة الأدبيات وتوليف الأدلة</h4>
+                        <p>مراجعة الأدبيات العلمية بشكل نقدي وبناء حجة قائمة على الأدلة من مصادر أولية وثانوية.</p>
+                    </div>
+                </div>
+                <div class="course-highlight-item">
+                    <i class="fas fa-dna"></i>
+                    <div>
+                        <h4>مناهج التحليل البيولوجي</h4>
+                        <p>تطبيق مناهج تحليلية على البيانات البيولوجية، من مجموعات البيانات الجينية إلى الملاحظات البيئية والبيانات السريرية.</p>
+                    </div>
+                </div>
+                <div class="course-highlight-item">
+                    <i class="fas fa-file-medical-alt"></i>
+                    <div>
+                        <h4>الكتابة العلمية للتقارير</h4>
+                        <p>إنتاج تقرير أحياء منظّم بمستوى جامعي مع استشهادات صحيحة، المخرج الذي يُظهر العمق والانضباط الأكاديمي.</p>
+                    </div>
+                </div>
+                <div class="course-highlight-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <div>
+                        <h4>تفسير البيانات</h4>
+                        <p>تحليل مجموعات بيانات بيولوجية حقيقية، واستخلاص استنتاجات مبنية على الأدلة، والتعامل مع عدم اليقين كما يفعل العلماء.</p>
+                    </div>
+                </div>
+                <div class="course-highlight-item">
+                    <i class="fas fa-stethoscope"></i>
+                    <div>
+                        <h4>تحضير مقابلات الطب والعلوم</h4>
+                        <p>تحويل مشروعك إلى نقاط محادثة قوية لمقابلات قبول الطب والأحياء والعلوم الطبيعية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CONTACT / ENROLL CTA ====== -->
+    <section class="cta-section contact-section" id="contact">
+        <div class="container" data-aos="fade-up">
+            <h2>مستعد لبدء<br>رحلتك في الأحياء؟</h2>
+            <p>انضم إلى الدفعة القادمة من برنامج الأحياء من مسارك، أو تواصل معنا بالطريقة الأسهل لك.</p>
+            <div class="contact-options-grid">
+                <a href="https://wa.me/447440117343?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D8%B3%D8%A7%D8%B1%D9%83!%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20%D8%A7%D9%84%D8%A3%D8%AD%D9%8A%D8%A7%D8%A1." class="contact-option-card contact-option-featured" target="_blank">
+                    <span class="contact-option-badge">أسرع رد</span>
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>واتساب</h3>
+                    <p>راسل فريقنا مباشرة — غالباً نرد خلال دقائق. <span dir="ltr">+44 7440117343</span></p>
+                </a>
+                <a href="https://calendly.com/masarakeducation/30min" class="contact-option-card" target="_blank">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>احجز مكالمة مجانية</h3>
+                    <p>اختر الوقت الأنسب لك لاستشارة مجانية مدتها ٣٠ دقيقة.</p>
+                </a>
+                <a href="mailto:contact@masarak.education" class="contact-option-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>راسلنا بالبريد</h3>
+                    <p>تفضّل الكتابة؟ أرسل أسئلتك إلى contact@masarak.education</p>
+                </a>
+            </div>
+            <div class="cta-buttons contact-section-extra">
+                <a href="biology-enroll.html" class="btn-primary"><i class="fas fa-pen-to-square"></i> سجّل الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">مسارك للتعليم</div>
+                    <p>إعداد جامعي مبني على الإرشاد. نربط الطلاب الطموحين بمشرفين حاملي الدكتوراه من جامعات عالمية رائدة لبناء مشاريع حقيقية وطلبات قبول قوية وثقة دائمة.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/masarak.education/" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/447440117343?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D8%B3%D8%A7%D8%B1%D9%83!" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li><a href="mailto:contact@masarak.education"><i class="fas fa-envelope" style="margin-left:6px"></i> contact@masarak.education</a></li>
+                        <li><a href="tel:+447440117343"><i class="fas fa-phone" style="margin-left:6px"></i> <span dir="ltr">+44 7440117343</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 مسارك للتعليم. جميع الحقوق محفوظة.</p>
+                <div>
+                    <a href="../../privacy-policy.html">سياسة الخصوصية</a> · <a href="../../terms.html">الشروط والأحكام</a> · <a href="../../cookies-policy.html">سياسة ملفات تعريف الارتباط</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating enroll button -->
+    <a href="biology-enroll.html" class="whatsapp-float" aria-label="سجّل في برنامج الأحياء">
+        <i class="fas fa-pen-to-square"></i>
+        <span>سجّل الآن</span>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init({ duration: 700, once: true, offset: 80 });</script>
+    <script src="../../scripts.js"></script>
+</body>
+</html>

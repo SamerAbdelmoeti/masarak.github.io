@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التسجيل — برنامج البحث الهندسي | مسارك للتعليم</title>
+    <meta name="description" content="اختر مسارك وسجّل في برنامج البحث الهندسي من مسارك. أساسي أو مميز أو خاص. ١٦ جلسة، ٢٤ ساعة، مشروع بحثي حقيقي.">
+    <meta name="author" content="Masarak Education">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://masarak.github.io/ar/courses/engineering-enroll.html">
+    <link rel="alternate" hreflang="ar" href="https://masarak.github.io/ar/courses/engineering-enroll.html">
+    <link rel="alternate" hreflang="en" href="https://masarak.github.io/courses/engineering-enroll.html">
+
+    <link rel="icon" type="image/png" href="../../images/favicon.png?v=2">
+    <link rel="apple-touch-icon" href="../../images/favicon.png?v=2">
+    <link rel="manifest" href="../../site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner" style="display:none;">
+        <div class="cookie-consent-content">
+            <span>يستخدم هذا الموقع ملفات تعريف الارتباط. اطلع على <a href="../cookies-policy.html" target="_blank">سياسة ملفات تعريف الارتباط</a>.</span>
+            <button id="acceptCookiesBtn" class="btn-primary">قبول</button>
+            <button id="rejectCookiesBtn" class="btn-secondary" style="margin-right:8px;">رفض</button>
+        </div>
+    </div>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../../images/logo.png" alt="شعار مسارك للتعليم">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <button class="nav-close" onclick="toggleNav()"><i class="fas fa-times"></i></button>
+                <li><a href="../index.html#why" onclick="toggleNav()">لماذا مسارك</a></li>
+                <li><a href="../index.html#services" onclick="toggleNav()">البرنامج</a></li>
+                <li class="has-dropdown">
+                    <a href="index.html">الدورات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                    <ul class="nav-dropdown">
+                        <li><a href="engineering.html" onclick="toggleNav()"><i class="fas fa-cogs"></i> الهندسة</a></li>
+                        <li><a href="biology.html" onclick="toggleNav()"><i class="fas fa-dna"></i> الأحياء</a></li>
+                        <li><a href="ai.html" onclick="toggleNav()"><i class="fas fa-brain"></i> الذكاء الاصطناعي</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#process" onclick="toggleNav()">كيف نعمل</a></li>
+                <li><a href="../index.html#founders" onclick="toggleNav()">المؤسسون</a></li>
+                <li><a href="../index.html#faq" onclick="toggleNav()">الأسئلة الشائعة</a></li>
+                <li><a href="#contact" class="btn-nav-secondary" onclick="toggleNav()"><i class="fas fa-comments"></i>استشارة مجانية</a></li>
+                <li><a href="engineering.html" class="btn-primary" onclick="toggleNav()">← العودة إلى الدورة</a></li>
+                <li class="lang-toggle"><span class="lang-active">العربية</span><span class="lang-divider">|</span><a href="../../courses/engineering-enroll.html" class="lang-option" onclick="localStorage.setItem('masarak-lang','en')">EN</a></li>
+            </ul>
+            <button class="mobile-toggle" onclick="toggleNav()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section class="cta-section cta-hero-page">
+        <div class="container">
+            <div class="course-subject-badge" style="margin:0 auto 16px;display:inline-flex;"><i class="fas fa-cogs"></i> الهندسة</div>
+            <h2>التسجيل - برنامج الهندسة</h2>
+            <p>اختر المسار الذي يناسب أهدافك. جميع المسارات تشمل المنهج الكامل بثلاث مراحل بإشراف مشرف من كامبريدج.</p>
+        </div>
+    </section>
+
+    <!-- ====== TIER COMPARISON ====== -->
+    <section class="tier-comparison">
+        <div class="container">
+            <div class="section-header" style="text-align:center;margin-bottom:48px;" data-aos="fade-up">
+                <div class="section-label">اختر مسارك</div>
+                <h2>ثلاث طرق للانضمام إلى البرنامج</h2>
+                <p style="max-width:620px;margin:12px auto 0;color:#555;">جميع المسارات تشمل نفس الـ١٦ جلسة عبر ٣ مراحل. الفرق هو مقدار الدعم الشخصي الذي تحصل عليه.</p>
+            </div>
+            <div class="tier-comparison-grid" data-aos="fade-up">
+
+                <!-- Core -->
+                <div class="tier-card">
+                    <h3>أساسي</h3>
+                    <p class="tier-subtitle">مجموعة جماعية</p>
+                    <div class="tier-price"><span class="tier-original">$499</span>$419</div>
+                    <p class="tier-price-note">دفعة واحدة · بدون رسوم خفية</p>
+                    <ul class="tier-feature-list">
+                        <li><i class="fas fa-check"></i> ١٦ جلسة · ٢٤ ساعة إجمالاً</li>
+                        <li><i class="fas fa-check"></i> مشروع بحث هندسي</li>
+                        <li><i class="fas fa-check"></i> تقرير بحثي وعرض تقديمي</li>
+                        <li><i class="fas fa-check"></i> مجموعة صغيرة</li>
+                        <li class="unavailable"><i class="fas fa-times"></i> شهادة مسارك</li>
+                        <li class="unavailable"><i class="fas fa-times"></i> دعم التقديم الجامعي</li>
+                        <li class="unavailable"><i class="fas fa-times"></i> سيرة ذاتية وبيان شخصي مصقولان</li>
+                        <li class="unavailable"><i class="fas fa-times"></i> جلسات فردية بالكامل</li>
+                        <li class="unavailable"><i class="fas fa-times"></i> جدول مرن حسب وتيرتك</li>
+                        <li class="unavailable"><i class="fas fa-times"></i> جلسات تحضير للمقابلات</li>
+                        <li class="unavailable"><i class="fas fa-times"></i> خطاب توصية شخصي</li>
+                    </ul>
+                    <a href="engineering-enroll-core.html" class="btn-outline" style="width:100%;text-align:center;display:block;box-sizing:border-box;">سجّل في الأساسي</a>
+                </div>
+
+                <!-- Premium -->
+                <div class="tier-card tier-featured">
+                    <div class="tier-badge">الأكثر طلباً</div>
+                    <h3>مميز</h3>
+                    <p class="tier-subtitle">مجموعة جماعية - تشمل دعم التقديم</p>
+                    <div class="tier-price"><span class="tier-original">$1,113</span>$779</div>
+                    <p class="tier-price-note">دفعة واحدة · بدون رسوم خفية</p>
+                    <ul class="tier-feature-list">
+                        <li><i class="fas fa-check"></i> ١٦ جلسة · ٢٤ ساعة إجمالاً</li>
+                        <li><i class="fas fa-check"></i> مشروع بحث هندسي</li>
+                        <li><i class="fas fa-check"></i> تقرير بحثي وعرض تقديمي</li>
+                        <li><i class="fas fa-check"></i> مجموعة صغيرة</li>
+                        <li><i class="fas fa-check"></i> <b>شهادة مسارك</b></li>
+                        <li><i class="fas fa-check"></i> <b>دعم التقديم الجامعي</b></li>
+                        <li><i class="fas fa-check"></i> <b>سيرة ذاتية وبيان شخصي مصقولان</b></li>
+                        <li class="unavailable"><i class="fas fa-times"></i> جلسات فردية بالكامل</li>
+                        <li class="unavailable"><i class="fas fa-times"></i> جدول مرن حسب وتيرتك</li>
+                        <li class="unavailable"><i class="fas fa-times"></i> جلسات تحضير للمقابلات</li>
+                        <li class="unavailable"><i class="fas fa-times"></i> خطاب توصية شخصي</li>
+                    </ul>
+                    <a href="engineering-enroll-premium.html" class="btn-primary" style="width:100%;text-align:center;display:block;box-sizing:border-box;">سجّل في المميز</a>
+                </div>
+
+                <!-- Private -->
+                <div class="tier-card">
+                    <h3>خاص</h3>
+                    <p class="tier-subtitle">فردي بالكامل · بوتيرتك</p>
+                    <div class="tier-price"><span class="tier-original">$1,646</span>$1,152</div>
+                    <p class="tier-price-note">دفعة واحدة · بدون رسوم خفية</p>
+                    <ul class="tier-feature-list">
+                        <li><i class="fas fa-check"></i> ١٦ جلسة · ٢٤ ساعة إجمالاً</li>
+                        <li><i class="fas fa-check"></i> مشروع بحث هندسي</li>
+                        <li><i class="fas fa-check"></i> تقرير بحثي وعرض تقديمي</li>
+                        <li><i class="fas fa-check"></i> جلسات فردية</li>
+                        <li><i class="fas fa-check"></i> شهادة مسارك</li>
+                        <li><i class="fas fa-check"></i> دعم التقديم الجامعي</li>
+                        <li><i class="fas fa-check"></i> سيرة ذاتية وبيان شخصي مصقولان</li>
+                        <li><i class="fas fa-check"></i> <b>جلسات فردية بالكامل</b></li>
+                        <li><i class="fas fa-check"></i> <b>جدول مرن حسب وتيرتك</b></li>
+                        <li><i class="fas fa-check"></i> <b>جلسات تحضير للمقابلات</b></li>
+                        <li><i class="fas fa-check"></i> <b>خطاب توصية شخصي</b></li>
+                    </ul>
+                    <a href="engineering-enroll-private.html" class="btn-outline" style="width:100%;text-align:center;display:block;box-sizing:border-box;">سجّل في الخاص</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section class="cta-section contact-section" id="contact">
+        <div class="container" data-aos="fade-up">
+            <h2>أسئلة قبل التسجيل؟</h2>
+            <p>تواصل معنا بالطريقة الأسهل لك — يسعدنا مساعدتك قبل الالتزام.</p>
+            <div class="contact-options-grid">
+                <a href="https://wa.me/447440117343?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D8%B3%D8%A7%D8%B1%D9%83!%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D8%A9." class="contact-option-card contact-option-featured" target="_blank">
+                    <span class="contact-option-badge">أسرع رد</span>
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>واتساب</h3>
+                    <p>راسل فريقنا مباشرة — غالباً نرد خلال دقائق. <span dir="ltr">+44 7440117343</span></p>
+                </a>
+                <a href="https://calendly.com/masarakeducation/30min" class="contact-option-card" target="_blank">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>احجز مكالمة مجانية</h3>
+                    <p>اختر الوقت الأنسب لك لاستشارة مجانية مدتها ٣٠ دقيقة.</p>
+                </a>
+                <a href="mailto:contact@masarak.education" class="contact-option-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>راسلنا بالبريد</h3>
+                    <p>تفضّل الكتابة؟ أرسل أسئلتك إلى contact@masarak.education</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">مسارك للتعليم</div>
+                    <p>إعداد جامعي مبني على الإرشاد. نربط الطلاب الطموحين بمشرفين حاملي الدكتوراه من جامعات عالمية رائدة لبناء مشاريع حقيقية وطلبات قبول قوية وثقة دائمة.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/masarak.education/" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/447440117343?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D8%B3%D8%A7%D8%B1%D9%83!" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li><a href="mailto:contact@masarak.education"><i class="fas fa-envelope" style="margin-left:6px"></i> contact@masarak.education</a></li>
+                        <li><a href="tel:+447440117343"><i class="fas fa-phone" style="margin-left:6px"></i> <span dir="ltr">+44 7440117343</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 مسارك للتعليم. جميع الحقوق محفوظة.</p>
+                <div>
+                    <a href="../privacy-policy.html">سياسة الخصوصية</a> · <a href="../terms.html">الشروط والأحكام</a> · <a href="../cookies-policy.html">سياسة ملفات تعريف الارتباط</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../scripts.js"></script>
+</body>
+</html>

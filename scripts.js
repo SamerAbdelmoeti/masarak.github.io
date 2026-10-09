@@ -106,6 +106,20 @@ function playHeroVideo() {
     }
 }
 
+// ── Course intro video: big center play button ──
+function playCourseVideo(btn) {
+    const video = btn.parentElement.querySelector('video');
+    if (video) video.play();
+}
+
+document.querySelectorAll('.hero-video-wrapper video').forEach(video => {
+    const btn = video.parentElement.querySelector('.video-play-btn');
+    if (!btn) return;
+    video.addEventListener('play', () => { btn.style.display = 'none'; });
+    video.addEventListener('pause', () => { btn.style.display = 'flex'; });
+    video.addEventListener('ended', () => { btn.style.display = 'flex'; });
+});
+
 // ── FAQ toggle ──
 function toggleFaq(el) {
     const item = el.parentElement;
