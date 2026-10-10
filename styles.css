@@ -1969,7 +1969,7 @@ body {
     }
     [dir="rtl"] .hero h1 span {
         display: block;
-        white-space: nowrap;
+        white-space: normal;
     }
 }
 
