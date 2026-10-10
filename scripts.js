@@ -91,9 +91,26 @@ window.addEventListener('scroll', () => {
 // ── Mobile nav toggle ──
 function toggleNav() {
     if (window.innerWidth <= 768) {
-        document.getElementById('navLinks').classList.toggle('active');
+        var navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+        if (!navLinks.classList.contains('active')) {
+            document.querySelectorAll('.has-dropdown.open').forEach(function (li) { li.classList.remove('open'); });
+        }
     }
 }
+
+// ── Mobile nav: tap "Courses" to expand/collapse its submenu instead of navigating ──
+document.querySelectorAll('.has-dropdown > a').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            var parentLi = link.parentElement;
+            var isOpen = parentLi.classList.contains('open');
+            document.querySelectorAll('.has-dropdown.open').forEach(function (li) { li.classList.remove('open'); });
+            if (!isOpen) parentLi.classList.add('open');
+        }
+    });
+});
 
 // ── Hero video play ──
 function playHeroVideo() {
@@ -112,7 +129,7 @@ function playCourseVideo(btn) {
     if (video) video.play();
 }
 
-document.querySelectorAll('.hero-video-wrapper video').forEach(video => {
+document.querySelectorAll('.hero-video-wrapper video, .course-video-wrapper video').forEach(video => {
     const btn = video.parentElement.querySelector('.video-play-btn');
     if (!btn) return;
     video.addEventListener('play', () => { btn.style.display = 'none'; });

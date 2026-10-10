@@ -2622,10 +2622,8 @@ body {
         gap: 0;
     }
 
-    .has-dropdown > a .dropdown-arrow { display: none; }
-
     .nav-dropdown {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: static;
         background: transparent;
@@ -2636,6 +2634,10 @@ body {
         gap: 8px;
         margin-top: 4px;
     }
+
+    .has-dropdown.open .nav-dropdown { display: flex; }
+
+    .has-dropdown.open .dropdown-arrow { transform: rotate(180deg); }
 
     .nav-dropdown li a {
         color: rgba(255,255,255,0.65) !important;

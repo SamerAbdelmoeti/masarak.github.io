@@ -1,3 +1,5 @@
 /todos
 /img/src
 index_*.html
+# Raw/uncompressed source footage - keep locally only, use compressed versions in videos/
+videos/meet_*.mp4
