@@ -2622,34 +2622,10 @@ body {
         gap: 0;
     }
 
-    .nav-dropdown {
-        display: none;
-        flex-direction: column;
-        position: static;
-        background: transparent;
-        box-shadow: none;
-        border: none;
-        padding: 0;
-        transform: none;
-        gap: 8px;
-        margin-top: 4px;
-    }
+    .has-dropdown > a .dropdown-arrow { display: none; }
 
-    .has-dropdown.open .nav-dropdown { display: flex; }
-
-    .has-dropdown.open .dropdown-arrow { transform: rotate(180deg); }
-
-    .nav-dropdown li a {
-        color: rgba(255,255,255,0.65) !important;
-        font-size: 15px !important;
-        padding: 4px 0 !important;
-        justify-content: center;
-        background: transparent !important;
-    }
-
-    .nav-dropdown li a:hover {
-        color: var(--accent) !important;
-    }
+    /* Submenu is dropped on mobile - "Courses" is just a plain link to the courses page */
+    .nav-dropdown { display: none !important; }
 }
 
 /* RTL dropdown positioning */
