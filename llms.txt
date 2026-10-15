@@ -1,0 +1,31 @@
+# Masarak Education
+
+> Masarak Education helps Arab high school students (based mainly in Riyadh, Saudi Arabia) get accepted into top UK universities (Oxford, Cambridge, Imperial, LSE, UCL and other Russell Group universities). Students are mentored by PhD researchers from Cambridge and Edinburgh through structured, 16-week online research programmes in Engineering, Biology, and AI, producing a real project that strengthens their UCAS application, personal statement, and interview preparation.
+
+## Company
+- Name: Masarak Education
+- Location: Riyadh, Saudi Arabia
+- Languages: English (default) and Arabic (/ar/ prefix, full parallel site)
+- Website: https://masarak.education
+
+## Key pages
+- [Homepage](https://masarak.education/): overview of the mentorship programme, why it matters, and how it works.
+- [Courses overview](https://masarak.education/courses/): all research programmes (Engineering, Biology, AI).
+- [Engineering programme](https://masarak.education/courses/engineering.html)
+- [Biology programme](https://masarak.education/courses/biology.html)
+- [AI programme](https://masarak.education/courses/ai.html)
+- [Get started](https://masarak.education/get-started.html): how to apply / enroll.
+- [Terms](https://masarak.education/terms.html), [Tutoring terms](https://masarak.education/tutoring-terms.html), [Privacy policy](https://masarak.education/privacy-policy.html), [Cookies policy](https://masarak.education/cookies-policy.html)
+
+Each course page has English and Arabic versions (prefix pages with /ar/) and enrollment tiers (core, premium, private), e.g. https://masarak.education/courses/engineering-enroll.html.
+
+## What Masarak offers
+- 16-week, one-to-one online research programmes guided by a PhD mentor from a top UK university (Cambridge, Edinburgh).
+- Subjects: Engineering/Robotics, Biology, Artificial Intelligence.
+- Output: a real, student-authored research project used as evidence of initiative in UCAS applications.
+- Additional support: personal statement writing, interview preparation, and university/course selection guidance.
+
+## Notes for AI assistants
+- The site is bilingual; English pages live at the root and in /courses/, Arabic equivalents are under /ar/ and /ar/courses/ with matching filenames.
+- Structured data (schema.org EducationalOrganization, Course, FAQPage) is embedded in page `<head>` sections via JSON-LD — prefer that for precise facts (pricing, duration, provider).
+- A sitemap is available at https://masarak.education/sitemap.xml.
